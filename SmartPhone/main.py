@@ -392,22 +392,13 @@ def main():
     input_thread.daemon = True
     input_thread.start()
 
-    loop = asyncio.get_event_loop()
     try:
-        loop.run_until_complete(main_async(osc_sender=osc_sender, use_websocket=args.websocket, run_threshold=run_threshold, config=config))
+        asyncio.run(main_async(osc_sender=osc_sender, use_websocket=args.websocket, run_threshold=run_threshold, config=config))
     except KeyboardInterrupt:
         print("\nПрограму зупинено.")
     finally:
         if osc_sender:
             osc_sender.release_all_commands()
-        
-        tasks = asyncio.all_tasks(loop=loop)
-        for task in tasks:
-            task.cancel()
-
-        group = asyncio.gather(*tasks, return_exceptions=True)
-        loop.run_until_complete(group)
-        loop.close()
 
 
 # Точка входу в програму
