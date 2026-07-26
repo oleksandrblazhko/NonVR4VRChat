@@ -373,18 +373,22 @@ def main():
     config = load_config()
     debug_mode = config.get("debug", False)
     run_threshold = config.get("run_threshold", 1.5)
+    startup_mode = config.get("startup_mode", {})
 
     parser = argparse.ArgumentParser(description="WebSocket-сервер для трансляції даних з акселерометра.")
-    parser.add_argument("--osc", action="store_true", help="Активувати режим надсилання OSC команд.")
-    parser.add_argument("--websocket", action="store_true", help="Активувати WebSocket сервер.")
+    parser.add_argument("--osc", action="store_true", help="Активувати режим надсилання OSC команд (перевизначає конфігурацію).")
+    parser.add_argument("--websocket", action="store_true", help="Активувати WebSocket сервер (перевизначає конфігурацію).")
     args = parser.parse_args()
+
+    use_osc = args.osc or startup_mode.get("osc", False)
+    use_websocket = args.websocket or startup_mode.get("websocket", False)
     
-    if args.osc and not OSCCommands:
+    if use_osc and not OSCCommands:
         print("Режим --osc неможливий, оскільки не вдалося імпортувати OSCCommands.")
         return
 
     osc_sender = None
-    if args.osc:
+    if use_osc:
         osc_bindings = config.get("osc_bindings", [])
         osc_sender = OSCCommands(debug=debug_mode, osc_bindings=osc_bindings)
 
@@ -393,7 +397,7 @@ def main():
     input_thread.start()
 
     try:
-        asyncio.run(main_async(osc_sender=osc_sender, use_websocket=args.websocket, run_threshold=run_threshold, config=config))
+        asyncio.run(main_async(osc_sender=osc_sender, use_websocket=use_websocket, run_threshold=run_threshold, config=config))
     except KeyboardInterrupt:
         print("\nПрограму зупинено.")
     finally:
