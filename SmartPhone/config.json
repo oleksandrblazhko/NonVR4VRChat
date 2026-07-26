@@ -3,5 +3,27 @@
   "run_threshold": 3.0,
   "debug": true,
   "delta_accX": 0.04830589020764463,
-  "delta_accY": -0.03544401034318182
+  "delta_accY": -0.03544401034318182,
+  "osc_bindings": [
+    {
+      "osc_command": "/input/MoveForward",
+      "axis": "X"
+    },
+    {
+      "osc_command": "/input/MoveBackward",
+      "axis": "X"
+    },
+    {
+      "osc_command": "/input/MoveLeft",
+      "axis": "Y"
+    },
+    {
+      "osc_command": "/input/MoveRight",
+      "axis": "Y"
+    },
+    {
+      "osc_command": "/input/Run",
+      "axis": "X_Y"
+    }
+  ]
 }

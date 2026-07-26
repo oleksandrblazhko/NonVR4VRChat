@@ -385,7 +385,8 @@ def main():
 
     osc_sender = None
     if args.osc:
-        osc_sender = OSCCommands(debug=debug_mode)
+        osc_bindings = config.get("osc_bindings", [])
+        osc_sender = OSCCommands(debug=debug_mode, osc_bindings=osc_bindings)
 
     input_thread = threading.Thread(target=input_handler, args=(config,))
     input_thread.daemon = True

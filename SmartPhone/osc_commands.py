@@ -6,16 +6,11 @@ OSC_IP = "127.0.0.1"
 OSC_PORT = 9000
 
 class OSCCommands:
-    def __init__(self, debug=False):
+    def __init__(self, debug=False, osc_bindings=[]):
         self.client = udp_client.SimpleUDPClient(OSC_IP, OSC_PORT)
         self.debug = debug
-        self._pressed = {
-            "/input/MoveForward": False,
-            "/input/MoveBackward": False,
-            "/input/MoveLeft": False,
-            "/input/MoveRight": False,
-            "/input/Run": False,
-        }
+        self.osc_bindings = osc_bindings
+        self._pressed = {binding["osc_command"]: False for binding in osc_bindings}
         print("OSC command sender initialized.")
 
     def _set_command(self, command: str, active: bool):
@@ -43,37 +38,39 @@ class OSCCommands:
         for command in self._pressed:
             self._set_command(command, False)
 
-    def send_commands(self, accX, accY, offset_accX, offset_accY, threshold=0.5, run_threshold=1.5):
+    def send_commands(self, accX, accY, accZ, offset_accX, offset_accY, offset_accZ, threshold=0.5, run_threshold=1.5):
         """
-        Sends OSC commands based on phone tilt.
+        Sends OSC commands based on phone tilt, using configurable bindings.
         """
         dx = accX - offset_accX
         dy = accY - offset_accY
+        dz = accZ - offset_accZ # Not used in current bindings, but available
 
-        # Corresponds to 'w' (forward) and 's' (backward)
-        if dx > threshold:
-            self._set_command("/input/MoveForward", True)
-            self._set_command("/input/MoveBackward", False)
-        elif dx < -threshold:
-            self._set_command("/input/MoveForward", False)
-            self._set_command("/input/MoveBackward", True)
-        else:
-            self._set_command("/input/MoveForward", False)
-            self._set_command("/input/MoveBackward", False)
+        for binding in self.osc_bindings:
+            command = binding["osc_command"]
+            axis = binding["axis"]
+            active = False
 
-        # Run command logic
-        if dx > run_threshold or dx < -run_threshold: # Activate run for significant forward or backward tilt
-            self._set_command("/input/Run", True)
-        else:
-            self._set_command("/input/Run", False)
+            if command == "/input/MoveForward":
+                if axis == "X" and dx > threshold:
+                    active = True
+            elif command == "/input/MoveBackward":
+                if axis == "X" and dx < -threshold:
+                    active = True
+            elif command == "/input/MoveLeft":
+                if axis == "Y" and dy < -threshold:
+                    active = True
+            elif command == "/input/MoveRight":
+                if axis == "Y" and dy > threshold:
+                    active = True
+            elif command == "/input/Run":
+                if axis == "X_Y" and (abs(dx) > run_threshold or abs(dy) > run_threshold):
+                    active = True
+            
+            # Additional logic can be added here for other commands and axes
+            # For example, using the Z-axis:
+            # elif command == "/input/Jump":
+            #     if axis == "Z" and dz > some_z_threshold:
+            #         active = True
 
-        # Corresponds to 'd' (right) and 'a' (left)
-        if dy > threshold:
-            self._set_command("/input/MoveRight", True)
-            self._set_command("/input/MoveLeft", False)
-        elif dy < -threshold:
-            self._set_command("/input/MoveRight", False)
-            self._set_command("/input/MoveLeft", True)
-        else:
-            self._set_command("/input/MoveRight", False)
-            self._set_command("/input/MoveLeft", False)
+            self._set_command(command, active)
