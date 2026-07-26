@@ -206,7 +206,7 @@ async def data_loop(osc_sender=None, run_threshold=1.5):
                             accZ -= delta_accZ
                         
                         if osc_sender:
-                            osc_sender.send_commands(accX, accY, accZ, delta_accX, delta_accY, delta_accZ, run_threshold=run_threshold)
+                            osc_sender.send_commands(raw_accX, raw_accY, raw_accZ, delta_accX, delta_accY, delta_accZ, run_threshold=run_threshold)
 
                         # Застосовуємо фільтр низьких частот (EMA)
                         filtered_accX = ALPHA * accX + (1 - ALPHA) * filtered_accX
