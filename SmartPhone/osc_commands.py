@@ -41,7 +41,7 @@ class OSCCommands:
         for command in self._pressed:
             self._set_command(command, False)
 
-    def send_commands(self, accX, accY, accZ, offset_accX, offset_accY, offset_accZ, threshold=0.5, run_threshold=1.5):
+    def send_commands(self, accX, accY, accZ, offset_accX, offset_accY, offset_accZ, move_threshold=0.5, run_threshold=1.5):
         """
         Sends OSC commands based on phone tilt, using configurable bindings.
         """
@@ -60,13 +60,13 @@ class OSCCommands:
             command = binding["osc_command"]
             axis = binding["axis"]
 
-            if command == "/input/MoveForward" and axis == "X" and dx > threshold:
+            if command == "/input/MoveForward" and axis == "X" and dx > move_threshold:
                 is_moving_forward = True
-            elif command == "/input/MoveBackward" and axis == "X" and dx < -threshold:
+            elif command == "/input/MoveBackward" and axis == "X" and dx < -move_threshold:
                 is_moving_backward = True
-            elif command == "/input/MoveLeft" and axis == "Y" and dy < -threshold:
+            elif command == "/input/MoveLeft" and axis == "Y" and dy < -move_threshold:
                 is_moving_left = True
-            elif command == "/input/MoveRight" and axis == "Y" and dy > threshold:
+            elif command == "/input/MoveRight" and axis == "Y" and dy > move_threshold:
                 is_moving_right = True
             elif command == "/input/Run" and axis == "X_Y" and (abs(dx) > run_threshold or abs(dy) > run_threshold):
                 is_running = True

@@ -372,7 +372,9 @@ def main():
 
     config = load_config()
     debug_mode = config.get("debug", False)
-    run_threshold = config.get("run_threshold", 1.5)
+    thresholds = config.get("thresholds", {})
+    run_threshold = thresholds.get("run", 1.5)
+    move_threshold = thresholds.get("move", 0.5)
     startup_mode = config.get("startup_mode", {})
 
     parser = argparse.ArgumentParser(description="WebSocket-сервер для трансляції даних з акселерометра.")
@@ -397,7 +399,7 @@ def main():
     input_thread.start()
 
     try:
-        asyncio.run(main_async(osc_sender=osc_sender, use_websocket=use_websocket, run_threshold=run_threshold, config=config))
+        asyncio.run(main_async(osc_sender=osc_sender, use_websocket=use_websocket, run_threshold=run_threshold, move_threshold=move_threshold, config=config))
     except KeyboardInterrupt:
         print("\nПрограму зупинено.")
     finally:
