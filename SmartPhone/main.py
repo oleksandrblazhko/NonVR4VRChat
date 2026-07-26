@@ -61,6 +61,7 @@ ALPHA = 0.3
 # Фільтровані значення
 filtered_accX = 0.0
 filtered_accY = 0.0
+filtered_accZ = 0.0
 
 # Файл конфігурації
 CONFIG_FILE = "config.json"
@@ -100,7 +101,7 @@ async def check_server_available(session, ip_address):
     Перевіряє доступність HTTP-сервера за вказаною IP-адресою.
     Повертає True, якщо сервер доступний і повертає коректні дані.
     """
-    url = f"http://{ip_address}:{DEFAULT_PORT}/get?accX&accY"
+    url = f"http://{ip_address}:{DEFAULT_PORT}/get?accX&accY&accZ"
     try:
         async with session.get(url, timeout=aiohttp.ClientTimeout(total=2)) as response:
             if response.status == 200:
@@ -108,7 +109,8 @@ async def check_server_available(session, ip_address):
                 # Перевіряємо, чи є дані в буфері (не null)
                 accX = data.get("buffer", {}).get("accX", {}).get("buffer", [None])[0]
                 accY = data.get("buffer", {}).get("accY", {}).get("buffer", [None])[0]
-                if accX is not None and accY is not None:
+                accZ = data.get("buffer", {}).get("accZ", {}).get("buffer", [None])[0]
+                if accX is not None and accY is not None and accZ is not None:
                     return True, url
     except (aiohttp.ClientError, asyncio.TimeoutError, json.JSONDecodeError, KeyError):
         pass
@@ -149,7 +151,7 @@ def get_user_ip():
             user_input = input("Введіть останнє число IP-адреси (наприклад, 111 або 165): ")
             last_octet = int(user_input)
             if 1 <= last_octet <= 254:
-                url = f"http://{BASE_IP}{last_octet}:{DEFAULT_PORT}/get?accX&accY"
+                url = f"http://{BASE_IP}{last_octet}:{DEFAULT_PORT}/get?accX&accY&accZ"
                 print(f"Використовується адреса: {url}")
                 return url
             else:
@@ -177,7 +179,7 @@ async def data_loop(osc_sender=None, run_threshold=1.5):
     Головний цикл програми: періодично запитує дані з HTTP-сервера,
     обчислює кути нахилу та транслює їх усім підключеним клієнтам.
     """
-    global calibration_state, delta_accX, delta_accY, calibration_data, filtered_accX, filtered_accY
+    global calibration_state, delta_accX, delta_accY, calibration_data, filtered_accX, filtered_accY, filtered_accZ
 
     async with aiohttp.ClientSession() as session:
         while True:
@@ -187,9 +189,11 @@ async def data_loop(osc_sender=None, run_threshold=1.5):
                         data = await response.json()
                         raw_accX = data.get("buffer", {}).get("accX", {}).get("buffer", [0])[0]
                         raw_accY = data.get("buffer", {}).get("accY", {}).get("buffer", [0])[0]
+                        raw_accZ = data.get("buffer", {}).get("accZ", {}).get("buffer", [0])[0]
 
                         accX = raw_accX
                         accY = raw_accY
+                        accZ = raw_accZ
 
                         if calibration_state == CalibrationState.CALIBRATING:
                             calibration_data.append((accX, accY))
@@ -205,6 +209,7 @@ async def data_loop(osc_sender=None, run_threshold=1.5):
                         # Застосовуємо фільтр низьких частот (EMA)
                         filtered_accX = ALPHA * accX + (1 - ALPHA) * filtered_accX
                         filtered_accY = ALPHA * accY + (1 - ALPHA) * filtered_accY
+                        filtered_accZ = ALPHA * accZ + (1 - ALPHA) * filtered_accZ
 
                         ratio_x = clamp(filtered_accX / SCALING_FACTOR, -1.0, 1.0)
                         ratio_y = clamp(filtered_accY / SCALING_FACTOR, -1.0, 1.0)
@@ -213,7 +218,7 @@ async def data_loop(osc_sender=None, run_threshold=1.5):
                         angle_y = math.degrees(math.asin(ratio_y))
 
                         SENSOR_DATA.update({
-                            "accX": filtered_accX, "accY": filtered_accY,
+                            "accX": filtered_accX, "accY": filtered_accY, "accZ": filtered_accZ,
                             "angle_x": angle_x, "angle_y": angle_y
                         })
                     else:
@@ -227,6 +232,7 @@ async def data_loop(osc_sender=None, run_threshold=1.5):
                 message = json.dumps({
                     "accX": SENSOR_DATA["accX"],
                     "accY": SENSOR_DATA["accY"],
+                    "accZ": SENSOR_DATA["accZ"],
                     "angle_x": SENSOR_DATA["angle_x"],
                     "angle_y": SENSOR_DATA["angle_y"]
                 })
