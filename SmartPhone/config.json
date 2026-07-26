@@ -1,15 +1,13 @@
 {
   "server_ip": "192.168.0.104",
   "debug": true,
-  "delta_accX": 0.04830589020764463,
-  "delta_accY": -0.03544401034318182,
   "startup_mode": {
     "osc": true,
     "websocket": false
   },
   "thresholds": {
-    "move": 5.0,
-    "run": 20.0
+    "move": 5,
+    "run": 20
   },
   "osc_bindings": [
     {
@@ -32,5 +30,10 @@
       "osc_command": "/input/Run",
       "axis": "X_Y"
     }
-  ]
+  ],
+  "calibration": {
+    "delta_accX": 0.0313889842690678,
+    "delta_accY": 0.09665212214406779,
+    "delta_accZ": -9.679016995480227
+  }
 }

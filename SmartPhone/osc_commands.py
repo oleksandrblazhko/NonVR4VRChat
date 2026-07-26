@@ -45,37 +45,64 @@ class OSCCommands:
         """
         Sends OSC commands based on phone tilt, using configurable bindings.
         """
-        dx = accX - offset_accX
-        dy = accY - offset_accY
-        dz = accZ - offset_accZ # Not used in current bindings, but available
+        deltas = {
+            "X": accX - offset_accX,
+            "Y": accY - offset_accY,
+            "Z": accZ - offset_accZ
+        }
 
-        # Handle mutually exclusive commands
-        is_moving_forward = False
-        is_moving_backward = False
-        is_moving_left = False
-        is_moving_right = False
-        is_running = False
+        command_active = {binding["osc_command"]: False for binding in self.osc_bindings}
 
         for binding in self.osc_bindings:
             command = binding["osc_command"]
             axis = binding["axis"]
+            invert = binding.get("invert", False) # Get invert property, defaults to False
 
-            if command == "/input/MoveForward" and axis == "X" and dx > move_threshold:
-                is_moving_forward = True
-            elif command == "/input/MoveBackward" and axis == "X" and dx < -move_threshold:
-                is_moving_backward = True
-            elif command == "/input/MoveLeft" and axis == "Y" and dy < -move_threshold:
-                is_moving_left = True
-            elif command == "/input/MoveRight" and axis == "Y" and dy > move_threshold:
-                is_moving_right = True
-            elif command == "/input/Run" and axis == "X_Y" and (abs(dx) > run_threshold or abs(dy) > run_threshold):
-                is_running = True
+            value = deltas.get(axis)
+            
+            # Apply inversion only to directional commands
+            if command in ["/input/MoveForward", "/input/MoveBackward", "/input/MoveLeft", "/input/MoveRight"]:
+                if value is not None and invert:
+                    value = -value
 
-        self._set_command("/input/MoveForward", is_moving_forward)
-        self._set_command("/input/MoveBackward", is_moving_backward)
-        self._set_command("/input/MoveLeft", is_moving_left)
-        self._set_command("/input/MoveRight", is_moving_right)
-        self._set_command("/input/Run", is_running)
+            is_active = False
+            if command == "/input/MoveForward":
+                if value is not None:
+                    is_active = value > move_threshold
+            elif command == "/input/MoveBackward":
+                if value is not None:
+                    is_active = value < -move_threshold
+            elif command == "/input/MoveLeft":
+                if value is not None:
+                    is_active = value < -move_threshold
+            elif command == "/input/MoveRight":
+                if value is not None:
+                    is_active = value > move_threshold
+            elif command == "/input/Run":
+                axes_for_run = axis.split('_')
+                is_running = False
+                for run_axis in axes_for_run:
+                    # Inversion does not apply to /input/Run as it checks absolute magnitude
+                    if abs(deltas.get(run_axis, 0)) > run_threshold:
+                        is_running = True
+                        break
+                is_active = is_running
+
+            if is_active:
+                command_active[command] = True
+        
+        # To prevent sending both forward and backward, or left and right at the same time
+        if command_active.get("/input/MoveForward", False) and command_active.get("/input/MoveBackward", False):
+             command_active["/input/MoveForward"] = False
+             command_active["/input/MoveBackward"] = False
+
+        if command_active.get("/input/MoveLeft", False) and command_active.get("/input/MoveRight", False):
+             command_active["/input/MoveLeft"] = False
+             command_active["/input/MoveRight"] = False
+
+        # Send commands
+        for command in self._pressed:
+            self._set_command(command, command_active.get(command, False))
 
         # Example for other commands
         # for binding in self.osc_bindings:

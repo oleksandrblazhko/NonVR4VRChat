@@ -20,9 +20,11 @@ except ImportError:
 # --- Глобальні змінні та налаштування ---
 
 # Змінні для калібрування
-delta_accX = 0.0
-delta_accY = 0.0
-delta_accZ = 0.0
+calibration_values = {
+    "delta_accX": 0.0,
+    "delta_accY": 0.0,
+    "delta_accZ": 0.0
+}
 
 # Стан калібрування
 class CalibrationState:
@@ -186,7 +188,7 @@ async def data_loop(osc_sender=None, run_threshold=1.5, move_threshold=0.5):
     Головний цикл програми: періодично запитує дані з HTTP-сервера,
     обчислює кути нахилу та транслює їх усім підключеним клієнтам.
     """
-    global calibration_state, delta_accX, delta_accY, delta_accZ, calibration_data, filtered_accX, filtered_accY, filtered_accZ
+    global calibration_state, calibration_values, calibration_data, filtered_accX, filtered_accY, filtered_accZ
 
     async with aiohttp.ClientSession() as session:
         while True:
@@ -207,12 +209,12 @@ async def data_loop(osc_sender=None, run_threshold=1.5, move_threshold=0.5):
                             continue
 
                         if calibration_state == CalibrationState.DONE:
-                            accX -= delta_accX
-                            accY -= delta_accY
-                            accZ -= delta_accZ
+                            accX -= calibration_values["delta_accX"]
+                            accY -= calibration_values["delta_accY"]
+                            accZ -= calibration_values["delta_accZ"]
                         
                         if osc_sender:
-                            osc_sender.send_commands(raw_accX, raw_accY, raw_accZ, delta_accX, delta_accY, delta_accZ, run_threshold=run_threshold, move_threshold=move_threshold)
+                            osc_sender.send_commands(raw_accX, raw_accY, raw_accZ, calibration_values["delta_accX"], calibration_values["delta_accY"], calibration_values["delta_accZ"], run_threshold=run_threshold, move_threshold=move_threshold)
 
                         # Застосовуємо фільтр низьких частот (EMA)
                         filtered_accX = ALPHA * accX + (1 - ALPHA) * filtered_accX
@@ -254,7 +256,7 @@ def calibration_thread(config):
     """
     Потік для виконання калібрування.
     """
-    global calibration_state, delta_accX, delta_accY, delta_accZ, calibration_data
+    global calibration_state, calibration_values, calibration_data
     
     print("Режим калібрування. Тримайте смартфон у стані спокою впродовж 5 секунд")
     calibration_data = []
@@ -271,14 +273,12 @@ def calibration_thread(config):
         
     if calibration_data:
         accX_data, accY_data, accZ_data = zip(*calibration_data)
-        delta_accX = np.mean(accX_data)
-        delta_accY = np.mean(accY_data)
-        delta_accZ = np.mean(accZ_data)
-        print(f"Калібрування завершено: delta_accX={delta_accX:.2f}, delta_accY={delta_accY:.2f}, delta_accZ={delta_accZ:.2f}")
+        calibration_values["delta_accX"] = np.mean(accX_data)
+        calibration_values["delta_accY"] = np.mean(accY_data)
+        calibration_values["delta_accZ"] = np.mean(accZ_data)
+        print(f"Калібрування завершено: delta_accX={calibration_values['delta_accX']:.2f}, delta_accY={calibration_values['delta_accY']:.2f}, delta_accZ={calibration_values['delta_accZ']:.2f}")
         
-        config["delta_accX"] = delta_accX
-        config["delta_accY"] = delta_accY
-        config["delta_accZ"] = delta_accZ
+        config["calibration"] = calibration_values
         save_config(config)
     else:
         print("Не вдалося отримати дані для калібрування.")
@@ -309,18 +309,18 @@ def input_handler(config):
 
 async def main_async(osc_sender=None, use_websocket=False, run_threshold=1.5, move_threshold=0.5, config=None):
     """Основна функція, яка запускає WebSocket-сервер та цикл обробки даних."""
-    global HTTP_SERVER_URL, delta_accX, delta_accY, delta_accZ, calibration_state
+    global HTTP_SERVER_URL, calibration_values, calibration_state
     
     saved_ip = config.get("server_ip")
     
     # Load calibration from config if available
-    if "delta_accX" in config and "delta_accY" in config and "delta_accZ" in config:
-        delta_accX = config["delta_accX"]
-        delta_accY = config["delta_accY"]
-        delta_accZ = config["delta_accZ"]
-        if delta_accX != 0.0 or delta_accY != 0.0 or delta_accZ != 0.0:
+    if "calibration" in config:
+        calibration_values["delta_accX"] = config["calibration"].get("delta_accX", 0.0)
+        calibration_values["delta_accY"] = config["calibration"].get("delta_accY", 0.0)
+        calibration_values["delta_accZ"] = config["calibration"].get("delta_accZ", 0.0)
+        if any(calibration_values.values()):
             calibration_state = CalibrationState.DONE
-            print(f"Завантажено збережене калібрування: delta_accX={delta_accX:.2f}, delta_accY={delta_accY:.2f}, delta_accZ={delta_accZ:.2f}")
+            print(f"Завантажено збережене калібрування: delta_accX={calibration_values['delta_accX']:.2f}, delta_accY={calibration_values['delta_accY']:.2f}, delta_accZ={calibration_values['delta_accZ']:.2f}")
 
     server_url = None
     

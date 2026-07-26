@@ -1,0 +1,631 @@
+[
+  {
+    "authorId": "usr_1d34fb92-d6dc-4803-bb9b-d4c6bbffeb8f",
+    "authorName": "Denniia",
+    "capacity": 48,
+    "created_at": "2026-04-08T23:23:45.519Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 7,
+    "heat": 2,
+    "id": "wrld_46084632-e043-4cfb-9d47-4d4c54f8a66e",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_25143b2e-1056-4d96-8d60-20ccd175a69c/6/file",
+    "labsPublicationDate": "2026-04-15T02:01:36.487Z",
+    "name": "Radical Highway - Sonic Crossworld",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 24,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_sonic",
+      "author_tag_crossworld",
+      "author_tag_racing",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_25143b2e-1056-4d96-8d60-20ccd175a69c/6/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-04-24T09:39:54.210Z"
+  },
+  {
+    "authorId": "usr_279d7f06-cd14-4f1b-bda6-d36afc9ee252",
+    "authorName": "五行缺德喵",
+    "capacity": 64,
+    "created_at": "2024-12-23T08:13:41.525Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6,
+    "heat": 0,
+    "id": "wrld_e4a7596a-f256-41e0-bb08-4d8245a56981",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_6d108b1e-1355-4bb0-86d1-1faf2d64e90c/7/file",
+    "labsPublicationDate": "2024-12-23T12:53:49.905Z",
+    "name": "雪山夜间赛道",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_race",
+      "author_tag_racing",
+      "author_tag_cars",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_6d108b1e-1355-4bb0-86d1-1faf2d64e90c/7/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2024-12-25T10:37:26.006Z"
+  },
+  {
+    "authorId": "usr_d5ce76bc-8ef0-450a-9c79-bb652f357691",
+    "authorName": "Soren087",
+    "capacity": 64,
+    "created_at": "2026-03-11T04:41:10.040Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6,
+    "heat": 0,
+    "id": "wrld_f7605d5b-ce52-4a4e-bfd8-a1d20866a00f",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_e8fd7b6b-6b7d-4906-844d-e8cc0c06a46a/5/file",
+    "labsPublicationDate": "2026-03-14T02:42:26.162Z",
+    "name": "AeroCars",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_cars",
+      "author_tag_game",
+      "author_tag_multiplayer",
+      "author_tag_racing",
+      "author_tag_drive",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_e8fd7b6b-6b7d-4906-844d-e8cc0c06a46a/5/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-05-10T05:54:04.737Z"
+  },
+  {
+    "authorId": "usr_7bfd2650-c53f-4586-bbfb-6df67e6da7cc",
+    "authorName": "trviesoscott79k",
+    "capacity": 80,
+    "created_at": "2025-11-17T21:29:28.908Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6,
+    "heat": 2,
+    "id": "wrld_e8984fa9-5641-4990-b88d-6d9628430e2c",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_5b23894e-1e3d-4162-82a0-69cb288e2855/1/file",
+    "labsPublicationDate": "2026-02-18T06:32:23.872Z",
+    "name": "formula 1",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 2,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 80,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_race",
+      "author_tag_formula_1",
+      "author_tag_racing",
+      "author_tag_car",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_5b23894e-1e3d-4162-82a0-69cb288e2855/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-02-18T06:32:23.872Z"
+  },
+  {
+    "authorId": "usr_1d34fb92-d6dc-4803-bb9b-d4c6bbffeb8f",
+    "authorName": "Denniia",
+    "capacity": 48,
+    "created_at": "2026-04-20T22:28:22.697Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6,
+    "heat": 2,
+    "id": "wrld_985f6476-2425-473a-b57b-f5aa21c9afdc",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_e876737b-ea90-4edc-a4bd-78896c7c1e6c/3/file",
+    "labsPublicationDate": "2026-05-23T01:44:52.498Z",
+    "name": "Kronos Island - Sonic Crossworld",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 24,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_sonic",
+      "author_tag_racing",
+      "author_tag_crossworld",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_e876737b-ea90-4edc-a4bd-78896c7c1e6c/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-05-23T01:44:52.499Z"
+  },
+  {
+    "authorId": "usr_5bf11ba5-0cfb-43ea-9b1f-ba42b0a4f9fc",
+    "authorName": "Space_Burger",
+    "capacity": 60,
+    "created_at": "2025-07-26T00:03:14.124Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 5,
+    "heat": 3,
+    "id": "wrld_382a309a-652e-446b-8b6d-88ae49132291",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_6262ae0d-069f-4836-8fae-e825a2d13efb/2/file",
+    "labsPublicationDate": "2025-08-21T16:10:26.637Z",
+    "name": "Angry Birds GOǃ Karts on Crash Cove",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 30,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_karts",
+      "author_tag_racing",
+      "author_tag_angry_birds",
+      "author_tag_crash_team_racing",
+      "author_tag_cars",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_6262ae0d-069f-4836-8fae-e825a2d13efb/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2025-08-21T16:17:05.408Z"
+  },
+  {
+    "authorId": "usr_460f9e12-8d8c-402e-938f-08fc56bb0c1d",
+    "authorName": "AndratVA",
+    "capacity": 32,
+    "created_at": "2021-11-05T09:30:29.937Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 5,
+    "heat": 0,
+    "id": "wrld_71a0fb80-3bb1-41f6-b8d8-55e27a950f60",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_4d53a2ce-ee9e-45fc-928e-79d34c8ceeb1/2/file",
+    "labsPublicationDate": "2021-11-05T16:36:25.540Z",
+    "name": "Koopa Troopa Beach",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_mario",
+      "author_tag_kart",
+      "author_tag_racing",
+      "author_tag_n64",
+      "author_tag_beach",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_4d53a2ce-ee9e-45fc-928e-79d34c8ceeb1/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2019.4.31f1"
+      }
+    ],
+    "updated_at": "2021-11-05T16:36:25.419Z"
+  },
+  {
+    "authorId": "usr_63a6c6b7-22a4-484f-9316-c9d71dfc26f1",
+    "authorName": "_wonil_",
+    "capacity": 64,
+    "created_at": "2026-02-03T02:34:22.852Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 5,
+    "heat": 0,
+    "id": "wrld_cddab7ac-03ca-4406-b1c4-3b29d80ff1a5",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_3375a79c-7cb4-4ba3-909f-96481c60b66b/2/file",
+    "labsPublicationDate": "2026-06-26T17:52:04.592Z",
+    "name": "Mobile Tiny Kart Racing",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_racing",
+      "author_tag_kart",
+      "author_tag_driving",
+      "author_tag_quest",
+      "author_tag_iphone",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_3375a79c-7cb4-4ba3-909f-96481c60b66b/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-06-26T17:52:04.593Z"
+  },
+  {
+    "authorId": "usr_8dd0942e-3ff1-4e23-ad30-171efdf788fe",
+    "authorName": "_jami",
+    "capacity": 64,
+    "created_at": "2025-04-16T06:18:01.466Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 5,
+    "heat": 0,
+    "id": "wrld_17f76f44-a24b-495d-aa75-abf0689e7c7e",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c178f1ea-d539-4afb-943f-7b8fc387cc2a/2/file",
+    "labsPublicationDate": "2025-04-17T01:38:13.657Z",
+    "name": "sike kijetesantakalu",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_game",
+      "author_tag_kart",
+      "author_tag_race",
+      "author_tag_racing",
+      "author_tag_circuit",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c178f1ea-d539-4afb-943f-7b8fc387cc2a/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2025-05-10T19:53:31.315Z"
+  },
+  {
+    "authorId": "usr_2e77b725-2f8c-453d-b4f3-47dd0957f44e",
+    "authorName": "mmtg03_ﾐﾐﾂｸﾞ",
+    "capacity": 64,
+    "created_at": "2023-11-24T13:03:05.886Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 4,
+    "heat": 0,
+    "id": "wrld_b8f4663c-cee5-4a89-b02e-d98f3c84f2a4",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_cf7404b1-b3ed-403d-b6d7-5569264e72aa/2/file",
+    "labsPublicationDate": "2023-12-20T14:54:44.838Z",
+    "name": "がばレースVRC版 gaba_race_VRC",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_drive",
+      "author_tag_car",
+      "author_tag_racing",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_cf7404b1-b3ed-403d-b6d7-5569264e72aa/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2019.4.31f1"
+      }
+    ],
+    "updated_at": "2024-04-28T03:50:43.539Z"
+  },
+  {
+    "authorId": "usr_09832130-3eac-4305-a49e-b4c7c348cc5b",
+    "authorName": "Kimi Yagami",
+    "capacity": 40,
+    "created_at": "2020-07-13T07:17:02.088Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 4,
+    "heat": 0,
+    "id": "wrld_2b85f0ca-ad7b-4de3-aa18-824e86912dbc",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_5404b2fd-11a1-49d5-96a9-6f0bb9ed4f5c/2/file",
+    "labsPublicationDate": "2020-07-15T17:08:44.087Z",
+    "name": "Kimi's Udon KartSpeedway ǃ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "2025-10-12T00:08:12.886Z",
+    "recommendedCapacity": 20,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_racing",
+      "author_tag_karts",
+      "author_tag_udon",
+      "author_tag_new",
+      "author_tag_driving",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_5404b2fd-11a1-49d5-96a9-6f0bb9ed4f5c/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2018.4.20f1"
+      }
+    ],
+    "updated_at": "2020-07-13T17:28:26.142Z"
+  },
+  {
+    "authorId": "usr_af49a0cb-a02f-4f4e-a0b9-c8ee5f95bb39",
+    "authorName": "~Sed~",
+    "capacity": 64,
+    "created_at": "2025-01-30T03:46:14.640Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 4,
+    "heat": 0,
+    "id": "wrld_1090a1b3-a7f0-4778-8b8b-df996305ecfe",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_92c8f7f3-0c00-4f2e-957c-bc67bdc12958/1/file",
+    "labsPublicationDate": "2025-01-30T03:47:33.940Z",
+    "name": "The Streetcar Hideout",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_chill",
+      "author_tag_cars",
+      "author_tag_relax",
+      "author_tag_racing",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_92c8f7f3-0c00-4f2e-957c-bc67bdc12958/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2019.4.31f1"
+      }
+    ],
+    "updated_at": "2025-01-30T20:53:19.783Z"
+  },
+  {
+    "authorId": "usr_18cc1d1d-8a9c-465f-aa1e-698552445404",
+    "authorName": "MarioKartFan",
+    "capacity": 10,
+    "created_at": "2025-01-29T20:07:09.260Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 4,
+    "heat": 0,
+    "id": "wrld_38531511-cfd4-4f67-8dbf-7a82f05b6598",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_d57a9f83-10d7-4d47-8a00-8a31c0f8affa/1/file",
+    "labsPublicationDate": "2025-01-29T20:13:24.467Z",
+    "name": "GoKarts By KartFan",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 2,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 5,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_gokarts",
+      "author_tag_racing",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_d57a9f83-10d7-4d47-8a00-8a31c0f8affa/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2025-01-29T20:13:24.467Z"
+  },
+  {
+    "authorId": "usr_1d34fb92-d6dc-4803-bb9b-d4c6bbffeb8f",
+    "authorName": "Denniia",
+    "capacity": 48,
+    "created_at": "2026-04-16T20:01:07.022Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 2,
+    "heat": 0,
+    "id": "wrld_19d0a46c-6ab3-4677-bbf3-c0253a9d3db4",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_a04c4b46-a5f3-45b1-bc96-2281b9d56b5a/3/file",
+    "labsPublicationDate": "2026-06-24T03:42:02.774Z",
+    "name": "Bikini Bottom - Sonic Crossworld",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 24,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_bikini_bottom",
+      "author_tag_sonic",
+      "author_tag_racing",
+      "author_tag_crossworld",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_a04c4b46-a5f3-45b1-bc96-2281b9d56b5a/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-06-24T03:42:02.774Z"
+  },
+  {
+    "authorId": "usr_0cd4c32c-03f5-45c6-ae3c-48f7ec91a82a",
+    "authorName": "dilroopgill",
+    "capacity": 48,
+    "created_at": "2024-04-03T09:59:30.986Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 2,
+    "heat": 0,
+    "id": "wrld_8d507969-8c1e-4a52-be8c-d55e8e5352f8",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c19aa181-3ffc-48c8-abdf-b08ba8e0392c/16/file",
+    "labsPublicationDate": "2024-04-13T11:22:06.196Z",
+    "name": "Dilly's Race Island",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 24,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_openflight",
+      "author_tag_floatzone",
+      "author_tag_saccflight",
+      "author_tag_racing",
+      "author_tag_driving",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c19aa181-3ffc-48c8-abdf-b08ba8e0392c/16/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.6f1"
+      }
+    ],
+    "updated_at": "2024-04-28T03:50:17.578Z"
+  },
+  {
+    "authorId": "usr_1178a20e-cf5c-41a0-b53b-607c963987b2",
+    "authorName": "L̲o̲k̲i̲",
+    "capacity": 18,
+    "created_at": "2020-05-18T17:28:36.298Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 2,
+    "heat": 0,
+    "id": "wrld_f056129d-00f9-4e4a-b9f2-85d1db5b3642",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_99d9af74-2425-4e0e-bed3-7fd10461fbbf/2/file",
+    "labsPublicationDate": "2020-05-18T17:28:36.581Z",
+    "name": "Machi",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 9,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_racing",
+      "author_tag_maze",
+      "author_tag_park",
+      "author_tag_flying",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_99d9af74-2425-4e0e-bed3-7fd10461fbbf/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2017.4.28f1"
+      }
+    ],
+    "updated_at": "2020-05-23T00:54:57.261Z"
+  }
+]

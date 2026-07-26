@@ -1,0 +1,514 @@
+[
+  {
+    "authorId": "usr_bc8a30c2-66b7-4453-93ac-69a05f4d8cf6",
+    "authorName": "まってぃ",
+    "capacity": 64,
+    "created_at": "2021-08-06T14:10:02.046Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 11871,
+    "heat": 3,
+    "id": "wrld_0fbaf443-5374-46e5-ba5d-27de3dc88ee3",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_a5609721-5c2a-491a-bc4b-3d93dd0a5b11/3/file",
+    "labsPublicationDate": "2021-08-11T12:52:34.189Z",
+    "name": "VRC弓道場（VRC Kyudo Hall）",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 7,
+    "previewYoutubeId": null,
+    "publicationDate": "2021-08-14T00:39:05.827Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_japan",
+      "author_tag_archery",
+      "author_tag_kyudo",
+      "author_tag_udon",
+      "author_tag_game",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_a5609721-5c2a-491a-bc4b-3d93dd0a5b11/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2019.4.29f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2019.4.31f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.6f1"
+      }
+    ],
+    "updated_at": "2024-05-23T16:22:28.107Z"
+  },
+  {
+    "authorId": "usr_f4071d92-14f1-499c-b8a6-2cb1bd5b3426",
+    "authorName": "link0319",
+    "capacity": 64,
+    "created_at": "2025-08-28T14:24:03.988Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 11402,
+    "heat": 4,
+    "id": "wrld_5b786184-c3e0-4c05-bcf1-c6f81503abf5",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_057e9929-5534-4277-9c90-b32cf9ba85bf/11/file",
+    "labsPublicationDate": "2025-09-20T02:06:24.733Z",
+    "name": "蝶恋花 - Whispers of the Blossom Valley",
+    "occupants": 1,
+    "organization": "vrchat",
+    "popularity": 7,
+    "previewYoutubeId": null,
+    "publicationDate": "2025-09-20T06:44:43.091Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_nature",
+      "author_tag_horse",
+      "author_tag_archery",
+      "author_tag_photography",
+      "system_approved",
+      "author_tag_game"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_057e9929-5534-4277-9c90-b32cf9ba85bf/11/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-02-19T03:46:56.953Z"
+  },
+  {
+    "authorId": "usr_8a4016f7-7487-4cc5-ae7c-5ea3c3485e58",
+    "authorName": "ぷちりゅう",
+    "capacity": 64,
+    "created_at": "2025-07-11T16:37:23.829Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 2885,
+    "heat": 4,
+    "id": "wrld_534d7786-788f-48de-b32c-45bdc21d75fd",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_524ba4b1-4e61-4fe0-aba0-6ccdeb9322d6/7/file",
+    "labsPublicationDate": "2025-08-01T13:53:33.657Z",
+    "name": "あおぞら弓道場 （Aozora Kyudo Hall）",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2025-08-01T18:24:25.076Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_japan",
+      "author_tag_archery",
+      "author_tag_kyudo",
+      "author_tag_udon",
+      "author_tag_game",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_524ba4b1-4e61-4fe0-aba0-6ccdeb9322d6/7/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-19T15:32:57.406Z"
+  },
+  {
+    "authorId": "usr_42c5ef91-dee4-4910-ad73-609c7cfcdc42",
+    "authorName": "shiuk",
+    "capacity": 64,
+    "created_at": "2025-02-21T04:33:56.227Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 899,
+    "heat": 3,
+    "id": "wrld_16a6759f-3e63-46e1-97d0-90b46cc69464",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_4ff14d44-bc0d-442a-8e3e-60b3e950135b/1/file",
+    "labsPublicationDate": "2025-02-21T07:17:19.423Z",
+    "name": "Archery Time Trial",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2025-02-23T12:56:47.562Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_time_trial",
+      "author_tag_archery",
+      "author_tag_game",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_4ff14d44-bc0d-442a-8e3e-60b3e950135b/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2025-03-08T18:58:34.432Z"
+  },
+  {
+    "authorId": "usr_d3bc046a-c24c-45e9-af52-e9882f36369f",
+    "authorName": "THELUCKYKING",
+    "capacity": 64,
+    "created_at": "2024-08-23T21:25:17.801Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 751,
+    "heat": 2,
+    "id": "wrld_5eebe7e0-aa61-4f60-ab00-9db57fd42592",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_9dd63c44-2ab7-4ea2-a3c0-cebb2899b4ca/3/file",
+    "labsPublicationDate": "2024-08-30T21:23:55.961Z",
+    "name": "Colossus Fields",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2024-08-31T09:32:32.874Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_colossus",
+      "author_tag_climbing",
+      "author_tag_field",
+      "author_tag_archery",
+      "author_tag_nature",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_9dd63c44-2ab7-4ea2-a3c0-cebb2899b4ca/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2024-08-31T21:51:22.070Z"
+  },
+  {
+    "authorId": "usr_7d17bf5d-7810-47dd-8a6c-fc8303790d57",
+    "authorName": "PatMaz02",
+    "capacity": 64,
+    "created_at": "2026-06-14T15:11:09.704Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 635,
+    "heat": 4,
+    "id": "wrld_130f81a7-8c37-4507-8042-5152bafabf62",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_d002b8da-5702-4eca-8782-b0ef6ae03d0b/2/file",
+    "labsPublicationDate": "2026-06-22T15:55:02.099Z",
+    "name": "Sanctuary of the Dead",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-06-27T10:15:01.892Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_zombie",
+      "author_tag_pve",
+      "author_tag_survival",
+      "author_tag_archery",
+      "author_tag_gothic",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_d002b8da-5702-4eca-8782-b0ef6ae03d0b/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-20T10:29:13.612Z"
+  },
+  {
+    "authorId": "usr_8a4016f7-7487-4cc5-ae7c-5ea3c3485e58",
+    "authorName": "ぷちりゅう",
+    "capacity": 64,
+    "created_at": "2025-08-11T13:03:48.654Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 534,
+    "heat": 4,
+    "id": "wrld_6ec10459-66b8-484f-930c-17bdf3ffb8c5",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_105c0533-ddbe-4d6c-93c0-7141bba275dc/7/file",
+    "labsPublicationDate": "2025-08-14T15:03:45.167Z",
+    "name": "ほしぞら弓道場 （Hoshizora Kyudo Hall）",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2025-08-16T14:12:59.053Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_japan",
+      "author_tag_archery",
+      "author_tag_kyudo",
+      "author_tag_game",
+      "author_tag_chill",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_105c0533-ddbe-4d6c-93c0-7141bba275dc/7/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-19T17:22:46.338Z"
+  },
+  {
+    "authorId": "usr_6d9074d9-0368-49c6-a1eb-2567142f3bb9",
+    "authorName": "The_Sebuss",
+    "capacity": 64,
+    "created_at": "2026-05-04T21:52:19.157Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 244,
+    "heat": 4,
+    "id": "wrld_a5e6262f-a792-4b74-a331-716dde698dd9",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_b823a879-ffa2-49f2-b67c-3f58af349a17/2/file",
+    "labsPublicationDate": "2026-05-08T23:43:40.872Z",
+    "name": "Archery Range",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-05-11T04:47:08.359Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_bow",
+      "author_tag_archery",
+      "author_tag_forest",
+      "author_tag_game",
+      "author_tag_arrow",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_b823a879-ffa2-49f2-b67c-3f58af349a17/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-05-14T17:40:56.069Z"
+  },
+  {
+    "authorId": "usr_8a4016f7-7487-4cc5-ae7c-5ea3c3485e58",
+    "authorName": "ぷちりゅう",
+    "capacity": 64,
+    "created_at": "2024-11-23T16:01:44.827Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 171,
+    "heat": 1,
+    "id": "wrld_17cb765a-6cb4-4dff-9927-e31f4aa8aaad",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_77ccb0b5-9e91-4294-bdaa-4e94eee29998/2/file",
+    "labsPublicationDate": "2024-12-01T12:00:24.349Z",
+    "name": "VRC弓道部_資料室",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2024-12-19T15:44:03.144Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_japan",
+      "author_tag_archery",
+      "author_tag_kyudo",
+      "author_tag_archive",
+      "author_tag_event",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_77ccb0b5-9e91-4294-bdaa-4e94eee29998/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2025-08-25T02:24:05.571Z"
+  },
+  {
+    "authorId": "usr_2c0d9735-9342-4db3-9c48-5eb152581b08",
+    "authorName": "Tony_Lewis",
+    "capacity": 32,
+    "created_at": "2021-12-29T21:02:30.605Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 91,
+    "heat": 0,
+    "id": "wrld_e96421ae-2da5-4d21-b481-855490fe140c",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_446a7026-9165-4b27-a46e-fe67c6bf73ca/2/file",
+    "labsPublicationDate": "2022-05-01T13:16:18.639Z",
+    "name": "Summer Resonate",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2022-05-10T07:38:25.060Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_slord",
+      "author_tag_ocean",
+      "author_tag_archery",
+      "author_tag_chill",
+      "author_tag_swimming",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_446a7026-9165-4b27-a46e-fe67c6bf73ca/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2019.4.31f1"
+      }
+    ],
+    "updated_at": "2022-05-07T02:26:32.053Z"
+  },
+  {
+    "authorId": "usr_14e3ff8d-0a01-4b58-a987-1aac95e9e8ad",
+    "authorName": "ayaldev",
+    "capacity": 80,
+    "created_at": "2018-01-04T14:31:19.831Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 26,
+    "heat": 0,
+    "id": "wrld_7e724053-d49c-4479-a845-7255c3e11c87",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c4f43d0d-72ee-4859-91c1-5d00d4940597/1/file",
+    "labsPublicationDate": "none",
+    "name": "Archer Village Payon （Old Payon）",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2018-02-06T17:14:57.949Z",
+    "recommendedCapacity": 40,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_ragnarok",
+      "author_tag_town",
+      "admin_approved",
+      "author_tag_mmo",
+      "system_approved",
+      "author_tag_archery",
+      "author_tag_ro"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c4f43d0d-72ee-4859-91c1-5d00d4940597/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "5.6.3p1"
+      }
+    ],
+    "updated_at": "2018-02-06T17:14:57.949Z"
+  },
+  {
+    "authorId": "usr_f41378c8-9496-4708-9ecb-11d60e0515e0",
+    "authorName": "AurelTristen",
+    "capacity": 64,
+    "created_at": "2026-03-15T03:56:12.373Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 8,
+    "heat": 0,
+    "id": "wrld_26bc7f3d-218e-4807-9205-0d093a8f7d97",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_e91d839a-8fd6-4d69-88d6-f27e94b81a85/3/file",
+    "labsPublicationDate": "2026-03-15T05:41:37.908Z",
+    "name": "The Woeful Wizard Inn and Pub",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "none",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_light_volumes",
+      "author_tag_fantasy",
+      "author_tag_inn",
+      "author_tag_chess",
+      "author_tag_archery",
+      "system_labs"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_e91d839a-8fd6-4d69-88d6-f27e94b81a85/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-04-13T01:51:59.513Z"
+  }
+]

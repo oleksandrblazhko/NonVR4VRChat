@@ -1,0 +1,4072 @@
+[
+  {
+    "authorId": "usr_261f21af-6b9f-4ee8-bdc8-8a44c769cedb",
+    "authorName": "ごのくに",
+    "capacity": 64,
+    "created_at": "2026-07-13T11:44:29.619Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 38,
+    "heat": 5,
+    "id": "wrld_7aafd59a-9c0a-422a-bccd-8ec6758381b4",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_6ed8ca31-5a36-46f8-be78-099512894856/2/file",
+    "labsPublicationDate": "2026-07-17T16:21:05.888Z",
+    "name": "Stay",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-18T01:07:34.651Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_6ed8ca31-5a36-46f8-be78-099512894856/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T16:31:12.454Z"
+  },
+  {
+    "authorId": "usr_3d8a4210-be7c-4368-82e7-1ee5218f524a",
+    "authorName": "このポテチ塩こいなぁ。",
+    "capacity": 64,
+    "created_at": "2026-04-07T16:39:18.193Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 30,
+    "heat": 5,
+    "id": "wrld_90604711-7ef4-4038-b214-d8ced7046f78",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c6019e61-5ada-4992-85d5-5edb83207140/2/file",
+    "labsPublicationDate": "2026-04-13T15:34:00.734Z",
+    "name": "草原の中で Night ver․",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-18T01:01:54.462Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_bed",
+      "author_tag_chill",
+      "author_tag_videoplayer",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c6019e61-5ada-4992-85d5-5edb83207140/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-04-13T15:38:09.938Z"
+  },
+  {
+    "authorId": "usr_511fedf7-dbb6-4b14-87b6-900f973ae712",
+    "authorName": "Gssam",
+    "capacity": 24,
+    "created_at": "2026-07-13T13:06:15.876Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 1017,
+    "heat": 5,
+    "id": "wrld_78a88716-4fa3-49fc-a280-143c5c2b4e24",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_4d431920-e57e-40fd-8141-ebfdd7e203c5/3/file",
+    "labsPublicationDate": "2026-07-16T08:02:35.808Z",
+    "name": "Atelier",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-18T00:52:22.772Z",
+    "recommendedCapacity": 12,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_cozy",
+      "author_tag_chill",
+      "author_tag_relax",
+      "author_tag_atelier",
+      "author_tag_school",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_4d431920-e57e-40fd-8141-ebfdd7e203c5/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T05:45:16.157Z"
+  },
+  {
+    "authorId": "usr_a42f55d3-cd10-42ce-b54c-2560b1fab750",
+    "authorName": "Craigthepc",
+    "capacity": 64,
+    "created_at": "2026-07-17T06:58:49.811Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 154,
+    "heat": 5,
+    "id": "wrld_543fa318-6afd-48c5-a99d-6746d0483971",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_9bb5c418-b725-46d6-a6f0-bcda5ddfeca8/1/file",
+    "labsPublicationDate": "2026-07-17T07:14:16.502Z",
+    "name": "Asdfmovie‚ Rick and Morty‚ Hotdiggedydemon Ultimate Avatar World",
+    "occupants": 1,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-18T00:43:59.279Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_rick_and_morty",
+      "author_tag_meme",
+      "author_tag_my_little_pony",
+      "author_tag_Fnaf",
+      "author_tag_Mario",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_9bb5c418-b725-46d6-a6f0-bcda5ddfeca8/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-23T19:40:05.065Z"
+  },
+  {
+    "authorId": "usr_c65ad244-2bc6-489b-9ed3-616ac2207a43",
+    "authorName": "kame san",
+    "capacity": 64,
+    "created_at": "2026-07-10T08:41:59.079Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 3,
+    "heat": 4,
+    "id": "wrld_572a587e-abec-4cdb-9c20-b609a90a64b8",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_0b407393-f11d-48ef-8f73-be4917531f8d/2/file",
+    "labsPublicationDate": "2026-07-16T16:23:44.993Z",
+    "name": "かめさんの休憩所",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-18T00:42:57.649Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_0b407393-f11d-48ef-8f73-be4917531f8d/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-20T00:50:43.672Z"
+  },
+  {
+    "authorId": "usr_0c3b00e8-70af-451b-b33f-b95f043736db",
+    "authorName": "itsLyxie",
+    "capacity": 80,
+    "created_at": "2026-07-15T17:19:08.185Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 2,
+    "heat": 4,
+    "id": "wrld_b979f7fb-8394-40e4-a5e5-d22e68db3f66",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_b60dae64-be51-4c65-933a-5cddd776ef63/3/file",
+    "labsPublicationDate": "2026-07-16T21:56:00.722Z",
+    "name": "Summerfest '26",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-18T00:25:09.556Z",
+    "recommendedCapacity": 80,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_b60dae64-be51-4c65-933a-5cddd776ef63/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-18T19:59:51.236Z"
+  },
+  {
+    "authorId": "usr_682d9aa3-b099-4443-b57c-a226dbcceb5c",
+    "authorName": "Xasu_cam",
+    "capacity": 80,
+    "created_at": "2026-07-13T19:46:46.131Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 19,
+    "heat": 5,
+    "id": "wrld_50a7cb44-b77e-4dbd-9de2-d52fdc9f1c5b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_294e0afc-911b-43aa-b06b-ba9bd26078fe/3/file",
+    "labsPublicationDate": "2026-07-13T19:59:31.154Z",
+    "name": "Alt RaveCave",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-18T00:14:09.600Z",
+    "recommendedCapacity": 80,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_rave",
+      "author_tag_musik",
+      "author_tag_hangout",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_294e0afc-911b-43aa-b06b-ba9bd26078fe/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T18:46:25.584Z"
+  },
+  {
+    "authorId": "usr_db27c1f5-a973-4996-aac1-af716f9d682c",
+    "authorName": "Kindly Miquella",
+    "capacity": 32,
+    "created_at": "2026-07-13T05:58:57.355Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 61,
+    "heat": 4,
+    "id": "wrld_32d7aada-6fb0-4472-a0c7-3c61046b3548",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_1a5549cc-7937-4527-8012-87a2c0b0196f/1/file",
+    "labsPublicationDate": "2026-07-13T06:00:57.652Z",
+    "name": "Temen-ni-gru",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T23:55:10.995Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_1a5549cc-7937-4527-8012-87a2c0b0196f/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-13T06:00:57.652Z"
+  },
+  {
+    "authorId": "usr_7a10236c-98c6-4d72-89fd-6dc316066b75",
+    "authorName": "Korbyte",
+    "capacity": 30,
+    "created_at": "2026-04-04T00:50:49.206Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 81,
+    "heat": 4,
+    "id": "wrld_cb455011-f145-498e-bc13-262369cf0399",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_ff22b612-10a4-459d-b479-932ae1de730c/2/file",
+    "labsPublicationDate": "2026-07-17T08:06:12.493Z",
+    "name": "Freddy Fazbear's Pizza",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T23:42:21.483Z",
+    "recommendedCapacity": 15,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_fnaf",
+      "author_tag_chill",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_ff22b612-10a4-459d-b479-932ae1de730c/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T08:06:12.493Z"
+  },
+  {
+    "authorId": "usr_fb328961-8746-4982-90cc-dc6a31a2a27d",
+    "authorName": "m0ks",
+    "capacity": 36,
+    "created_at": "2026-07-12T17:09:51.900Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 4,
+    "heat": 4,
+    "id": "wrld_a725b296-d761-4dd4-a172-0942c87eb4b7",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c2e7b825-8190-46ce-a0a2-054bab5f9c33/3/file",
+    "labsPublicationDate": "2026-07-14T14:52:15.254Z",
+    "name": "m0ks_Chill",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T23:40:59.098Z",
+    "recommendedCapacity": 18,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_chill",
+      "author_tag_room",
+      "author_tag_cozy",
+      "author_tag_home",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c2e7b825-8190-46ce-a0a2-054bab5f9c33/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-23T06:46:47.910Z"
+  },
+  {
+    "authorId": "usr_1ede9474-aa19-4238-829a-aabeb53d4073",
+    "authorName": "Vanquish3r",
+    "capacity": 64,
+    "created_at": "2025-09-08T11:05:51.701Z",
+    "defaultContentSettings": {
+      "drones": false
+    },
+    "disabledPropAbilities": [],
+    "favorites": 179,
+    "heat": 3,
+    "id": "wrld_3bbc4d82-97b0-4f34-a2ec-da322d3edb1a",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_1c54229b-6380-4381-b3a4-e3b0233ad1d4/3/file",
+    "labsPublicationDate": "2026-07-17T23:37:55.440Z",
+    "name": "The VR Late Show",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T23:37:55.440Z",
+    "recommendedCapacity": 64,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_late_show",
+      "author_tag_live",
+      "author_tag_entertainment",
+      "author_tag_show",
+      "author_tag_performance",
+      "feature_drones_disabled",
+      "content_adult",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_1c54229b-6380-4381-b3a4-e3b0233ad1d4/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T23:37:55.517Z"
+  },
+  {
+    "authorId": "usr_21e44f3f-2053-441f-96a0-86f2a967a5c3",
+    "authorName": "Qyou",
+    "capacity": 64,
+    "created_at": "2025-12-05T04:24:11.972Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 7,
+    "heat": 1,
+    "id": "wrld_7ed0e565-a7a2-43fc-862f-b1a05c1ebc52",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c2ba4a7d-f59a-47a2-af84-36c3f014257c/1/file",
+    "labsPublicationDate": "2026-02-02T00:14:41.290Z",
+    "name": "Happily Ever After",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T23:22:25.293Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "content_sex",
+      "content_adult",
+      "author_tag_love",
+      "author_tag_cuddle",
+      "author_tag_music",
+      "author_tag_moon",
+      "author_tag_goth",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c2ba4a7d-f59a-47a2-af84-36c3f014257c/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-02-02T00:14:41.290Z"
+  },
+  {
+    "authorId": "usr_860f593d-3426-4a79-b6a6-bfbcd174e8b4",
+    "authorName": "JustWolfbane",
+    "capacity": 80,
+    "created_at": "2026-07-03T22:10:45.254Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6,
+    "heat": 4,
+    "id": "wrld_ce74cb9f-c642-47c6-9d75-6780754a45b2",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_bf86a682-5808-4c68-b9fa-65d7877cd518/2/file",
+    "labsPublicationDate": "2026-07-08T01:48:24.721Z",
+    "name": "Night Crawlers Beach Episode",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T23:01:53.266Z",
+    "recommendedCapacity": 80,
+    "releaseStatus": "public",
+    "tags": [
+      "content_adult",
+      "content_sex",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_bf86a682-5808-4c68-b9fa-65d7877cd518/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-18T00:24:26.605Z"
+  },
+  {
+    "authorId": "usr_2ffba481-2947-43e3-8358-230554eac2ab",
+    "authorName": "ღ-Tea-ღ",
+    "capacity": 64,
+    "created_at": "2026-07-01T09:47:38.901Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 4,
+    "heat": 3,
+    "id": "wrld_3c53f1b7-13f9-4921-988c-2e4c6d4c89a3",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_17722f2a-f39f-4c4c-a5b8-1d660664ed16/1/file",
+    "labsPublicationDate": "2026-07-04T09:45:45.237Z",
+    "name": "Tea's World",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T22:40:32.776Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_17722f2a-f39f-4c4c-a5b8-1d660664ed16/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-04T09:45:45.237Z"
+  },
+  {
+    "authorId": "usr_a3247dc7-e23c-4ccb-9371-0f41835d8d6f",
+    "authorName": "ICrackedMyCar",
+    "capacity": 64,
+    "created_at": "2026-05-11T04:02:09.432Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 937,
+    "heat": 4,
+    "id": "wrld_ed3b90c6-afd9-4319-af1c-58ea25c4770f",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_e3d885c5-ec00-45a5-abb2-f6f1a8116cc0/1/file",
+    "labsPublicationDate": "2026-07-16T23:23:38.046Z",
+    "name": "Shake Your Peanut 2",
+    "occupants": 3,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T22:08:09.109Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_e3d885c5-ec00-45a5-abb2-f6f1a8116cc0/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T23:23:38.046Z"
+  },
+  {
+    "authorId": "usr_c7fb2fef-59ce-4e63-889a-9b2721a59e4b",
+    "authorName": "あまぐ。",
+    "capacity": 32,
+    "created_at": "2026-07-13T02:21:32.077Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 16,
+    "heat": 4,
+    "id": "wrld_550b67fa-4eac-4464-978b-a98f5766bffc",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_77880cd8-fb81-410b-9125-e1bd7adf8406/6/file",
+    "labsPublicationDate": "2026-07-15T06:00:58.812Z",
+    "name": "You are my curse",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T22:02:21.450Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_sleep",
+      "author_tag_chill",
+      "author_tag_room",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_77880cd8-fb81-410b-9125-e1bd7adf8406/6/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T16:59:26.020Z"
+  },
+  {
+    "authorId": "usr_ee68939c-ed07-48e8-bcbc-a334988bf9c4",
+    "authorName": "wkgoth",
+    "capacity": 64,
+    "created_at": "2026-07-14T07:04:21.170Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 79,
+    "heat": 4,
+    "id": "wrld_d0b7ed2e-8a3c-474d-8498-bd8434d83a94",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_b950f245-e76a-4304-b851-73437e274193/1/file",
+    "labsPublicationDate": "2026-07-14T07:07:00.638Z",
+    "name": "lil zesty apple store monkey",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T22:02:20.669Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_gay",
+      "author_tag_monkey",
+      "author_tag_cute",
+      "author_tag_wkgoth",
+      "debug_allowed",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_b950f245-e76a-4304-b851-73437e274193/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-14T07:09:01.837Z"
+  },
+  {
+    "authorId": "usr_4b550445-f377-427d-bb3c-4400284171ec",
+    "authorName": "かものは__",
+    "capacity": 64,
+    "created_at": "2026-05-27T06:54:21.356Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 3,
+    "heat": 3,
+    "id": "wrld_78cae103-cd74-4cb4-8582-04f4c1895318",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_a78746f5-8879-4915-96ba-2e36c422ea0b/3/file",
+    "labsPublicationDate": "2026-07-17T21:57:17.364Z",
+    "name": "ベランダと寝室と海",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T21:57:17.365Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_a78746f5-8879-4915-96ba-2e36c422ea0b/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T21:57:17.432Z"
+  },
+  {
+    "authorId": "usr_554f52d0-dfc2-473e-9858-82e7eefa5362",
+    "authorName": "10zy_じゅうじ",
+    "capacity": 32,
+    "created_at": "2026-07-15T08:42:59.429Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 167,
+    "heat": 5,
+    "id": "wrld_2d282af0-9d28-4037-9ad7-d0546f44f038",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_0db54b62-96b0-4244-beff-e081107a62d6/2/file",
+    "labsPublicationDate": "2026-07-16T10:36:05.020Z",
+    "name": "心の避難所",
+    "occupants": 1,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T21:53:44.849Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_chill",
+      "author_tag_relax",
+      "author_tag_apocolypse",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_0db54b62-96b0-4244-beff-e081107a62d6/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-23T13:05:39.381Z"
+  },
+  {
+    "authorId": "usr_a30ced7b-1aba-46bf-9ff0-6840f259c2c4",
+    "authorName": "るかしゃん",
+    "capacity": 40,
+    "created_at": "2025-09-22T03:04:05.952Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 10,
+    "heat": 4,
+    "id": "wrld_af90b5b0-7bed-4381-8a17-de2ee32e836a",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_eb88cea5-330e-409b-95ad-9d835cc013af/2/file",
+    "labsPublicationDate": "2025-09-23T07:05:54.856Z",
+    "name": "RukaHome",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T21:13:25.133Z",
+    "recommendedCapacity": 20,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_sleep",
+      "author_tag_chill",
+      "author_tag_relax",
+      "author_tag_home",
+      "author_tag_bed",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_eb88cea5-330e-409b-95ad-9d835cc013af/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2025-10-12T04:25:37.494Z"
+  },
+  {
+    "authorId": "usr_c79cdbf0-b50f-4d7a-a85e-9821be771afd",
+    "authorName": "fumi_Nyan",
+    "capacity": 64,
+    "created_at": "2026-06-14T10:57:56.396Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 1,
+    "heat": 4,
+    "id": "wrld_eb1d2e9f-e0c9-4875-a6a8-1d66ee1b4716",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_6b82365c-f337-4a52-85eb-94305dc3e319/2/file",
+    "labsPublicationDate": "2026-07-17T15:13:28.989Z",
+    "name": "ohisama13 Happybirthdayǃǃǃǃ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T21:07:13.303Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_6b82365c-f337-4a52-85eb-94305dc3e319/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-19T16:05:01.755Z"
+  },
+  {
+    "authorId": "usr_e5045dec-9306-4cc9-a92f-5853789f5602",
+    "authorName": "kirill_skin",
+    "capacity": 64,
+    "created_at": "2026-07-06T09:52:08.484Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 22,
+    "heat": 3,
+    "id": "wrld_459cc413-82a8-4b11-b649-38cce9ae8503",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_4e92361a-492d-40ce-9516-0ded0f7292bc/1/file",
+    "labsPublicationDate": "2026-07-12T09:22:02.741Z",
+    "name": "Деддом 3․0",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T20:49:21.266Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "debug_allowed",
+      "author_tag_rus",
+      "author_tag_ru",
+      "author_tag_5",
+      "author_tag_deddom",
+      "author_tag_russia",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_4e92361a-492d-40ce-9516-0ded0f7292bc/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-23T09:35:29.944Z"
+  },
+  {
+    "authorId": "usr_d83b6667-a2d4-441d-9b9b-d294bbdf91d3",
+    "authorName": "munoida",
+    "capacity": 48,
+    "created_at": "2026-05-16T20:41:32.270Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 59,
+    "heat": 4,
+    "id": "wrld_63a44ceb-ced8-4ce9-afb6-59f916be9665",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_db73b175-f6fd-4d19-ade3-0a4576995093/1/file",
+    "labsPublicationDate": "2026-06-19T02:22:24.290Z",
+    "name": "Stairwell",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T20:48:08.188Z",
+    "recommendedCapacity": 24,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_db73b175-f6fd-4d19-ade3-0a4576995093/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-06-19T02:31:43.318Z"
+  },
+  {
+    "authorId": "usr_c70a9ff1-0d49-4660-be83-3d895a4c0c5e",
+    "authorName": "可爱穗ove",
+    "capacity": 64,
+    "created_at": "2026-07-15T14:45:21.961Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 10,
+    "heat": 4,
+    "id": "wrld_079f0ea6-d9b8-4a7c-aa4a-54f748919921",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_3985565e-ba9b-4768-9552-2dac5c4f8bcb/1/file",
+    "labsPublicationDate": "2026-07-15T14:45:28.811Z",
+    "name": "穗穗的猫家",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T20:46:32.709Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_3985565e-ba9b-4768-9552-2dac5c4f8bcb/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T03:51:58.263Z"
+  },
+  {
+    "authorId": "usr_8f52f3f9-46f4-4e76-9f55-f5d5d5445bba",
+    "authorName": "ターちゃん",
+    "capacity": 64,
+    "created_at": "2026-07-03T07:33:32.477Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 11,
+    "heat": 4,
+    "id": "wrld_d288928a-4d03-40f3-9f98-a960c1452fea",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_7f3ab3f8-c484-465a-ba8c-0135d9a0ab95/1/file",
+    "labsPublicationDate": "2026-07-03T07:45:29.354Z",
+    "name": "高級マンション",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T20:34:46.423Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_7f3ab3f8-c484-465a-ba8c-0135d9a0ab95/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-03T07:45:29.355Z"
+  },
+  {
+    "authorId": "usr_a9c1b439-66c5-49f4-9685-a72f43270852",
+    "authorName": "SteveIsHere",
+    "capacity": 64,
+    "created_at": "2026-02-04T01:56:28.182Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 43,
+    "heat": 2,
+    "id": "wrld_2d3a8fdf-484b-44c0-8c7d-f48be79714b5",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_17d0bf04-2d50-4616-98b5-1cad81cc7166/1/file",
+    "labsPublicationDate": "2026-07-16T06:59:29.785Z",
+    "name": "Starlit Drifting",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T19:56:07.411Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_17d0bf04-2d50-4616-98b5-1cad81cc7166/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-21T03:20:15.578Z"
+  },
+  {
+    "authorId": "usr_d42fccfb-a9d8-4b82-ab90-829f9343b5fe",
+    "authorName": "TheBananaMan176",
+    "capacity": 80,
+    "created_at": "2026-06-03T04:45:55.084Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 17,
+    "heat": 4,
+    "id": "wrld_46ca4750-f4f8-41e9-9466-fe7aeaf447f6",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_15e7e78a-73e3-4e83-a078-b9db796eb3fe/2/file",
+    "labsPublicationDate": "2026-07-16T08:48:28.446Z",
+    "name": "TNE ISD",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T19:47:42.774Z",
+    "recommendedCapacity": 80,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_15e7e78a-73e3-4e83-a078-b9db796eb3fe/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-23T14:11:26.000Z"
+  },
+  {
+    "authorId": "usr_3b2a3eeb-0575-4438-bc67-d8f2e1ebab1d",
+    "authorName": "yuki238",
+    "capacity": 64,
+    "created_at": "2026-07-11T07:10:00.393Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 23,
+    "heat": 4,
+    "id": "wrld_6a45ccb3-ba7e-4157-9aaf-95317ae7c2dc",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_035b4b86-5cf3-45ad-b843-84de0c3c2b34/2/file",
+    "labsPublicationDate": "2026-07-13T01:43:38.232Z",
+    "name": "おちおちロイヤル",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T19:35:55.045Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_035b4b86-5cf3-45ad-b843-84de0c3c2b34/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T14:20:30.104Z"
+  },
+  {
+    "authorId": "usr_1c699e92-97d4-452b-952f-ab8583d51921",
+    "authorName": "E3h0",
+    "capacity": 64,
+    "created_at": "2026-07-08T08:48:46.873Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 36,
+    "heat": 1,
+    "id": "wrld_938bb748-a16a-4039-8078-03993fac115f",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2874be40-53ce-408a-bdaf-6788fd7eeeac/1/file",
+    "labsPublicationDate": "2026-07-08T09:19:16.558Z",
+    "name": "Echos Avatar World",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T19:34:28.567Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2874be40-53ce-408a-bdaf-6788fd7eeeac/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-09T12:46:47.545Z"
+  },
+  {
+    "authorId": "usr_28ec9229-5dea-4400-8cb0-17c2081cea5b",
+    "authorName": "げんちっち",
+    "capacity": 64,
+    "created_at": "2026-07-11T07:29:23.741Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 66,
+    "heat": 4,
+    "id": "wrld_0fb8e600-5c6a-4e27-b534-fdab796e274c",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_87127650-d29a-41f2-a959-5bba09c5480b/1/file",
+    "labsPublicationDate": "2026-07-15T04:16:46.583Z",
+    "name": "Bar META17",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T19:04:15.448Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "debug_allowed",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_87127650-d29a-41f2-a959-5bba09c5480b/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T11:22:23.708Z"
+  },
+  {
+    "authorId": "usr_541bfebe-8156-4268-8853-1810ded32461",
+    "authorName": "まりにゃんこ",
+    "capacity": 4,
+    "created_at": "2026-07-04T15:06:43.981Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6,
+    "heat": 4,
+    "id": "wrld_49eabc7e-e4f9-434a-b87c-48224344801e",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_137c0a7a-7bc1-4cdd-9b05-08494f96f6dc/4/file",
+    "labsPublicationDate": "2026-07-11T18:37:04.416Z",
+    "name": "The Lantern Arbor",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T18:48:39.721Z",
+    "recommendedCapacity": 2,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_home",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_137c0a7a-7bc1-4cdd-9b05-08494f96f6dc/4/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-11T18:37:04.417Z"
+  },
+  {
+    "authorId": "usr_085c72ff-6b49-49b0-94c0-522019bacac1",
+    "authorName": "webbtail245",
+    "capacity": 80,
+    "created_at": "2026-06-26T12:02:06.761Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 29,
+    "heat": 3,
+    "id": "wrld_402550aa-e59a-44dd-bac0-2e8cced59422",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_f793784b-e029-4a96-adfe-a7112f235298/1/file",
+    "labsPublicationDate": "2026-06-27T05:50:15.016Z",
+    "name": "Avatar Testing Plane",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T18:44:27.737Z",
+    "recommendedCapacity": 80,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_test",
+      "author_tag_plane",
+      "author_tag_testing",
+      "author_tag_big",
+      "author_tag_huge",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_f793784b-e029-4a96-adfe-a7112f235298/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-09T07:46:25.669Z"
+  },
+  {
+    "authorId": "usr_ca659644-0b58-45ac-b74a-79f0324dce81",
+    "authorName": "Esuto_湯圓",
+    "capacity": 64,
+    "created_at": "2026-07-16T05:40:49.693Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 3,
+    "heat": 5,
+    "id": "wrld_811d7eac-4573-4ce7-a91c-fcf876bfa5ec",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2559517b-d5b2-41e1-8e08-4033e72a949f/1/file",
+    "labsPublicationDate": "2026-07-16T05:45:31.913Z",
+    "name": "避難所",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T18:33:03.539Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_sleep",
+      "author_tag_chill",
+      "author_tag_home",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2559517b-d5b2-41e1-8e08-4033e72a949f/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-22T10:19:15.329Z"
+  },
+  {
+    "authorId": "usr_3cdd75ac-1149-4727-9e80-9708941a3893",
+    "authorName": "シアンミヤ",
+    "capacity": 16,
+    "created_at": "2026-04-25T12:48:44.423Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 23,
+    "heat": 3,
+    "id": "wrld_92247d20-ff5f-4594-baac-546ce40932ee",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_f902d211-4272-4757-ba15-0156ac6fba07/2/file",
+    "labsPublicationDate": "2026-04-27T04:51:55.048Z",
+    "name": "ミヤのアトリエ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T18:33:03.502Z",
+    "recommendedCapacity": 8,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_chill",
+      "author_tag_sleep",
+      "author_tag_video",
+      "author_tag_relax",
+      "author_tag_home",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_f902d211-4272-4757-ba15-0156ac6fba07/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-04-27T04:51:55.048Z"
+  },
+  {
+    "authorId": "usr_aae0c656-cb86-42b3-aeac-486ea3a9442c",
+    "authorName": "SkyRazzberri",
+    "capacity": 64,
+    "created_at": "2026-06-30T01:13:06.132Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 8,
+    "heat": 3,
+    "id": "wrld_4bb1fc29-2227-4b7a-9468-600e00c5b7f6",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_14185fe1-dba2-4e36-b47a-5c25fd39cd20/6/file",
+    "labsPublicationDate": "2026-06-30T21:55:30.699Z",
+    "name": "Low poly bayou swamp",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T18:32:16.467Z",
+    "recommendedCapacity": 64,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_nature",
+      "author_tag_cozy",
+      "author_tag_optimized",
+      "author_tag_south",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_14185fe1-dba2-4e36-b47a-5c25fd39cd20/6/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-21T22:58:54.242Z"
+  },
+  {
+    "authorId": "usr_70391676-3ae5-488f-bb14-6e35859e16e1",
+    "authorName": "OUKING",
+    "capacity": 60,
+    "created_at": "2023-07-17T05:03:10.172Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 38,
+    "heat": 2,
+    "id": "wrld_46c63666-00b4-4a83-a3f2-012bde3ef2b9",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_967acb3f-df01-49cd-bba9-cbe2e238899e/1/file",
+    "labsPublicationDate": "2026-03-18T07:34:22.663Z",
+    "name": "さっちん誕生祭2023牢獄水族館ステージ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T18:04:26.487Z",
+    "recommendedCapacity": 30,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_967acb3f-df01-49cd-bba9-cbe2e238899e/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2019.4.31f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2019.4.31f1"
+      }
+    ],
+    "updated_at": "2026-03-18T07:34:22.663Z"
+  },
+  {
+    "authorId": "usr_4784e117-4418-44bf-b9cf-7dbbb1ac4f7f",
+    "authorName": "ら で ぉ",
+    "capacity": 24,
+    "created_at": "2026-07-08T12:08:49.416Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 16,
+    "heat": 2,
+    "id": "wrld_3606a883-73c5-43f4-9150-dea8980e9f6b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_227899ef-a67f-4b9a-8f6b-1726630f3f98/4/file",
+    "labsPublicationDate": "2026-07-17T03:54:41.935Z",
+    "name": "TANO∗C楽曲とその他が聴けるチル部屋",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T18:02:02.727Z",
+    "recommendedCapacity": 12,
+    "releaseStatus": "public",
+    "tags": [
+      "debug_allowed",
+      "author_tag_Hardcore",
+      "author_tag_Garage",
+      "author_tag_Baikinmen_Video_inside",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_227899ef-a67f-4b9a-8f6b-1726630f3f98/4/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-18T15:23:42.194Z"
+  },
+  {
+    "authorId": "usr_9808a26b-2791-4e56-9f80-efb08cf5f988",
+    "authorName": "RaptorGamez",
+    "capacity": 64,
+    "created_at": "2026-05-29T04:37:46.947Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 10915,
+    "heat": 3,
+    "id": "wrld_0fe1c3b6-ab3e-46fa-b9ef-d18160bdbe8e",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_d22468da-2891-44ba-85e2-10fc41fa1921/4/file",
+    "labsPublicationDate": "2026-07-17T18:01:16.196Z",
+    "name": "GreenSite․dle ［Higher or Lower Game］",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 7,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T18:01:16.197Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_rule",
+      "author_tag_game",
+      "author_tag_games",
+      "author_tag_wordle",
+      "author_tag_green",
+      "system_monetized_world",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_d22468da-2891-44ba-85e2-10fc41fa1921/4/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T20:37:39.870Z"
+  },
+  {
+    "authorId": "usr_24bfa5e4-55cf-472d-80a1-890b2a00d42f",
+    "authorName": "Ucchiey",
+    "capacity": 80,
+    "created_at": "2026-06-18T07:22:21.281Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 8335,
+    "heat": 6,
+    "id": "wrld_4837b182-4e8e-47f5-8f56-9ee88f2d9da5",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_614ac504-8b24-46e4-a38b-cc979fb1941b/5/file",
+    "labsPublicationDate": "2026-07-17T11:00:13.502Z",
+    "name": "Cave Aquarium",
+    "occupants": 40,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T17:29:38.219Z",
+    "recommendedCapacity": 40,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_Aquarium",
+      "author_tag_Chill",
+      "author_tag_sample",
+      "author_tag_Fish",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_614ac504-8b24-46e4-a38b-cc979fb1941b/5/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T14:16:04.427Z"
+  },
+  {
+    "authorId": "usr_d9401296-94cf-49c6-a937-add374741a64",
+    "authorName": "邪神-Nestlande-",
+    "capacity": 64,
+    "created_at": "2026-06-07T07:43:47.319Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 2,
+    "heat": 0,
+    "id": "wrld_15863161-2aed-4699-96a8-d4e58c9524a1",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_56de294f-9757-4c88-bc0c-f25707825b8d/2/file",
+    "labsPublicationDate": "2026-06-08T08:57:28.304Z",
+    "name": "otomeさんいつもありがとう",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T17:22:25.900Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_56de294f-9757-4c88-bc0c-f25707825b8d/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-06-12T11:58:08.439Z"
+  },
+  {
+    "authorId": "usr_3a2fa17a-0b53-4af6-84a8-3ce2c7c1c713",
+    "authorName": "초원의 야생마",
+    "capacity": 64,
+    "created_at": "2026-07-11T10:15:13.674Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 21,
+    "heat": 4,
+    "id": "wrld_9a109ded-28dd-43bc-9892-240d071ad6aa",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_db95ebdb-b1fc-47ae-94bc-169127bb30de/5/file",
+    "labsPublicationDate": "2026-07-17T01:26:16.289Z",
+    "name": "샬롯 생일카페",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T17:06:38.355Z",
+    "recommendedCapacity": 64,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_db95ebdb-b1fc-47ae-94bc-169127bb30de/5/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T01:26:16.289Z"
+  },
+  {
+    "authorId": "usr_5ac69761-7202-47c7-b199-79a29db18ed1",
+    "authorName": "Reishichi",
+    "capacity": 64,
+    "created_at": "2026-05-16T02:06:30.869Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 10,
+    "heat": 4,
+    "id": "wrld_21d60db9-ad8a-41f7-92dd-8ec5cf785300",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_fdd5225b-44af-4670-8e22-8c0e912bd0c7/2/file",
+    "labsPublicationDate": "2026-06-30T10:53:54.554Z",
+    "name": "Hotel Galactica Showroom",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T17:01:13.902Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_Gallery",
+      "author_tag_Avatar",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_fdd5225b-44af-4670-8e22-8c0e912bd0c7/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-06-30T10:53:54.554Z"
+  },
+  {
+    "authorId": "usr_e892f2c2-b6d0-460b-8c9b-61362a29b609",
+    "authorName": "さばしゅこ",
+    "capacity": 48,
+    "created_at": "2026-07-14T06:19:22.507Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 939,
+    "heat": 6,
+    "id": "wrld_8be81db3-4be3-433e-85f4-6b72cab8e273",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_a85378e7-4862-45b2-9f1a-1b30e1aa7c6b/3/file",
+    "labsPublicationDate": "2026-07-17T09:05:08.761Z",
+    "name": "雨と紅茶とコンクリート2 -Rain Tea Concrete 2-",
+    "occupants": 14,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T16:59:50.346Z",
+    "recommendedCapacity": 24,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_rain",
+      "author_tag_chill",
+      "author_tag_tea",
+      "author_tag_concrete",
+      "author_tag_cozy",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_a85378e7-4862-45b2-9f1a-1b30e1aa7c6b/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-24T08:05:46.052Z"
+  },
+  {
+    "authorId": "usr_1371fa27-7cb0-48fb-a8cb-a4bce8d2e5d8",
+    "authorName": "Uru Veil",
+    "capacity": 30,
+    "created_at": "2026-07-15T05:07:46.788Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 2722,
+    "heat": 5,
+    "id": "wrld_7446c82f-4123-4fda-af9d-8d0d13b915d1",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_09e8f491-fbb9-4f3d-8212-92f43652ab24/2/file",
+    "labsPublicationDate": "2026-07-17T01:14:17.756Z",
+    "name": "VR ボンバー！",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T16:58:25.576Z",
+    "recommendedCapacity": 15,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_game",
+      "author_tag_PvP",
+      "author_tag_Quest",
+      "author_tag_Battle",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_09e8f491-fbb9-4f3d-8212-92f43652ab24/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-22T01:38:22.934Z"
+  },
+  {
+    "authorId": "usr_26ee610a-4070-41de-b190-09ea0cb07e09",
+    "authorName": "minminn4",
+    "capacity": 40,
+    "created_at": "2026-07-01T14:33:38.609Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 40,
+    "heat": 5,
+    "id": "wrld_d0da096d-77a0-4583-b577-34a0e5484485",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_0236d4f4-a912-4c35-91e8-145127e641ce/2/file",
+    "labsPublicationDate": "2026-07-16T12:28:58.531Z",
+    "name": "Urban Ruhe",
+    "occupants": 2,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T16:07:12.996Z",
+    "recommendedCapacity": 20,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_chill",
+      "author_tag_night",
+      "author_tag_sleep",
+      "author_tag_bar",
+      "author_tag_room",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_0236d4f4-a912-4c35-91e8-145127e641ce/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T12:42:45.518Z"
+  },
+  {
+    "authorId": "usr_a730f3ca-eb77-483c-97df-bca8f41a7086",
+    "authorName": "aprg",
+    "capacity": 80,
+    "created_at": "2025-05-24T20:15:49.526Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 28,
+    "heat": 0,
+    "id": "wrld_2b851be3-1f99-487e-ac6d-1ff63422c58b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_88abd391-93f0-45e5-9f76-69803b2bdfa4/1/file",
+    "labsPublicationDate": "2025-05-25T20:40:30.332Z",
+    "name": "Stereo Photo Gallery",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T15:29:18.907Z",
+    "recommendedCapacity": 80,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_gallery",
+      "author_tag_3d_photo",
+      "author_tag_stereo_photo",
+      "author_tag_photo_gallery",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_88abd391-93f0-45e5-9f76-69803b2bdfa4/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-02-23T14:12:13.830Z"
+  },
+  {
+    "authorId": "usr_06e24304-2407-410c-9ba1-b6ba8e55b4e5",
+    "authorName": "東れもん",
+    "capacity": 40,
+    "created_at": "2026-07-10T03:05:55.232Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6,
+    "heat": 4,
+    "id": "wrld_9694f154-ceec-4ca5-8fd5-6bf66a460c1b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2ec3b572-3918-4c4a-b69c-6ad7c3cea213/1/file",
+    "labsPublicationDate": "2026-07-10T12:47:34.529Z",
+    "name": "狸寝入り~bar~",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T15:26:05.571Z",
+    "recommendedCapacity": 20,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2ec3b572-3918-4c4a-b69c-6ad7c3cea213/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-23T16:43:31.800Z"
+  },
+  {
+    "authorId": "usr_5b6c38e9-d85e-499e-933a-f833147f396d",
+    "authorName": "~Spyder~",
+    "capacity": 64,
+    "created_at": "2026-07-14T23:32:40.453Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 28,
+    "heat": 4,
+    "id": "wrld_3b56e652-2920-4141-a49d-89cb9303aa00",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_04a74750-6ac4-47e6-a618-1b2181ef16bc/1/file",
+    "labsPublicationDate": "2026-07-16T00:39:29.538Z",
+    "name": "My Home Forever",
+    "occupants": 2,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T15:24:35.529Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_04a74750-6ac4-47e6-a618-1b2181ef16bc/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-21T21:51:21.039Z"
+  },
+  {
+    "authorId": "usr_ff8455a4-8001-4b30-9026-c8e1be685fe7",
+    "authorName": "Coicoi0055",
+    "capacity": 32,
+    "created_at": "2026-07-09T10:34:05.403Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 649,
+    "heat": 4,
+    "id": "wrld_aea37bb9-379b-4343-99ef-378d327b4b78",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_6917e441-c6ef-475a-9f39-8dac8d0ec95f/3/file",
+    "labsPublicationDate": "2026-07-17T09:00:59.643Z",
+    "name": "8番マグロ～お祭り会場からの脱出～",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T15:13:10.147Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_6917e441-c6ef-475a-9f39-8dac8d0ec95f/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T09:00:59.643Z"
+  },
+  {
+    "authorId": "usr_99debe11-5928-486c-9033-3fee8ee4456b",
+    "authorName": "いすずり",
+    "capacity": 64,
+    "created_at": "2024-07-26T05:13:04.744Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 16,
+    "heat": 3,
+    "id": "wrld_c5c31b8e-b93f-4754-be54-547ee4119ec2",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_93c4d4e6-5437-40b9-8235-cc3b25ab9d67/1/file",
+    "labsPublicationDate": "2026-07-17T15:07:27.783Z",
+    "name": "m1st",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T15:07:27.783Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_mirror",
+      "author_tag_login",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_93c4d4e6-5437-40b9-8235-cc3b25ab9d67/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T15:07:27.864Z"
+  },
+  {
+    "authorId": "usr_76f22179-61cc-4395-9fbe-434359deb5a3",
+    "authorName": "Lunarfox月狐",
+    "capacity": 80,
+    "created_at": "2026-07-14T19:38:59.470Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 40,
+    "heat": 5,
+    "id": "wrld_4570b920-8002-4e2f-835d-ed4799b767cc",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2c861066-1a4a-46e7-8bd3-9deae5d2a942/4/file",
+    "labsPublicationDate": "2026-07-16T15:59:03.901Z",
+    "name": "Lofty Living",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T14:58:15.320Z",
+    "recommendedCapacity": 40,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_sleep",
+      "author_tag_coffee",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2c861066-1a4a-46e7-8bd3-9deae5d2a942/4/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T15:59:03.901Z"
+  },
+  {
+    "authorId": "usr_1371fa27-7cb0-48fb-a8cb-a4bce8d2e5d8",
+    "authorName": "Uru Veil",
+    "capacity": 64,
+    "created_at": "2026-07-08T06:00:34.394Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 247,
+    "heat": 3,
+    "id": "wrld_0a382e10-5d66-44d5-abe2-b991e48bd085",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2b192286-f47b-442e-8929-9dcd1305c0e9/3/file",
+    "labsPublicationDate": "2026-07-09T10:36:05.027Z",
+    "name": "おじさんメテオ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T14:56:51.420Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_Game",
+      "author_tag_PvP",
+      "author_tag_Action",
+      "author_tag_partygame",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2b192286-f47b-442e-8929-9dcd1305c0e9/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-15T02:43:02.572Z"
+  },
+  {
+    "authorId": "usr_8998fccf-a319-4744-a250-e4d987233958",
+    "authorName": "にじゅし",
+    "capacity": 64,
+    "created_at": "2025-04-19T13:11:52.307Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6,
+    "heat": 4,
+    "id": "wrld_53dc62d8-5183-426a-995d-6c0afc8c63c4",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_54e76de0-6b95-445b-a58b-d4899e60dc40/3/file",
+    "labsPublicationDate": "2025-04-30T13:35:25.836Z",
+    "name": "24_portal_cafe",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T14:56:50.986Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_cafe",
+      "author_tag_portal",
+      "author_tag_chill",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_54e76de0-6b95-445b-a58b-d4899e60dc40/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-06-13T09:31:33.107Z"
+  },
+  {
+    "authorId": "usr_d6cc51bb-a23d-40d8-85a8-566767c98c6b",
+    "authorName": "haru-same",
+    "capacity": 64,
+    "created_at": "2026-07-07T07:08:20.926Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 516,
+    "heat": 4,
+    "id": "wrld_c7c79ea7-e1a4-4349-bc75-c8ad341e3c4b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_8bf094ab-3e8e-4150-b7d2-99ad94ba0ffa/2/file",
+    "labsPublicationDate": "2026-07-17T08:53:52.250Z",
+    "name": "はるさめ雑貨店 深海ギャラリー",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T14:55:27.290Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_Gallery",
+      "author_tag_Sea",
+      "author_tag_Ocean",
+      "author_tag_chill",
+      "author_tag_UnderWater",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_8bf094ab-3e8e-4150-b7d2-99ad94ba0ffa/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-21T02:03:06.794Z"
+  },
+  {
+    "authorId": "usr_6d3ef810-3ef3-4fd7-a65c-7a8328fc1e14",
+    "authorName": "HuM7110",
+    "capacity": 32,
+    "created_at": "2026-05-21T14:48:37.001Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 5,
+    "heat": 4,
+    "id": "wrld_b41073b7-81f6-45a3-a2df-f4397794c38a",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_939956f0-9ff6-4f33-89f8-a5883dc53e9d/2/file",
+    "labsPublicationDate": "2026-05-30T06:49:22.957Z",
+    "name": "はむちょ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T14:53:43.567Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_Home",
+      "author_tag_Chill",
+      "author_tag_Sleep",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_939956f0-9ff6-4f33-89f8-a5883dc53e9d/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-06-07T14:47:57.740Z"
+  },
+  {
+    "authorId": "usr_044eba1f-afd2-438f-b277-a4d40d6b6695",
+    "authorName": "青柳彰人",
+    "capacity": 64,
+    "created_at": "2026-01-16T21:00:30.423Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 68,
+    "heat": 1,
+    "id": "wrld_e8db75df-fcbb-44f7-8ebb-ebd91c940cab",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_94a1c08b-a988-47a6-bda8-5a0aa4913d62/3/file",
+    "labsPublicationDate": "2026-07-17T14:14:29.643Z",
+    "name": "光る海sea of light",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T14:14:29.644Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_94a1c08b-a988-47a6-bda8-5a0aa4913d62/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T14:14:29.824Z"
+  },
+  {
+    "authorId": "usr_a64993c8-d94e-42fc-8e41-c23ba1c43d58",
+    "authorName": "＠はもち",
+    "capacity": 42,
+    "created_at": "2026-04-29T10:08:45.198Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 4,
+    "heat": 2,
+    "id": "wrld_437ddaf5-b9a6-495b-98e5-c98ef2dd028b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_da6a0829-65ce-4537-9049-9585cc6f5d36/1/file",
+    "labsPublicationDate": "2026-05-08T08:32:32.055Z",
+    "name": "TOXIC SOMNIA",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T14:08:02.210Z",
+    "recommendedCapacity": 21,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_da6a0829-65ce-4537-9049-9585cc6f5d36/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-06-27T06:59:09.532Z"
+  },
+  {
+    "authorId": "usr_77659819-fcfb-4b2f-a21f-5d5da146c878",
+    "authorName": "シェルベージュ",
+    "capacity": 64,
+    "created_at": "2026-04-25T14:21:52.157Z",
+    "defaultContentSettings": {
+      "stickers": false
+    },
+    "disabledPropAbilities": [],
+    "favorites": 46,
+    "heat": 3,
+    "id": "wrld_a7579c81-3cd5-43d0-adee-97c14f51883b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_0aa32e53-3934-4cd3-a72b-c2eb35ed33f5/2/file",
+    "labsPublicationDate": "2026-07-16T14:08:05.593Z",
+    "name": "［3DGS］Batu_Caves（Malaysia） ⁄ バトゥ洞窟（マレーシア）",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T13:56:50.487Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "feature_stickers_disabled",
+      "author_tag_3DGS",
+      "author_tag_Malaysia",
+      "author_tag_Photogrametry",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_0aa32e53-3934-4cd3-a72b-c2eb35ed33f5/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T14:08:10.970Z"
+  },
+  {
+    "authorId": "usr_0d7aaf0a-d51f-4d61-ba50-e143b3ef296d",
+    "authorName": "Tofaiss",
+    "capacity": 64,
+    "created_at": "2026-07-16T01:12:48.559Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 4164,
+    "heat": 6,
+    "id": "wrld_5eb004eb-3a8d-486c-bc4e-58d12638640f",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c6469b85-69cc-4399-a6bf-e62f8a7eded3/2/file",
+    "labsPublicationDate": "2026-07-16T01:35:18.965Z",
+    "name": "The Full Moon",
+    "occupants": 15,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T13:54:02.148Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_chill",
+      "author_tag_relax",
+      "author_tag_elden_ring",
+      "author_tag_photography",
+      "author_tag_beautiful",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c6469b85-69cc-4399-a6bf-e62f8a7eded3/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T14:21:24.563Z"
+  },
+  {
+    "authorId": "usr_399561be-8727-4094-8f52-147c21ffdabd",
+    "authorName": "にゃんこぢる",
+    "capacity": 64,
+    "created_at": "2025-12-24T14:51:40.096Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 69,
+    "heat": 1,
+    "id": "wrld_6465d922-394e-4b7a-a52c-e7f752abe389",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_ab593653-64d5-419b-a6bb-b8f547edd033/1/file",
+    "labsPublicationDate": "2026-07-16T13:04:00.433Z",
+    "name": "にゃんこぢるのおうち",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T13:52:14.891Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_ab593653-64d5-419b-a6bb-b8f547edd033/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T13:04:00.433Z"
+  },
+  {
+    "authorId": "usr_a15a251b-b289-4660-a56d-ffc7e89c4e73",
+    "authorName": "ムラサキSAN",
+    "capacity": 64,
+    "created_at": "2025-10-10T16:39:53.176Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 53,
+    "heat": 3,
+    "id": "wrld_231698ee-b5f1-4301-a681-51350e6f94e5",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c2c75168-4856-4759-a468-0eb7ee5cec4f/3/file",
+    "labsPublicationDate": "2026-07-03T08:06:11.181Z",
+    "name": "海辺のサメテラス ~昼~",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T13:26:50.002Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_sea",
+      "author_tag_summer",
+      "author_tag_chill",
+      "author_tag_noon",
+      "author_tag_event",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c2c75168-4856-4759-a468-0eb7ee5cec4f/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-04T03:54:05.846Z"
+  },
+  {
+    "authorId": "usr_c2ca675f-cac9-47b1-b3e8-bc6a1263ca7d",
+    "authorName": "maro․",
+    "capacity": 40,
+    "created_at": "2026-06-14T09:51:39.616Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 8413,
+    "heat": 7,
+    "id": "wrld_6adf5642-2f8d-4478-973d-9bc56950c3c1",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_ada28367-8a6d-4bf2-aa00-d6b646cbbf22/3/file",
+    "labsPublicationDate": "2026-07-17T09:26:58.282Z",
+    "name": "面影が還る場所-omokage-",
+    "occupants": 142,
+    "organization": "vrchat",
+    "popularity": 7,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T13:22:37.595Z",
+    "recommendedCapacity": 20,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_Chill",
+      "author_tag_Night",
+      "author_tag_Japanese_style_room",
+      "author_tag_Firework",
+      "author_tag_Summer",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_ada28367-8a6d-4bf2-aa00-d6b646cbbf22/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-21T07:11:44.911Z"
+  },
+  {
+    "authorId": "usr_86f4363c-84e4-45fe-9c4f-97356aafda96",
+    "authorName": "ঌ٭がみてゃ٭໒",
+    "capacity": 64,
+    "created_at": "2026-06-15T14:18:32.446Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 2310,
+    "heat": 6,
+    "id": "wrld_5d46d718-2732-4c1f-81c2-38fdaf6e79a6",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_5fbf0634-4249-45d4-b045-5ddec099f8f9/6/file",
+    "labsPublicationDate": "2026-07-17T10:32:22.643Z",
+    "name": "Create Your World ～部屋作りの出来るワールド～",
+    "occupants": 6,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T13:21:13.171Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_5fbf0634-4249-45d4-b045-5ddec099f8f9/6/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T10:32:22.644Z"
+  },
+  {
+    "authorId": "usr_dc547418-3a3f-4133-958b-8fcc1add0a4d",
+    "authorName": "-にゃむ-",
+    "capacity": 32,
+    "created_at": "2026-07-15T05:08:04.182Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 253,
+    "heat": 5,
+    "id": "wrld_8550540b-18d3-49ba-8881-6db71e9b9a5d",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_d242fcaf-f9a5-403a-896a-5bc965d77dd6/5/file",
+    "labsPublicationDate": "2026-07-16T10:14:42.941Z",
+    "name": "Nyamu's Studio",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T13:21:13.061Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_photo",
+      "author_tag_chill",
+      "author_tag_撮影",
+      "author_tag_studio",
+      "author_tag_水色",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_d242fcaf-f9a5-403a-896a-5bc965d77dd6/5/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T17:12:58.845Z"
+  },
+  {
+    "authorId": "usr_01a60bab-06ca-4279-a762-871d1252d08c",
+    "authorName": "ふなくん",
+    "capacity": 16,
+    "created_at": "2026-06-03T10:48:51.350Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 11,
+    "heat": 4,
+    "id": "wrld_a6b1719d-de8e-41fb-bea3-1a4423e5d0fb",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_de9592db-ce1e-4656-a74d-13ea1fae9594/1/file",
+    "labsPublicationDate": "2026-06-03T14:35:13.820Z",
+    "name": "Re˸newhome",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T13:18:25.256Z",
+    "recommendedCapacity": 8,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_de9592db-ce1e-4656-a74d-13ea1fae9594/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-06-05T11:17:04.788Z"
+  },
+  {
+    "authorId": "usr_6ca17098-2b56-4cd7-a853-52eabefc0a97",
+    "authorName": "Lorde_",
+    "capacity": 64,
+    "created_at": "2026-07-16T22:43:45.970Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 4888,
+    "heat": 6,
+    "id": "wrld_8561a755-38d1-4f1c-b53e-5a567f221ae5",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_b50cac7a-6ff4-4f4e-b8f4-51591728fe38/1/file",
+    "labsPublicationDate": "2026-07-16T22:47:36.623Z",
+    "name": "Blue Moon Surf Club",
+    "occupants": 35,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T13:03:00.669Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_beach",
+      "author_tag_moon",
+      "author_tag_night",
+      "author_tag_relax",
+      "author_tag_relaxing",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_b50cac7a-6ff4-4f4e-b8f4-51591728fe38/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-21T09:41:42.886Z"
+  },
+  {
+    "authorId": "usr_3db5754e-a4e7-4e35-9763-21a56df2f511",
+    "authorName": "たらりら",
+    "capacity": 64,
+    "created_at": "2026-07-13T12:43:41.868Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 234,
+    "heat": 5,
+    "id": "wrld_494ebba4-b617-4314-954d-52fec1690439",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_0bb8db74-1481-449b-9509-03a92dc7d501/2/file",
+    "labsPublicationDate": "2026-07-16T12:45:10.337Z",
+    "name": "-夏凪-",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:51:38.375Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_summer",
+      "author_tag_chill",
+      "author_tag_sea",
+      "author_tag_sleep",
+      "author_tag_relax",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_0bb8db74-1481-449b-9509-03a92dc7d501/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T01:39:04.301Z"
+  },
+  {
+    "authorId": "usr_ea97a6bd-6fa7-4ddd-af88-cd06f743c3de",
+    "authorName": "西成武蔵",
+    "capacity": 32,
+    "created_at": "2026-07-06T15:17:32.448Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 162,
+    "heat": 4,
+    "id": "wrld_237b7ce4-841f-47b5-aff2-11ce0a384bd7",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_48333174-b9cf-4ba7-ba6d-9169e58f2d59/2/file",
+    "labsPublicationDate": "2026-07-16T15:05:21.928Z",
+    "name": "-HWSHA LIVE ARCHIVE WORLD-",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:50:12.918Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_48333174-b9cf-4ba7-ba6d-9169e58f2d59/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-19T01:36:43.685Z"
+  },
+  {
+    "authorId": "usr_eb77ebe3-45f6-40fc-8f39-e5c9efcfd79b",
+    "authorName": "Yorudayo",
+    "capacity": 64,
+    "created_at": "2026-07-15T11:56:14.443Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 47,
+    "heat": 4,
+    "id": "wrld_134935e8-6e9a-4f3b-ad2a-5af6b5c2bbce",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_1489c8cb-a1ba-42b1-985c-7aaa19fd6d2e/1/file",
+    "labsPublicationDate": "2026-07-16T12:04:17.132Z",
+    "name": "ie",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:50:12.859Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_1489c8cb-a1ba-42b1-985c-7aaa19fd6d2e/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T12:57:44.614Z"
+  },
+  {
+    "authorId": "usr_dc8e98f2-89ea-4f8f-a8bf-deccca976d1e",
+    "authorName": "kumiiiiiV",
+    "capacity": 32,
+    "created_at": "2026-06-29T15:12:29.562Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 66,
+    "heat": 3,
+    "id": "wrld_9e9fbc9c-67f8-46ae-8515-dcfe99dec84b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_b9675dc4-a433-4665-bc32-8db0cf1bdf2c/2/file",
+    "labsPublicationDate": "2026-07-02T15:53:52.078Z",
+    "name": "KumiAnimationWorld",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:46:00.508Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_b9675dc4-a433-4665-bc32-8db0cf1bdf2c/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-14T20:25:54.224Z"
+  },
+  {
+    "authorId": "usr_c23dfaea-f1b4-48f0-966c-c7a8a06c5d6a",
+    "authorName": "Sesko冬のNova",
+    "capacity": 64,
+    "created_at": "2025-01-08T11:03:51.150Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6,
+    "heat": 2,
+    "id": "wrld_0d849725-c705-4075-b1f2-b781bdc0bf0c",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_0c5a3674-e237-46c1-8cd1-df272ad6804d/5/file",
+    "labsPublicationDate": "2025-04-09T18:56:36.557Z",
+    "name": "Sesko's Home World",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:39:39.083Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_0c5a3674-e237-46c1-8cd1-df272ad6804d/5/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-06-23T15:46:32.367Z"
+  },
+  {
+    "authorId": "usr_e8ad0ebe-8179-4f1f-8e60-45057e1242a7",
+    "authorName": "つみきん",
+    "capacity": 32,
+    "created_at": "2026-06-30T06:36:32.105Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 11,
+    "heat": 3,
+    "id": "wrld_ae6abcd3-0286-40c1-906f-2ea54cf35617",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_6a68aa9d-527d-405f-9684-24d8580baac1/2/file",
+    "labsPublicationDate": "2026-06-30T11:14:21.087Z",
+    "name": "ちまるーむ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:39:00.130Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_6a68aa9d-527d-405f-9684-24d8580baac1/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-19T21:33:51.418Z"
+  },
+  {
+    "authorId": "usr_d44a6a20-d781-4923-acfe-a66f737e4151",
+    "authorName": "Tyeru",
+    "capacity": 64,
+    "created_at": "2026-05-23T08:15:37.892Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 62,
+    "heat": 4,
+    "id": "wrld_7e269f2c-9b9c-4cde-b4d4-1c8f88d51860",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_ed4239d3-fe8d-4a14-b0cf-886d78192d34/3/file",
+    "labsPublicationDate": "2026-05-23T09:27:06.809Z",
+    "name": "星降りラウンジ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:37:36.220Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_ed4239d3-fe8d-4a14-b0cf-886d78192d34/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-05-29T20:36:10.186Z"
+  },
+  {
+    "authorId": "usr_b57c9af9-6822-480e-99ba-00b8d6a16d48",
+    "authorName": "にえ201",
+    "capacity": 64,
+    "created_at": "2026-07-12T07:41:59.063Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 15,
+    "heat": 4,
+    "id": "wrld_a822f8e6-cc23-4e3e-90a2-5c53c802eb70",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_d4be2395-7259-4679-b39c-dae38a5b22a0/2/file",
+    "labsPublicationDate": "2026-07-16T04:43:48.132Z",
+    "name": "とりのおうち",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:29:12.677Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_d4be2395-7259-4679-b39c-dae38a5b22a0/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-16T04:43:48.133Z"
+  },
+  {
+    "authorId": "usr_34f78fd9-1a08-46ea-970d-da8504aae148",
+    "authorName": "Dark Karma",
+    "capacity": 64,
+    "created_at": "2024-10-24T20:45:29.125Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 24,
+    "heat": 3,
+    "id": "wrld_0b72501b-7e37-4d29-a4a1-6b5755897b11",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_385bf8bf-c0ef-48fb-81ac-5c18b2ba78a7/2/file",
+    "labsPublicationDate": "2026-06-08T14:02:46.837Z",
+    "name": "［ALPHA］ Danganronpa˸ Melded Realities",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:28:07.170Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_mafia",
+      "author_tag_danganronpa",
+      "author_tag_werewolf",
+      "author_tag_game",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_385bf8bf-c0ef-48fb-81ac-5c18b2ba78a7/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-18T16:28:03.888Z"
+  },
+  {
+    "authorId": "usr_068547c2-0a20-4490-9aa4-0031695f721d",
+    "authorName": "Pixelated Star",
+    "capacity": 64,
+    "created_at": "2026-07-13T05:36:49.366Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 3,
+    "heat": 4,
+    "id": "wrld_2b24c10d-9dbf-41b3-a71e-95eb8eb1883b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_25ca5d26-2643-4e4f-93da-6b0dbb31f68f/1/file",
+    "labsPublicationDate": "2026-07-15T02:35:13.693Z",
+    "name": "Plush Hangout",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:21:48.277Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_chill",
+      "author_tag_workout",
+      "author_tag_avatars",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_25ca5d26-2643-4e4f-93da-6b0dbb31f68f/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-15T02:35:13.693Z"
+  },
+  {
+    "authorId": "usr_1eaf852e-ecbe-467d-b2da-f3c6209ee250",
+    "authorName": "Jaaxy",
+    "capacity": 40,
+    "created_at": "2026-03-04T06:50:45.687Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 10,
+    "heat": 0,
+    "id": "wrld_98ff25f5-8c29-4a4a-b7d0-faaa43bc6d0b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_bd9f7e53-c90b-437a-9fa6-bc9ec8cbb1de/7/file",
+    "labsPublicationDate": "2026-03-04T06:54:45.672Z",
+    "name": "Purple haze~",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:21:48.172Z",
+    "recommendedCapacity": 20,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_bd9f7e53-c90b-437a-9fa6-bc9ec8cbb1de/7/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-04-08T06:51:00.004Z"
+  },
+  {
+    "authorId": "usr_c4187e20-9aaf-4d02-9a7e-c7228a18f294",
+    "authorName": "lemon8",
+    "capacity": 40,
+    "created_at": "2026-01-25T01:21:38.077Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 3351,
+    "heat": 6,
+    "id": "wrld_ef567eac-b7c4-49cd-8fb8-5472c75e45f7",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_1c71670c-7979-49a0-8b12-bfdb57550e92/2/file",
+    "labsPublicationDate": "2026-07-17T08:53:29.687Z",
+    "name": "タイドオブアルバ",
+    "occupants": 5,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:19:00.318Z",
+    "recommendedCapacity": 20,
+    "releaseStatus": "public",
+    "tags": [
+      "debug_allowed",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_1c71670c-7979-49a0-8b12-bfdb57550e92/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-24T08:20:04.709Z"
+  },
+  {
+    "authorId": "usr_84703d22-1d94-4c5b-aa92-5def5d48cdd9",
+    "authorName": "berol4",
+    "capacity": 64,
+    "created_at": "2026-07-12T20:09:26.856Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 7,
+    "heat": 5,
+    "id": "wrld_b2499636-fb11-4387-af10-0edde0f3a358",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_e216e44c-3f67-44cf-9470-3e66386230e1/1/file",
+    "labsPublicationDate": "2026-07-17T00:06:32.819Z",
+    "name": "CASITA DEL ROL By Berol4",
+    "occupants": 1,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:19:00.136Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_e216e44c-3f67-44cf-9470-3e66386230e1/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-23T22:57:16.666Z"
+  },
+  {
+    "authorId": "usr_cc93bf3a-212d-44a6-bbe3-13d64424d8a5",
+    "authorName": "KDDIテクノロジー",
+    "capacity": 64,
+    "created_at": "2025-12-09T17:57:55.879Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 27,
+    "heat": 0,
+    "id": "wrld_08d48648-489d-4232-a789-0c54513490d0",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_e963b2f6-05f6-4cfa-9abb-a3a0961551d9/1/file",
+    "labsPublicationDate": "2025-12-22T13:42:13.422Z",
+    "name": "KDDIテクノロジー VRChatサテライトオフィス",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:13:23.122Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_e963b2f6-05f6-4cfa-9abb-a3a0961551d9/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2025-12-22T13:42:13.423Z"
+  },
+  {
+    "authorId": "usr_e624dd38-987e-4ad9-acc0-eb7d1fc0f65a",
+    "authorName": "ᴛʜᴇ ᴍᴀᴊᴏʀ",
+    "capacity": 80,
+    "created_at": "2026-05-23T05:26:11.954Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 25,
+    "heat": 2,
+    "id": "wrld_07c5c1c4-0a5c-4daf-bf2b-a7e20f62e870",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2933cb02-cf70-463a-b347-e76d2e5dc06f/1/file",
+    "labsPublicationDate": "2026-05-23T09:01:54.652Z",
+    "name": "SCP United Pooling world",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T12:07:27.264Z",
+    "recommendedCapacity": 80,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_scp",
+      "author_tag_pooling",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2933cb02-cf70-463a-b347-e76d2e5dc06f/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-05-25T02:36:55.952Z"
+  },
+  {
+    "authorId": "usr_e7bc4f22-b7b8-4c23-a38f-63f192bf9edb",
+    "authorName": "けもすこ",
+    "capacity": 32,
+    "created_at": "2026-07-09T13:31:28.354Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 40,
+    "heat": 3,
+    "id": "wrld_d847fa83-1ed5-4c6f-ac28-bd977a39f7a9",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_80cd9f4a-b220-4ee1-a70e-7c101e973de0/2/file",
+    "labsPublicationDate": "2026-07-15T09:34:35.714Z",
+    "name": "enough",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T11:55:41.845Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_chill",
+      "author_tag_sleep",
+      "author_tag_night",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_80cd9f4a-b220-4ee1-a70e-7c101e973de0/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-22T14:04:58.492Z"
+  },
+  {
+    "authorId": "usr_7346da47-fe46-4b1a-92a4-71512dcad34a",
+    "authorName": "ゆかりんごパンチ",
+    "capacity": 24,
+    "created_at": "2023-06-11T13:58:20.568Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 12,
+    "heat": 3,
+    "id": "wrld_3d942c71-ea9d-47ad-886c-ad37e90d2389",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_0c0bb167-c1b2-41a8-beec-e4c1943d618a/4/file",
+    "labsPublicationDate": "2024-07-06T17:51:01.723Z",
+    "name": "It's nothing․",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T11:53:11.710Z",
+    "recommendedCapacity": 12,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_video",
+      "author_tag_chill",
+      "author_tag_pen",
+      "author_tag_room",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_0c0bb167-c1b2-41a8-beec-e4c1943d618a/4/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2019.4.31f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2024-07-26T09:26:20.029Z"
+  },
+  {
+    "authorId": "usr_55600a67-7684-43a0-946b-90946b2a2a9f",
+    "authorName": "˙·∗z0мв1z∗·˙",
+    "capacity": 30,
+    "created_at": "2026-07-01T19:04:04.734Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 11,
+    "heat": 3,
+    "id": "wrld_ad12f9ff-1b68-44b8-8510-9a11f6e23911",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_021c506e-a02e-4497-847a-a7ed59fadcef/1/file",
+    "labsPublicationDate": "2026-07-02T09:02:24.878Z",
+    "name": "Better home worldǃ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T11:51:48.175Z",
+    "recommendedCapacity": 15,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_021c506e-a02e-4497-847a-a7ed59fadcef/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-03T07:35:37.634Z"
+  },
+  {
+    "authorId": "usr_7d67368a-7e22-43c9-a126-6b8fcfb9be6f",
+    "authorName": "ᴍ̷ᴇ̷ʟ̷ʟ̷ᴏ̷",
+    "capacity": 64,
+    "created_at": "2026-05-15T09:46:21.904Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 13,
+    "heat": 3,
+    "id": "wrld_04db9e8f-e753-47f5-89d3-16cae4a5083b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_266bc0fc-c8ef-49dc-afef-a3a5c7f59fc4/3/file",
+    "labsPublicationDate": "2026-05-24T08:51:30.858Z",
+    "name": "Mello's Avi World",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T11:51:08.110Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "content_adult",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_266bc0fc-c8ef-49dc-afef-a3a5c7f59fc4/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-05-28T14:59:58.629Z"
+  },
+  {
+    "authorId": "usr_5fca7403-7149-4b1f-8483-0b0900a18ed7",
+    "authorName": "セリアseria",
+    "capacity": 24,
+    "created_at": "2026-06-25T06:50:55.939Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6087,
+    "heat": 5,
+    "id": "wrld_1f5f62ee-3cc2-4ae9-8ee1-c0b00ec10cb5",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_3b0cdf8a-08a7-4148-a8a9-0c5203ea79fc/9/file",
+    "labsPublicationDate": "2026-07-16T22:45:33.459Z",
+    "name": "終末旅行ごっこ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T11:47:35.942Z",
+    "recommendedCapacity": 12,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_snow",
+      "author_tag_blizzard",
+      "author_tag_fog",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_3b0cdf8a-08a7-4148-a8a9-0c5203ea79fc/9/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-21T07:08:41.810Z"
+  },
+  {
+    "authorId": "usr_43a840b9-2679-45f9-b966-3c2225a20718",
+    "authorName": "ユリメタ",
+    "capacity": 64,
+    "created_at": "2026-07-08T10:57:58.955Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 27,
+    "heat": 3,
+    "id": "wrld_047bfe42-9a08-422b-8a21-7cbdde398198",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_f43e3d55-2c23-454a-b7f9-dc4b7abb1545/4/file",
+    "labsPublicationDate": "2026-07-12T15:55:53.550Z",
+    "name": "HEAVY METAL LIVE YEAHǃǃǃǃǃ",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T11:47:31.685Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_f43e3d55-2c23-454a-b7f9-dc4b7abb1545/4/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-21T14:39:35.455Z"
+  },
+  {
+    "authorId": "usr_ef739ae6-5648-46e3-8a89-9d6f3f5c0e1e",
+    "authorName": "Himajinは暇人",
+    "capacity": 64,
+    "created_at": "2026-07-13T08:40:00.704Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 30,
+    "heat": 4,
+    "id": "wrld_d27cc6ce-2e8d-411f-8f28-1fb8bfe2979b",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_ee9405f9-6bd1-4b48-ab96-35d219c06eb7/1/file",
+    "labsPublicationDate": "2026-07-13T09:27:16.202Z",
+    "name": "the Homebrew Launcher",
+    "occupants": 1,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T11:42:00.207Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_chill",
+      "author_tag_home",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_ee9405f9-6bd1-4b48-ab96-35d219c06eb7/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-15T01:09:24.117Z"
+  },
+  {
+    "authorId": "usr_5f2b4bd7-882d-4971-851f-17e2855a8cd0",
+    "authorName": "-かげやま-",
+    "capacity": 64,
+    "created_at": "2026-06-30T11:45:07.760Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 16,
+    "heat": 3,
+    "id": "wrld_08ba98c3-124d-4c0b-a741-cd9876594c46",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c7439e84-485f-4b37-aa63-baae256c483b/2/file",
+    "labsPublicationDate": "2026-07-04T02:28:24.146Z",
+    "name": "ちるびすけっと",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T11:40:35.878Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c7439e84-485f-4b37-aa63-baae256c483b/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-18T03:14:58.488Z"
+  },
+  {
+    "authorId": "usr_41d0eefb-eacf-40d6-9516-b092473f5dfd",
+    "authorName": "~Grean~",
+    "capacity": 40,
+    "created_at": "2022-11-24T07:22:59.410Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 146,
+    "heat": 3,
+    "id": "wrld_46b432db-c944-431a-ae8f-fe7b7fa6d351",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_9f998134-617b-40e2-852f-d341fbff986c/3/file",
+    "labsPublicationDate": "2026-07-17T11:38:11.708Z",
+    "name": "One Piece - Romance Dawn",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 5,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T11:38:11.708Z",
+    "recommendedCapacity": 20,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_piece",
+      "author_tag_onepiece",
+      "author_tag_rp",
+      "author_tag_roleplay",
+      "author_tag_one",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_9f998134-617b-40e2-852f-d341fbff986c/3/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2019.4.31f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2019.4.31f1"
+      }
+    ],
+    "updated_at": "2026-07-17T11:38:11.786Z"
+  },
+  {
+    "authorId": "usr_c310d1f6-8a51-41ae-b469-124ff15c5841",
+    "authorName": "Psiοnic",
+    "capacity": 32,
+    "created_at": "2026-07-11T04:25:12.964Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 41,
+    "heat": 4,
+    "id": "wrld_514bf13b-12e0-48c8-8ae0-0cb1d95244ce",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_4c768dd2-8d6c-4d3a-a721-8987b6622d7e/2/file",
+    "labsPublicationDate": "2026-07-11T04:42:14.512Z",
+    "name": "Backrooms Chillax World （Now With TVsǃ）",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T11:00:59.146Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_4c768dd2-8d6c-4d3a-a721-8987b6622d7e/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-12T03:46:35.604Z"
+  },
+  {
+    "authorId": "usr_610b54ce-90f1-4e17-9205-fb7374520fba",
+    "authorName": "₴GIGA₴",
+    "capacity": 64,
+    "created_at": "2025-11-10T23:04:26.161Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 18,
+    "heat": 2,
+    "id": "wrld_fbb8b9bd-d4e4-4e4f-af21-c3ee5c95f45c",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_4f6beaaf-d920-46b0-bd5d-527263a943d1/1/file",
+    "labsPublicationDate": "2025-12-03T01:36:14.611Z",
+    "name": "just a test",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T10:58:33.637Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_4f6beaaf-d920-46b0-bd5d-527263a943d1/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2025-12-03T01:36:14.611Z"
+  },
+  {
+    "authorId": "usr_427a7a4f-0de4-472f-806c-43897b988513",
+    "authorName": "RobLeckie",
+    "capacity": 64,
+    "created_at": "2026-05-03T20:45:47.048Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 6,
+    "heat": 4,
+    "id": "wrld_080cacec-0946-4a8a-85f7-42cd8341f108",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_a0e3208c-782b-4f07-b714-59e84218cb8d/1/file",
+    "labsPublicationDate": "2026-07-16T13:19:16.288Z",
+    "name": "Leckie New Home",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T10:52:35.182Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_a0e3208c-782b-4f07-b714-59e84218cb8d/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-22T16:56:33.263Z"
+  },
+  {
+    "authorId": "usr_6d761ae0-b1a3-4b5f-b525-e9d768669fcc",
+    "authorName": "shiba_rintaro",
+    "capacity": 32,
+    "created_at": "2026-07-15T07:44:26.920Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 917,
+    "heat": 6,
+    "id": "wrld_8cbe8166-7d48-4aaa-b6c6-8aee98999340",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_65366dc9-095f-486b-b044-7c9dff8438d1/2/file",
+    "labsPublicationDate": "2026-07-15T10:03:30.901Z",
+    "name": "屋上で星を見ながらごろ寝したい",
+    "occupants": 8,
+    "organization": "vrchat",
+    "popularity": 6,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T10:31:34.447Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_chill",
+      "author_tag_sleep",
+      "author_tag_night",
+      "system_approved",
+      "system_updated_recently",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_65366dc9-095f-486b-b044-7c9dff8438d1/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-22T10:42:27.923Z"
+  },
+  {
+    "authorId": "usr_d5466438-3a5c-4d00-a399-ef95e610f2d3",
+    "authorName": "Iron_Eagle",
+    "capacity": 64,
+    "created_at": "2025-06-06T14:14:14.178Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 0,
+    "heat": 2,
+    "id": "wrld_f306764d-8873-40a5-aa98-6eb65456afb7",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_eb3dd059-d39e-476b-8f6d-de137f5f7e0c/4/file",
+    "labsPublicationDate": "2025-06-15T20:12:17.380Z",
+    "name": "Mein Zuhause",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T10:09:36.303Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_eb3dd059-d39e-476b-8f6d-de137f5f7e0c/4/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2025-11-13T08:20:44.210Z"
+  },
+  {
+    "authorId": "usr_606a3983-58d5-443c-8a96-3781228b2e05",
+    "authorName": "º结衣º",
+    "capacity": 32,
+    "created_at": "2025-06-17T05:27:27.230Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 14,
+    "heat": 0,
+    "id": "wrld_0622c903-de13-46e0-ad19-31e74e0953e8",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_741aa64e-26f1-424d-8194-20336466d0bd/2/file",
+    "labsPublicationDate": "2026-07-17T10:01:59.279Z",
+    "name": "回忆小窝",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T10:01:59.280Z",
+    "recommendedCapacity": 16,
+    "releaseStatus": "public",
+    "tags": [
+      "debug_allowed",
+      "system_approved",
+      "system_published_recently"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_741aa64e-26f1-424d-8194-20336466d0bd/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T10:01:59.462Z"
+  },
+  {
+    "authorId": "usr_af7ad01b-80f3-4516-b467-dec2bfce3fb1",
+    "authorName": "㆐פרחים ㆐",
+    "capacity": 64,
+    "created_at": "2026-05-27T23:25:51.020Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 36,
+    "heat": 0,
+    "id": "wrld_ec68be44-b6f0-4b8d-85da-a3af8d3e952c",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_f895f9e9-59d9-40e1-a5c3-8a6ff80533da/1/file",
+    "labsPublicationDate": "2026-07-10T19:41:43.490Z",
+    "name": "The Hunt For The Whistle （W․I․Pǃǃ）",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T09:47:45.851Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_f895f9e9-59d9-40e1-a5c3-8a6ff80533da/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-10T19:42:26.365Z"
+  },
+  {
+    "authorId": "usr_a6986ff8-0d15-4d10-979f-196af162e3cf",
+    "authorName": "SomeFish3000",
+    "capacity": 64,
+    "created_at": "2026-04-21T11:56:49.789Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 1,
+    "heat": 2,
+    "id": "wrld_6022db35-2390-42bd-98fc-588b19b6e5c6",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_e98e927c-ac27-459b-9ff6-6509f491a02d/2/file",
+    "labsPublicationDate": "2026-04-21T11:59:07.547Z",
+    "name": "My vrc art （wip）",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 3,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T09:44:57.688Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_e98e927c-ac27-459b-9ff6-6509f491a02d/2/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-04-22T04:26:32.286Z"
+  },
+  {
+    "authorId": "usr_7b199b6e-823d-45a4-a10c-f88b2b7ab044",
+    "authorName": "۶Cony۶",
+    "capacity": 80,
+    "created_at": "2026-07-16T00:20:34.752Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 2,
+    "heat": 4,
+    "id": "wrld_065090ab-a6de-4434-ad11-6486c3061c81",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_461ba138-3aca-4db3-8b65-75da96bf6309/1/file",
+    "labsPublicationDate": "2026-07-17T03:42:05.690Z",
+    "name": "Salon Rio Nilo",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T09:29:34.134Z",
+    "recommendedCapacity": 80,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_dj",
+      "author_tag_party",
+      "author_tag_drink",
+      "author_tag_spanish",
+      "author_tag_parties",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_461ba138-3aca-4db3-8b65-75da96bf6309/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "android",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "ios",
+        "unityVersion": "2022.3.22f1"
+      },
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-17T03:42:05.691Z"
+  },
+  {
+    "authorId": "usr_b3a8d243-1a16-4532-951f-255b1f13f2ed",
+    "authorName": "ω I Ł Ł I",
+    "capacity": 64,
+    "created_at": "2026-07-12T15:55:04.614Z",
+    "defaultContentSettings": {},
+    "disabledPropAbilities": [],
+    "favorites": 85,
+    "heat": 4,
+    "id": "wrld_3d16a23b-56d1-4fe3-8478-14f8e2ca3db0",
+    "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c096402e-6c0b-4718-a8e3-cb2dc9a85d63/1/file",
+    "labsPublicationDate": "2026-07-12T15:55:49.734Z",
+    "name": "Public Avatars x Chill World",
+    "occupants": 0,
+    "organization": "vrchat",
+    "popularity": 4,
+    "previewYoutubeId": null,
+    "publicationDate": "2026-07-17T09:15:33.622Z",
+    "recommendedCapacity": 32,
+    "releaseStatus": "public",
+    "tags": [
+      "author_tag_animations",
+      "author_tag_effect",
+      "author_tag_chill",
+      "author_tag_relax",
+      "author_tag_avatars",
+      "system_approved"
+    ],
+    "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c096402e-6c0b-4718-a8e3-cb2dc9a85d63/1/256",
+    "udonProducts": [],
+    "unityPackages": [
+      {
+        "created_at": null,
+        "platform": "standalonewindows",
+        "unityVersion": "2022.3.22f1"
+      }
+    ],
+    "updated_at": "2026-07-18T09:25:15.330Z"
+  }
+]
