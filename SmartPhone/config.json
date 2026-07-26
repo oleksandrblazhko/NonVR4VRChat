@@ -8,8 +8,8 @@
     "websocket": false
   },
   "thresholds": {
-    "move": 0.5,
-    "run": 3.0
+    "move": 5.0,
+    "run": 20.0
   },
   "osc_bindings": [
     {

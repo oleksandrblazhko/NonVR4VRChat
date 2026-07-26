@@ -71,6 +71,12 @@ def clamp(value, min_val, max_val):
     """Допоміжна функція, що обмежує значення в заданому діапазоні [min_val, max_val]."""
     return max(min_val, min(value, max_val))
 
+def degrees_to_accel(degrees):
+    """
+    Converts an angle in degrees to the corresponding raw accelerometer value.
+    """
+    return 9.8 * math.sin(math.radians(degrees))
+
 def load_config():
     """
     Завантажує конфігурацію з файлу.
@@ -175,7 +181,7 @@ async def register_client(websocket):
         CONNECTED_CLIENTS.remove(websocket)
         print(f"Клієнт від'єднався. Всього клієнтів: {len(CONNECTED_CLIENTS)}")
 
-async def data_loop(osc_sender=None, run_threshold=1.5):
+async def data_loop(osc_sender=None, run_threshold=1.5, move_threshold=0.5):
     """
     Головний цикл програми: періодично запитує дані з HTTP-сервера,
     обчислює кути нахилу та транслює їх усім підключеним клієнтам.
@@ -206,7 +212,7 @@ async def data_loop(osc_sender=None, run_threshold=1.5):
                             accZ -= delta_accZ
                         
                         if osc_sender:
-                            osc_sender.send_commands(raw_accX, raw_accY, raw_accZ, delta_accX, delta_accY, delta_accZ, run_threshold=run_threshold)
+                            osc_sender.send_commands(raw_accX, raw_accY, raw_accZ, delta_accX, delta_accY, delta_accZ, run_threshold=run_threshold, move_threshold=move_threshold)
 
                         # Застосовуємо фільтр низьких частот (EMA)
                         filtered_accX = ALPHA * accX + (1 - ALPHA) * filtered_accX
@@ -301,7 +307,7 @@ def input_handler(config):
         time.sleep(0.1)
 
 
-async def main_async(osc_sender=None, use_websocket=False, run_threshold=1.5, config=None):
+async def main_async(osc_sender=None, use_websocket=False, run_threshold=1.5, move_threshold=0.5, config=None):
     """Основна функція, яка запускає WebSocket-сервер та цикл обробки даних."""
     global HTTP_SERVER_URL, delta_accX, delta_accY, delta_accZ, calibration_state
     
@@ -356,7 +362,7 @@ async def main_async(osc_sender=None, use_websocket=False, run_threshold=1.5, co
     # Always print keyboard control hints
     print("Клавіші керування: F1 - калібрування стану спокою, Esc - завершення роботи")
 
-    data_task = asyncio.create_task(data_loop(osc_sender=osc_sender, run_threshold=run_threshold))
+    data_task = asyncio.create_task(data_loop(osc_sender=osc_sender, run_threshold=run_threshold, move_threshold=move_threshold))
 
     try:
         await data_task
@@ -373,8 +379,12 @@ def main():
     config = load_config()
     debug_mode = config.get("debug", False)
     thresholds = config.get("thresholds", {})
-    run_threshold = thresholds.get("run", 1.5)
-    move_threshold = thresholds.get("move", 0.5)
+    run_threshold_deg = thresholds.get("run", 20.0)
+    move_threshold_deg = thresholds.get("move", 5.0)
+    
+    run_threshold = degrees_to_accel(run_threshold_deg)
+    move_threshold = degrees_to_accel(move_threshold_deg)
+    
     startup_mode = config.get("startup_mode", {})
 
     parser = argparse.ArgumentParser(description="WebSocket-сервер для трансляції даних з акселерометра.")
