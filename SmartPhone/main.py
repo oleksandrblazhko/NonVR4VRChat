@@ -13,11 +13,20 @@ import winsound
 import argparse
 try:
     from osc_commands import OSCCommands
+    from smart_calibration import SmartCalibration, DataCollector
 except ImportError:
     print("Помилка імпорту. Переконайтеся, що бібліотека python-osc встановлено.")
     OSCCommands = None
+    SmartCalibration = None
+    DataCollector = None
 
 # --- Глобальні змінні та налаштування ---
+
+# Подія для синхронізації доступу до клавіатури
+keyboard_input_suspended = threading.Event()
+
+# Блокування для запобігання одночасного запуску кількох калібрувань
+smart_cal_lock = threading.Lock()
 
 # Змінні для калібрування
 calibration_values = {
@@ -34,6 +43,34 @@ class CalibrationState:
 
 calibration_state = CalibrationState.IDLE
 calibration_data = []
+
+class SmartCalibrationState:
+    IDLE = 0
+    COLLECTING_NEUTRAL = 1
+    COLLECTING_FORWARD = 2
+    COLLECTING_BACKWARD = 3
+    COLLECTING_LEFT = 4
+    COLLECTING_RIGHT = 5
+    DONE = 6
+
+class State:
+    def __init__(self, initial_value):
+        self._value = initial_value
+
+    def get(self):
+        return self._value
+
+    def set(self, new_value):
+        self._value = new_value
+
+smart_calibration_state = State(SmartCalibrationState.IDLE)
+smart_calibration_data = {
+    "neutral": [],
+    "forward": [],
+    "backward": [],
+    "left": [],
+    "right": [],
+}
 
 # Множина для зберігання всіх підключених клієнтів WebSocket
 CONNECTED_CLIENTS = set()
@@ -189,6 +226,7 @@ async def data_loop(osc_sender=None, run_threshold=1.5, move_threshold=0.5):
     обчислює кути нахилу та транслює їх усім підключеним клієнтам.
     """
     global calibration_state, calibration_values, calibration_data, filtered_accX, filtered_accY, filtered_accZ
+    global smart_calibration_state, smart_calibration_data
 
     async with aiohttp.ClientSession() as session:
         while True:
@@ -203,6 +241,20 @@ async def data_loop(osc_sender=None, run_threshold=1.5, move_threshold=0.5):
                         accX = raw_accX
                         accY = raw_accY
                         accZ = raw_accZ
+
+                        current_smart_state = smart_calibration_state.get()
+                        if current_smart_state != SmartCalibrationState.IDLE and current_smart_state != SmartCalibrationState.DONE:
+                            if current_smart_state == SmartCalibrationState.COLLECTING_NEUTRAL:
+                                smart_calibration_data["neutral"].append((accX, accY, accZ))
+                            elif current_smart_state == SmartCalibrationState.COLLECTING_FORWARD:
+                                smart_calibration_data["forward"].append((accX, accY, accZ))
+                            elif current_smart_state == SmartCalibrationState.COLLECTING_BACKWARD:
+                                smart_calibration_data["backward"].append((accX, accY, accZ))
+                            elif current_smart_state == SmartCalibrationState.COLLECTING_LEFT:
+                                smart_calibration_data["left"].append((accX, accY, accZ))
+                            elif current_smart_state == SmartCalibrationState.COLLECTING_RIGHT:
+                                smart_calibration_data["right"].append((accX, accY, accZ))
+                            continue
 
                         if calibration_state == CalibrationState.CALIBRATING:
                             calibration_data.append((accX, accY, accZ))
@@ -285,26 +337,87 @@ def calibration_thread(config):
 
     calibration_state = CalibrationState.DONE
 
-import os
-import signal
+def smart_calibration_thread(config, osc_sender, lock):
+    """
+    Потік для виконання розумного калібрування.
+    """
+    try:
+        global smart_calibration_state, smart_calibration_data, keyboard_input_suspended, calibration_values
+        if not SmartCalibration:
+            print("Модуль SmartCalibration не завантажено.")
+            return
 
-def input_handler(config):
+        data_collector = DataCollector(smart_calibration_data, smart_calibration_state, SmartCalibrationState)
+        calibrator = SmartCalibration(data_collector)
+        recommendations = calibrator.run_calibration()
+
+        if recommendations and recommendations.get("bindings"):
+            new_bindings = recommendations["bindings"]
+            new_calibration = recommendations.get("calibration", {})
+
+            while True:
+                keyboard_input_suspended.set() # Призупинити input_handler
+                answer = input("Зберегти нові налаштування? (y/n): ").lower()
+                keyboard_input_suspended.clear() # Відновити input_handler
+
+                if answer in ["y", "yes"]:
+                    config["osc_bindings"] = new_bindings
+                    if new_calibration:
+                        config["calibration"] = new_calibration
+                        # Also update the global calibration_values so it's used immediately
+                        calibration_values.update(new_calibration)
+                    
+                    save_config(config)
+                    
+                    if osc_sender:
+                        osc_sender.update_bindings(new_bindings)
+
+                    print("Налаштування оновлено.")
+                    break
+                elif answer in ["n", "no"]:
+                    print("Зміни скасовано.")
+                    break
+            print("Клавіші керування: F1 - калібрування стану спокою, F2 - розумне калібрування, Esc - завершення роботи")
+    finally:
+        lock.release()
+
+def input_handler(config, osc_sender=None):
     """
     Обробник введення з клавіатури для керування програмою.
     """
-    global calibration_state
-    
+    global calibration_state, smart_calibration_state, keyboard_input_suspended
+
     while True:
-        key = keyboard.read_key()
-        if key == 'f1' or key == 'F1':
-            if calibration_state != CalibrationState.CALIBRATING:
-                cal_thread = threading.Thread(target=calibration_thread, args=(config,))
-                cal_thread.start()
-        elif key == 'esc':
-            print("Завершення роботи...")
-            os.kill(os.getpid(), signal.SIGINT)
-            break
-        time.sleep(0.1)
+        if keyboard_input_suspended.is_set():
+            time.sleep(0.1)
+            continue
+
+        try:
+            key = keyboard.read_key()
+            if key == 'f1' or key == 'F1':
+                if calibration_state != CalibrationState.CALIBRATING and smart_calibration_state.get() == SmartCalibrationState.IDLE:
+                    cal_thread = threading.Thread(target=calibration_thread, args=(config,))
+                    cal_thread.start()
+            elif key == 'f2' or key == 'F2':
+                if smart_cal_lock.acquire(blocking=False):
+                    
+                    if calibration_state == CalibrationState.CALIBRATING or smart_calibration_state.get() != SmartCalibrationState.IDLE:
+                        smart_cal_lock.release()
+                        # print("DEBUG: Another calibration process is active. Ignoring F2 press.")
+                    else:
+                        # print(f"DEBUG: Starting smart_calibration_thread from thread {threading.get_ident()}, Time: {time.time()}")
+                        smart_cal_thread = threading.Thread(
+                            target=smart_calibration_thread, args=(config, osc_sender, smart_cal_lock)
+                        )
+                        smart_cal_thread.start()
+                
+            elif key == 'esc':
+                print("Завершення роботи...")
+                os.kill(os.getpid(), signal.SIGINT)
+                break
+        except Exception as e:
+            # У випадку помилки, якщо `read_key` не працює, коли інший потік використовує `input`
+            time.sleep(0.1)
 
 
 async def main_async(osc_sender=None, use_websocket=False, run_threshold=1.5, move_threshold=0.5, config=None):
@@ -360,7 +473,7 @@ async def main_async(osc_sender=None, use_websocket=False, run_threshold=1.5, mo
         print("WebSocket-сервер не запущено (використовуйте --websocket для активації).")
     
     # Always print keyboard control hints
-    print("Клавіші керування: F1 - калібрування стану спокою, Esc - завершення роботи")
+    print("Клавіші керування: F1 - калібрування стану спокою, F2 - розумне калібрування, Esc - завершення роботи")
 
     data_task = asyncio.create_task(data_loop(osc_sender=osc_sender, run_threshold=run_threshold, move_threshold=move_threshold))
 
@@ -374,6 +487,7 @@ async def main_async(osc_sender=None, use_websocket=False, run_threshold=1.5, mo
             await server.wait_closed()
 
 def main():
+    # print(f"DEBUG: Main function started. Thread ID: {threading.get_ident()}, Time: {time.time()}")
     global HTTP_SERVER_URL
 
     config = load_config()
@@ -404,7 +518,7 @@ def main():
         osc_bindings = config.get("osc_bindings", [])
         osc_sender = OSCCommands(debug=debug_mode, osc_bindings=osc_bindings)
 
-    input_thread = threading.Thread(target=input_handler, args=(config,))
+    input_thread = threading.Thread(target=input_handler, args=(config, osc_sender))
     input_thread.daemon = True
     input_thread.start()
 

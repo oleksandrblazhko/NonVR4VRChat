@@ -13,6 +13,16 @@ class OSCCommands:
         self._pressed = {binding["osc_command"]: False for binding in osc_bindings}
         print("OSC command sender initialized.")
 
+    def update_bindings(self, new_bindings):
+        """
+        Updates the OSC bindings and resets the state.
+        """
+        print("Updating OSC bindings...")
+        self.release_all_commands()
+        self.osc_bindings = new_bindings
+        self._pressed = {binding["osc_command"]: False for binding in self.osc_bindings}
+        print(f"New bindings loaded: {self.osc_bindings}")
+
     def _set_command(self, command: str, active: bool):
         """
         Sends an OSC command only when its state has changed.

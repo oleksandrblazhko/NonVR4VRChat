@@ -1,6 +1,6 @@
 {
   "server_ip": "192.168.0.104",
-  "debug": true,
+  "debug": false,
   "startup_mode": {
     "osc": true,
     "websocket": false
@@ -20,11 +20,13 @@
     },
     {
       "osc_command": "/input/MoveLeft",
-      "axis": "Y"
+      "axis": "Y",
+      "invert": true
     },
     {
       "osc_command": "/input/MoveRight",
-      "axis": "Y"
+      "axis": "Y",
+      "invert": true
     },
     {
       "osc_command": "/input/Run",
