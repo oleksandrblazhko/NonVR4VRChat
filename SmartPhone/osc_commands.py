@@ -17,6 +17,9 @@ class OSCCommands:
         """
         Sends an OSC command only when its state has changed.
         """
+        if command not in self._pressed:
+            return # Ignore commands not in the bindings
+
         if active:
             if not self._pressed.get(command, True):
                 if self.debug:
@@ -46,31 +49,40 @@ class OSCCommands:
         dy = accY - offset_accY
         dz = accZ - offset_accZ # Not used in current bindings, but available
 
+        # Handle mutually exclusive commands
+        is_moving_forward = False
+        is_moving_backward = False
+        is_moving_left = False
+        is_moving_right = False
+        is_running = False
+
         for binding in self.osc_bindings:
             command = binding["osc_command"]
             axis = binding["axis"]
-            active = False
 
-            if command == "/input/MoveForward":
-                if axis == "X" and dx > threshold:
-                    active = True
-            elif command == "/input/MoveBackward":
-                if axis == "X" and dx < -threshold:
-                    active = True
-            elif command == "/input/MoveLeft":
-                if axis == "Y" and dy < -threshold:
-                    active = True
-            elif command == "/input/MoveRight":
-                if axis == "Y" and dy > threshold:
-                    active = True
-            elif command == "/input/Run":
-                if axis == "X_Y" and (abs(dx) > run_threshold or abs(dy) > run_threshold):
-                    active = True
-            
-            # Additional logic can be added here for other commands and axes
-            # For example, using the Z-axis:
-            # elif command == "/input/Jump":
-            #     if axis == "Z" and dz > some_z_threshold:
-            #         active = True
+            if command == "/input/MoveForward" and axis == "X" and dx > threshold:
+                is_moving_forward = True
+            elif command == "/input/MoveBackward" and axis == "X" and dx < -threshold:
+                is_moving_backward = True
+            elif command == "/input/MoveLeft" and axis == "Y" and dy < -threshold:
+                is_moving_left = True
+            elif command == "/input/MoveRight" and axis == "Y" and dy > threshold:
+                is_moving_right = True
+            elif command == "/input/Run" and axis == "X_Y" and (abs(dx) > run_threshold or abs(dy) > run_threshold):
+                is_running = True
 
-            self._set_command(command, active)
+        self._set_command("/input/MoveForward", is_moving_forward)
+        self._set_command("/input/MoveBackward", is_moving_backward)
+        self._set_command("/input/MoveLeft", is_moving_left)
+        self._set_command("/input/MoveRight", is_moving_right)
+        self._set_command("/input/Run", is_running)
+
+        # Example for other commands
+        # for binding in self.osc_bindings:
+        #     command = binding["osc_command"]
+        #     axis = binding["axis"]
+        #     if command == "/input/Jump":
+        #         if axis == "Z" and dz > some_z_threshold:
+        #             self._set_command(command, True)
+        #         else:
+        #             self._set_command(command, False)
