@@ -27,19 +27,36 @@ class OSCCommands:
         """
         Sends an OSC command only when its state has changed.
         """
+
         if command not in self._pressed:
-            return # Ignore commands not in the bindings
+            return  # Ignore commands not in the bindings
+
+        # ANSI-коди кольорів
+        GREEN = "\033[92m"
+        RED = "\033[91m"
+        RESET = "\033[0m"
+
+        # Відступи для різних команд
+        INDENTS = {
+            "/input/Run": 95,
+            "/input/MoveLeft": 0,
+            "/input/MoveForward": 30,
+            "/input/MoveBackward": 30,
+            "/input/MoveRight": 65,
+        }
+
+        indent = " " * INDENTS.get(command, 0)
 
         if active:
             if not self._pressed.get(command, True):
                 if self.debug:
-                    print(f"OSC out: {command} -> {True}")
+                    print(f"{indent}{GREEN} OSC:{command}-{True}{RESET}")
                 self.client.send_message(command, True)
                 self._pressed[command] = True
         else:
             if self._pressed.get(command, False):
                 if self.debug:
-                    print(f"OSC out: {command} -> {False}")
+                    print(f"{indent}{RED} OSC:{command}-{False}{RESET}")
                 self.client.send_message(command, False)
                 self._pressed[command] = False
 
@@ -70,24 +87,19 @@ class OSCCommands:
 
             value = deltas.get(axis)
             
-            # Apply inversion only to directional commands
-            if command in ["/input/MoveForward", "/input/MoveBackward", "/input/MoveLeft", "/input/MoveRight"]:
-                if value is not None and invert:
-                    value = -value
-
             is_active = False
             if command == "/input/MoveForward":
                 if value is not None:
-                    is_active = value > move_threshold
+                    is_active = (value > move_threshold) if not invert else (value < -move_threshold)
             elif command == "/input/MoveBackward":
                 if value is not None:
-                    is_active = value < -move_threshold
+                    is_active = (value < -move_threshold) if not invert else (value > move_threshold)
             elif command == "/input/MoveLeft":
                 if value is not None:
-                    is_active = value < -move_threshold
+                    is_active = (value < -move_threshold) if not invert else (value > move_threshold)
             elif command == "/input/MoveRight":
                 if value is not None:
-                    is_active = value > move_threshold
+                    is_active = (value > move_threshold) if not invert else (value < -move_threshold)
             elif command == "/input/Run":
                 axes_for_run = axis.split('_')
                 is_running = False

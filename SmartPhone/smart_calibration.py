@@ -46,7 +46,7 @@ class SmartCalibration:
                 print(f"{i} ...")
                 winsound.Beep(1000, 200)
             time.sleep(1)
-        
+        time.sleep(1);
         print("Збір даних:")
         self._data_collector.start_collecting(position)
         for i in range(self.collection_duration, 0, -1):

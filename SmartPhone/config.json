@@ -1,6 +1,6 @@
 {
-  "server_ip": "192.168.0.104",
-  "debug": false,
+  "server_ip": "192.168.0.102",
+  "debug": true,
   "startup_mode": {
     "osc": true,
     "websocket": false
@@ -12,30 +12,30 @@
   "osc_bindings": [
     {
       "osc_command": "/input/MoveForward",
-      "axis": "X"
+      "axis": "Z",
+      "invert": true
     },
     {
       "osc_command": "/input/MoveBackward",
-      "axis": "X"
+      "axis": "Z",
+      "invert": true
     },
     {
       "osc_command": "/input/MoveLeft",
-      "axis": "Y",
-      "invert": true
+      "axis": "X"
     },
     {
       "osc_command": "/input/MoveRight",
-      "axis": "Y",
-      "invert": true
+      "axis": "X"
     },
     {
       "osc_command": "/input/Run",
-      "axis": "X_Y"
+      "axis": "Z_X"
     }
   ],
   "calibration": {
-    "delta_accX": 0.0313889842690678,
-    "delta_accY": 0.09665212214406779,
-    "delta_accZ": -9.679016995480227
+    "delta_accX": -0.56,
+    "delta_accY": 9.4,
+    "delta_accZ": -2.56
   }
 }
