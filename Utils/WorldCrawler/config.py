@@ -8,7 +8,7 @@
 
 USERNAME = "blazhko"
 
-PASSWORD = "123Ghbdtn321!"
+PASSWORD = ""
 
 # Кількість світів за один запит
 PAGE_SIZE = 100
