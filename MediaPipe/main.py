@@ -186,14 +186,6 @@ while True:
                 cx = int((1 - landmark.x) * w)
                 cy = int(landmark.y * h)
                 cv2.circle(frame, (cx, cy), 10, (0, 255, 0), cv2.FILLED)
-                
-                # Display coordinates vertically
-                cv2.putText(frame, f"x={landmark.x:.2f}", (cx - 50, cy + 25), 
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
-                cv2.putText(frame, f"y={landmark.y:.2f}", (cx - 50, cy + 40), 
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
-                cv2.putText(frame, f"z={landmark.z:.2f}", (cx - 50, cy + 55), 
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
 
         pose_frame = create_pose_frame(
 
@@ -243,68 +235,6 @@ while True:
                 look_vertical
             )
 
-        else:
-            look_horizontal = 0.0
-            look_vertical = 0.0
-
-        # ----------------------------------------------------
-        # Display
-        # ----------------------------------------------------
-
-        cv2.putText(
-            frame,
-            f"FPS: {fps:.1f}",
-            (10, 30),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.7,
-            (0, 255, 0),
-            2
-        )
-
-        cv2.putText(
-            frame,
-            f"Yaw Metric: {yaw_metric:.3f}",
-            (10, 60),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.7,
-            (255, 255, 0),
-            2
-        )
-
-        cv2.putText(
-            frame,
-            f"Pitch Metric: {pitch_metric:.3f}",
-            (10, 90),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.7,
-            (255, 255, 0),
-            2
-        )
-
-        cv2.putText(
-            frame,
-            f"LookH: {look_horizontal:.2f}",
-            (10, 120),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.7,
-            (0, 255, 255),
-            2
-        )
-
-        cv2.putText(
-            frame,
-            f"LookV: {look_vertical:.2f}",
-            (10, 150),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.7,
-            (0, 255, 255),
-            2
-        )
-
-        interface.draw_status(
-            frame
-        )
-
     else:
 
         cv2.putText(
@@ -318,8 +248,12 @@ while True:
         )
 
     # --------------------------------------------------------
-    # Hints
+    # Status & hints
     # --------------------------------------------------------
+
+    interface.draw_status(
+        frame
+    )
 
     interface.draw_hints(
         frame

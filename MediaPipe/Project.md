@@ -1,19 +1,21 @@
 # Документація алгоритмів MediaPipe4VRChat
 
-Цей документ містить покроковий аналіз та математичний опис ключових алгоритмів проекту [MediaPipe4VRChat](file:///C:/Users/User/Yoga/Yoga/MediaPipe4VRChat):
-1.  **Відстеження:** Обчислення 3D-орієнтації тулуба ([BodyTracker](file:///C:/Users/User/Yoga/Yoga/MediaPipe4VRChat/body_tracker.py#L71)).
-2.  **Логіка керування:** Обробка, фільтрація та відображення кутів у OSC-команди ([LookController](file:///C:/Users/User/Yoga/Yoga/MediaPipe4VRChat/look_controller.py#L87)).
+Цей документ містить покроковий аналіз та математичний опис ключових алгоритмів проекту [MediaPipe4VRChat](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe):
+1.  **Відстеження:** Обчислення 3D-орієнтації тулуба ([BodyTracker](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/body_tracker.py#L65)).
+2.  **Логіка керування:** Обробка, фільтрація та відображення кутів у OSC-команди ([LookController](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/look_controller.py#L38)).
+3.  **Вихід у VRChat:** Єдина точка виходу — OSC-повідомлення, та жести кистей, які їх породжують ([OSCSender](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/osc_sender.py#L63), [GrabController / UseController](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/grabcontroller.py#L14)).
+4.  **Клавіатура та екран:** Гарячі клавіші, сесія калібрування й усе, що малюється поверх відео ([Interface](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L72)).
 
 ---
 
 ## ЧАСТИНА 1. Відстеження 3D-орієнтації тулуба (BodyTracker)
 
 ### 1.1. Вхідні дані
-Алгоритм використовує координати суглобів із тривимірного простору MediaPipe, представлені об'єктом [Skeleton](file:///C:/Users/User/Yoga/Yoga/MediaPipe4VRChat/pose_types.py#L35):
+Алгоритм використовує координати суглобів із тривимірного простору MediaPipe, представлені об'єктом [Skeleton](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/pose_types.py#L36):
 *   Плечі: $P_{left\_shoulder}$ та $P_{right\_shoulder}$
 *   Стегна: $P_{left\_hip}$ та $P_{right\_hip}$
 
-Кожна точка є об'єктом типу [Vector3](file:///C:/Users/User/Yoga/Yoga/MediaPipe4VRChat/math3d.py#L25) з координатами $(x, y, z)$.
+Кожна точка є об'єктом типу [Vector3](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/math3d.py#L25) з координатами $(x, y, z)$.
 
 ### 1.2. Покроковий опис алгоритму відстеження
 
@@ -74,7 +76,7 @@ graph TD
 
 ## ЧАСТИНА 2. Логіка керування (LookController)
 
-Модуль [LookController](file:///C:/Users/User/Yoga/Yoga/MediaPipe4VRChat/look_controller.py#L87) обробляє отримані кути yaw та pitch, 
+Модуль [LookController](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/look_controller.py#L38) обробляє отримані кути yaw та pitch, 
 фільтрує шум і перетворює їх на нормовані значення погляду для VRChat.
 
 ### 2.1. Вхідні дані
@@ -97,7 +99,7 @@ graph TD
 $$\Delta\theta_{yaw} = \text{degrees}(\text{yaw\_angle} - \text{neutral\_yaw})$$
 $$\Delta\theta_{pitch} = \text{degrees}(\text{pitch\_angle} - \text{neutral\_pitch})$$
 
-#### Крок 2: Нормалізація та нелінійна обробка ([normalize_angle](file:///C:/Users/User/Yoga/Yoga/MediaPipe4VRChat/look_controller.py#L131))
+#### Крок 2: Нормалізація та нелінійна обробка `normalize_angle`
 Для кожного кута $\theta$ виконуються такі операції:
 1.  **Застосування мертвої зони (Dead Zone)**:
     Якщо кут лежить у межах мертвої зони ($|\theta| \le \text{dead\_zone}$), рух ігнорується, і функція повертає $0.0$.
@@ -165,7 +167,7 @@ graph TD
     CEN --> SL
 ```
 
-Гілка погляду спрацьовує **на кожному кадрі** і лише за умови `calibration.is_ready()` ([main.py:226](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/main.py#L226)). Гілка кисті працює окремо від калібрування та надсилає повідомлення **лише в момент переходу стану** ([main.py:165](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/main.py#L165)).
+Гілка погляду спрацьовує **на кожному кадрі** і лише за умови `calibration.is_ready()` ([main.py:218](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/main.py#L218)). Гілка кисті працює окремо від калібрування та надсилає повідомлення **лише в момент переходу стану** ([main.py:165](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/main.py#L165)).
 
 ### 3.3. Відповідність «поза → OSC-команда»
 
@@ -255,8 +257,8 @@ $$V_{target} = \begin{cases} 0.1 & P_{norm} = 0 \\ 0.1 + 0.9 \cdot P_{norm} & P_
 
 [OSCSender.center()](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/osc_sender.py#L240) надсилає пару `LookHorizontal = 0.0`, `LookVertical = 0.0`. Точки виклику:
 
-* завершення калібрування ([interface.py:206](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L206)) — значення одразу перезаписується наступним кадром, який дає нейтраль $0.5/0.1$;
-* скидання клавішею `R` ([interface.py:227](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L227)) — калібрування стає неготовим, тому `send_look` більше не викликається й погляд фактично «замирає» на $0.0$.
+* завершення калібрування ([interface.py:208](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L208)) — значення одразу перезаписується наступним кадром, який дає нейтраль $0.5/0.1$;
+* скидання клавішею `R` ([interface.py:229](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L229)) — калібрування стає неготовим, тому `send_look` більше не викликається й погляд фактично «замирає» на $0.0$.
 
 ### 3.5. Невикористані методи
 
@@ -337,47 +339,47 @@ $$V_{target} = \begin{cases} 0.1 & P_{norm} = 0 \\ 0.1 + 0.9 \cdot P_{norm} & P_
 ```mermaid
 graph TD
     subgraph main.py
-        WK["read_key (main.py:342)"] --> HK["handle_key (main.py:341)"]
-        POSE["кадр, де results.pose_landmarks не None"] --> UPD["update (main.py:217)"]
-        DISP["блок Display"] --> ST["draw_status (main.py:304)"]
-        SHOW["перед cv2.imshow"] --> HN["draw_hints (main.py:324)"]
+        WK["read_key (main.py:276)"] --> HK["handle_key (main.py:275)"]
+        POSE["кадр, де results.pose_landmarks не None"] --> UPD["update (main.py:209)"]
+        DISP["блок Status & hints"] --> ST["draw_status (main.py:254)"]
+        SHOW["перед cv2.imshow"] --> HN["draw_hints (main.py:258)"]
     end
 
     HK -->|"ESC (27)"| QUIT["True → break циклу"]
-    HK -->|"1"| SC["start_calibration (interface.py:143)"]
-    HK -->|"r / R"| RS["reset (interface.py:215)"]
+    HK -->|"1"| SC["start_calibration (interface.py:145)"]
+    HK -->|"r / R"| RS["reset (interface.py:217)"]
 
-    SC --> THR["_countdown: потік із 3 гудками (interface.py:231)"]
+    SC --> THR["_countdown: потік із 3 гудками (interface.py:233)"]
     SC --> ACC["накопичення сум метрик"]
     UPD --> ACC
     ACC -->|"elapsed ≥ calibration_time"| FIN["set_neutral + look_controller.reset + osc.center"]
     RS --> RST["calibration.reset + look_controller.reset + osc.center"]
 ```
 
-Сам `main.py` кодів клавіш не знає: він отримує лише булеве «чи виходимо» (`main.py:341`) і щойно виклик `interface.update(yaw_metric, pitch_metric)` на кожному кадрі з позою (`main.py:217`). Залежності в ін'єкції — `Calibration`, `LookController`, `OSCSender` — створюються в `main.py` і передаються у конструктор `Interface` (`main.py:101`).
+Сам `main.py` кодів клавіш не знає: він отримує лише булеве «чи виходимо» (`main.py:275`) і щойно виклик `interface.update(yaw_metric, pitch_metric)` на кожному кадрі з позою (`main.py:209`). Залежності в ін'єкції — `Calibration`, `LookController`, `OSCSender` — створюються в `main.py` і передаються у конструктор `Interface` (`main.py:101`).
 
 ### 4.2. Коди клавіш і диспетчеризація
 
-* **Зчитування.** `Interface.read_key()` ([interface.py:109](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L109)) — обгортка над `cv2.waitKey(1)`. Наслідки HighGUI-моделі: **не більше однієї клавіші за кадр**; клавіші, натиснуті між кадрами, не губляться, а лишаються в черзі й читаються наступного кадру (при ~30 FPS це затримка до 33 мс); якщо фокус вікна втрачено, події не надходять узагалі.
-* **Розподіл.** `Interface.handle_key()` ([interface.py:118](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L118)) повертає `True` лише для `KEY_ESCAPE = 27` ([interface.py:35](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L35)). `1` — `KEY_CALIBRATE = ord("1")` ([interface.py:37](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L37)); `R` — `KEY_RESET = (ord("r"), ord("R"))` ([interface.py:39](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L39)), тож регістр не має значення. Будь-яка інша клавіша, як і `waitKey` без натискання (повертає `-1`), не має жодного ефекту.
-* **Єдине джерело тексту підказок.** Список `KEY_HINTS` ([interface.py:43](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L43)) живить і консольний банер `print_banner()` ([interface.py:315](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L315)), і рядок на кадрі (4.4), тому перелік клавіш у консолі та у вікні не розійдуться.
+* **Зчитування.** `Interface.read_key()` ([interface.py:111](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L111)) — обгортка над `cv2.waitKey(1)`. Наслідки HighGUI-моделі: **не більше однієї клавіші за кадр**; клавіші, натиснуті між кадрами, не губляться, а лишаються в черзі й читаються наступного кадру (при ~30 FPS це затримка до 33 мс); якщо фокус вікна втрачено, події не надходять узагалі.
+* **Розподіл.** `Interface.handle_key()` ([interface.py:120](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L120)) повертає `True` лише для `KEY_ESCAPE = 27` ([interface.py:35](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L35)). `1` — `KEY_CALIBRATE = ord("1")` ([interface.py:37](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L37)); `R` — `KEY_RESET = (ord("r"), ord("R"))` ([interface.py:39](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L39)), тож регістр не має значення. Будь-яка інша клавіша, як і `waitKey` без натискання (повертає `-1`), не має жодного ефекту.
+* **Єдине джерело тексту підказок.** Список `KEY_HINTS` ([interface.py:43](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L43)) живить і консольний банер `print_banner()` ([interface.py:332](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L332)), і рядок на кадрі (4.4), тому перелік клавіш у консолі та у вікні не розійдуться.
 
 ### 4.3. Сесія калібрування
 
 Стан сесії (`calibrating`, `sum_yaw_metric`, `sum_pitch_metric`, `sample_count`, `calibration_start`) живе в екземплярі `Interface`, а не в модульних змінних циклу.
 
-1. `start_calibration()` ([interface.py:143](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L143)) виставляє `calibrating = True` ([interface.py:152](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L152)), фіксує `calibration_start = time.time()`, обнуляє суми й лічильник, і запускає потік `_countdown()` ([interface.py:231](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L231)): три гудки `winsound` частотою 1000 Гц тривалістю 200/200/700 мс із друком `3.......`, `2.......`, `1.......`. Потік `daemon` ([interface.py:166](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L166)), тож вихід під час відліку його не чекає; посилання зберігається в `self.countdown_thread` ([interface.py:168](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L168)).
-2. `Interface.update()` ([interface.py:174](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L174)) на кожному кадрі з виявленою позою додає метрики та збільшує `sample_count`. Нейтраль — арифметичне середнє за $N$ зразків:
+1. `start_calibration()` ([interface.py:145](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L145)) виставляє `calibrating = True` ([interface.py:154](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L154)), фіксує `calibration_start = time.time()`, обнуляє суми й лічильник, і запускає потік `_countdown()` ([interface.py:233](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L233)): три гудки `winsound` частотою 1000 Гц тривалістю 200/200/700 мс із друком `3.......`, `2.......`, `1.......`. Потік `daemon` ([interface.py:168](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L168)), тож вихід під час відліку його не чекає; посилання зберігається в `self.countdown_thread` ([interface.py:170](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L170)).
+2. `Interface.update()` ([interface.py:176](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L176)) на кожному кадрі з виявленою позою додає метрики та збільшує `sample_count`. Нейтраль — арифметичне середнє за $N$ зразків:
 
 $$\text{neutral\_yaw\_metric} = \frac{1}{N}\sum_{i=1}^{N}\text{yaw\_metric}_i \qquad \text{neutral\_pitch\_metric} = \frac{1}{N}\sum_{i=1}^{N}\text{pitch\_metric}_i$$
 
-3. Як тільки $\Delta t = t_{кадр} - \text{calibration\_start} \ge$ `calibration_time` (типово `CALIBRATION_TIME = 4.0` с, [interface.py:33](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L33), перевизначається аргументом конструктора), викликаються `calibration.set_neutral()` ([calibration.py:36](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/calibration.py#L36)), `look_controller.reset()` ([look_controller.py:91](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/look_controller.py#L91)) і `osc.center()` ([interface.py:206](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L206)); `calibrating` гасне, у консоль виводиться `Calibration completed.` і `calibration.print()`.
+3. Як тільки $\Delta t = t_{кадр} - \text{calibration\_start} \ge$ `calibration_time` (типово `CALIBRATION_TIME = 4.0` с, [interface.py:33](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L33), перевизначається аргументом конструктора), викликаються `calibration.set_neutral()` ([calibration.py:36](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/calibration.py#L36)), `look_controller.reset()` ([look_controller.py:91](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/look_controller.py#L91)) і `osc.center()` ([interface.py:208](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L208)); `calibrating` гасне, у консоль виводиться `Calibration completed.` і `calibration.print()`.
 
 Оскільки $N \ge 1$ у момент завершення (зразок додається до перевірки часу), ділення на нуль у цьому коді неможливе.
 
 ### 4.4. Рендер підказки та індикатора стану
 
-`draw_hints(frame)` ([interface.py:274](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L274)) викликається **поза** блоком перевірки пози ([main.py:324](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/main.py#L324)), тому рядок видно і коли позу не знайдено. Малювання йде просто в буфер кадру — окремого UI-шару в OpenCV немає:
+`draw_hints(frame)` ([interface.py:291](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L291)) викликається **поза** блоком перевірки пози ([main.py:258](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/main.py#L258)), тому рядок видно і коли позу не знайдено. Малювання йде просто в буфер кадру — окремого UI-шару в OpenCV немає:
 
 * смуга: прямокутник `cv2.FILLED` кольору `BAR_COLOR = (0, 0, 0)` від $y_{top} = \max(h - \text{BAR\_HEIGHT}, 0)$ до низу, де `BAR_HEIGHT = 28` px ([interface.py:59](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L59));
 * текст: `"[1] Calibration   [R] Reset   [ESC] Quit"`, колір `HINT_COLOR = (0, 255, 0)`, `FONT_HERSHEY_SIMPLEX`, масштаб `0.55`, товщина `1`;
@@ -389,21 +391,29 @@ $$x = \max\!\left(\frac{w - w_{text}}{2},\, 0\right) \qquad y = h - \max\!\left(
 
 * Напис свідомо **латиницею**: Hershey-шрифти `cv2.putText` не містять кириличних літер, тому український текст у вікні перетворився б на порожні місця або квадратики (консоль — UTF-8, там українська працює).
 
-Індикатор `draw_status(frame)` ([interface.py:253](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L253)) малює червоний `(0, 0, 255)` напис `CALIBRATION...` у точці `(10, 190)`, поки сесія активна, — і викликається **всередині** блоку з виявленою позою ([main.py:304](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/main.py#L304)).
+Стан калібрування малює `draw_status(frame)` ([interface.py:255](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L255)) одним рядком у точці `(10, 80)`, залежно від стану:
+
+* сесія активна → `CALIBRATION...` червоним `(0, 0, 255)` (`STATUS_COLOR`);
+* сесії немає і калібрування ще не робилось (`calibration.is_ready()` хибне) → `NO CALIBRATION - PRESS 1` жовтим `(0, 255, 255)` (`WARNING_COLOR`, [interface.py:65](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L65));
+* відкалібровано і сесії немає → жодного рядка.
+
+Викликається **поза** гілкою з виявленою позою ([main.py:254](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/main.py#L254), спільний блок «Status & hints» разом з `draw_hints`), тому попередження не зникає, коли камера втратить користувача. Рядок `Pose not detected` лишився в `main.py` у точці `(10, 40)` — на рядок вище за статус, тож обидва можуть бути видимі одночасно і не перекриваються.
+
+**Технічний вивід з екрана прибрано** (2026-09-27): `FPS`, `Yaw Metric`, `Pitch Metric`, `LookH`, `LookV` і підписи `x=`/`y=`/`z=` біля кожної точки. Залишились лише точки (`cv2.circle`, [main.py:188](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/main.py#L188)), попередження, індикатор калібрування та смуга підказки. Числа не зникли зовсім — той самий `LookHorizontal`/`LookVertical` видно в консолі через відладочний вивід (3.7). Значення `fps` рахується й далі ([main.py:155](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/main.py#L155)), бо передається в `create_pose_frame`; а от гілка `else` з обнуленням `look_horizontal`/`look_vertical` прибрано як мертву — єдиним читачем тих змінних був накладений текст.
 
 ### 4.5. Збережені нюанси поведінки
 
 Усі три дісталися у спадок від версії в `main.py`; перенесення навмисне не змінювало логіку:
 
 * **Повторне `1` під час активної сесії ігнорується** — `start_calibration()` виходить одразу, тож накопичені зразки не обнуляються, а зворотний відлік не запускається вдруге.
-* **`R` під час активної сесії її не скасовує** — `reset()` ([interface.py:215](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L215)) скидає калібрування, контролер погляду й надсилає `center()`, але `calibrating` лишається `True`; за кілька секунд сесія доживає до кінця і знову записує нейтраль.
-* **Втрата пози підвішує сесію назавжди.** Зразки додаються лише в кадрі, де `results.pose_landmarks` не `None`, тому без пози сесія не завершиться ніколи; підсвітка `CALIBRATION...` при цьому зникає (її виклик лежить у тому ж блоці), і зовні сесія виглядає завершеною, хоча `1` її не перезапустить. Єдиний вихід — дочекатися повернення пози або `R` + `1`.
+* **`R` під час активної сесії її не скасовує** — `reset()` ([interface.py:217](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/interface.py#L217)) скидає калібрування, контролер погляду й надсилає `center()`, але `calibrating` лишається `True`; за кілька секунд сесія доживає до кінця і знову записує нейтраль.
+* **Втрата пози підвішує сесію назавжди.** Зразки додаються лише в кадрі, де `results.pose_landmarks` не `None`, тому без пози сесія не завершиться ніколи і `1` її не перезапустить. Індикатор `CALIBRATION...` тепер лишається видимим (його виклик винесено поза гілку з позою, 4.4), тож підвішену сесію принаймні видно; прибрати її можна лише `R` + `1`.
 
 ### 4.6. Чим це перевіряється
 
 `test_interface.py` ([test_interface.py](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/test_interface.py)) — 11 перевірок, які запускаються без камери, вікна та VRChat (`.venv/Scripts/python.exe -m pytest`, або те саме скриптом `python test_interface.py`). `Calibration`, `LookController` і `OSCSender` підмінені заглушками, які лише рахують виклики й пам'ятають передану нейтраль; `time` і `winsound` підмінюються на рівні модуля `interface`, тому сесія калібрування прокручується миттєво і без гудків, а таймінг задається вручну.
 
-Покриття: `ESC` → запит на вихід; `r`/`R` → три виклики скидання; невідома клавіша та `-1` → без ефектів; $N$-зразкове усереднення та завершення за часом; обидва перші нюанси з 4.5; `update()` поза сесією; смуга підказки (верх кадру не чіпаний, смуга мальована, зелені пікселі тексту є) і поведінка на кадрі 20×320; `CALIBRATION...` лише під час активної сесії; єдність `KEY_HINTS` у банері.
+Покриття: `ESC` → запит на вихід; `r`/`R` → три виклики скидання; невідома клавіша та `-1` → без ефектів; $N$-зразкове усереднення та завершення за часом; обидва перші нюанси з 4.5; `update()` поза сесією; смуга підказки (верх кадру не чіпаний, смуга мальована, зелені пікселі тексту є) і поведінка на кадрі 20×320; статус калібрування у всіх трьох станах (попередження жовтим → `CALIBRATION...` червоним → чисто); єдність `KEY_HINTS` у банері.
 
 Третій нюанс (підвішена сесія після втрати пози) тестом **не покритий** — він вимагає імітації всього циклу з MediaPipe, а не тільки `Interface`.
 

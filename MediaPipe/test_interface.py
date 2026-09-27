@@ -367,23 +367,35 @@ def test_hints_line_on_small_frame():
     print("OK  підказка не ламається на кадрі меншому за смугу")
 
 
-def test_status_only_while_calibrating():
+def test_status_shows_calibration_state():
 
-    iface, clock, _sound, _cal, _look, _osc = build()
+    iface, clock, _sound, cal, _look, _osc = build()
+
+    # 1. Калібрування ще не було - жовте попередження.
+    frame = np.zeros((480, 640, 3), dtype=np.uint8)
+
+    iface.draw_status(frame)
+
+    yellow = np.all(frame == np.array([0, 255, 255]), axis=-1)
+
+    red = np.all(frame == np.array([0, 0, 255]), axis=-1)
+
+    assert yellow.sum() > 500
+    assert red.sum() == 0
+
+    # 2. Активна сесія - червоний індикатор замість попередження.
+    iface.handle_key(ord("1"))
 
     frame = np.zeros((480, 640, 3), dtype=np.uint8)
 
     iface.draw_status(frame)
 
-    assert frame.max() == 0
-
-    iface.handle_key(ord("1"))
-
-    iface.draw_status(frame)
-
     red = np.all(frame == np.array([0, 0, 255]), axis=-1)
 
+    yellow = np.all(frame == np.array([0, 255, 255]), axis=-1)
+
     assert red.sum() > 500
+    assert yellow.sum() == 0
 
     clock.now = 104.5
 
@@ -393,7 +405,16 @@ def test_status_only_while_calibrating():
 
     wait_countdown(iface)
 
-    print("OK  CALIBRATION... показує лише активну сесію")
+    # 3. Відкалібровано і сесії немає - на екрані чисто.
+    assert cal.ready is True
+
+    frame = np.zeros((480, 640, 3), dtype=np.uint8)
+
+    iface.draw_status(frame)
+
+    assert frame.max() == 0
+
+    print("OK  статус: попередження -> CALIBRATION... -> чисто")
 
 
 def test_banner_lists_keys(capsys=None):
@@ -439,7 +460,7 @@ if __name__ == "__main__":
     test_reset_during_calibration_is_not_cancelled()
     test_hints_line_at_bottom()
     test_hints_line_on_small_frame()
-    test_status_only_while_calibrating()
+    test_status_shows_calibration_state()
     test_banner_lists_keys()
 
     print("------------------------------------")

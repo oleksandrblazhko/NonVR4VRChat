@@ -62,6 +62,8 @@ STATUS_FONT = cv2.FONT_HERSHEY_SIMPLEX
 
 STATUS_COLOR = (0, 0, 255)
 
+WARNING_COLOR = (0, 255, 255)
+
 
 # ============================================================
 # Interface
@@ -252,22 +254,37 @@ class Interface:
 
     def draw_status(self, frame):
         """
-        Позначка активної сесії калібрування.
+        Стан калібрування у лівому верхньому куті.
+
+        Викликається поза гілкою з виявленою позою, щоб попередження не
+        зникало, коли камера втратить користувача. Рядок `Pose not
+        detected` малює `main.py`, і він стоїть вище - за координатами
+        вони не перекриваються.
         """
 
-        if not self.calibrating:
+        if self.calibrating:
 
-            return
+            cv2.putText(
+                frame,
+                "CALIBRATION...",
+                (10, 80),
+                STATUS_FONT,
+                0.8,
+                STATUS_COLOR,
+                2
+            )
 
-        cv2.putText(
-            frame,
-            "CALIBRATION...",
-            (10, 190),
-            STATUS_FONT,
-            0.8,
-            STATUS_COLOR,
-            2
-        )
+        elif not self.calibration.is_ready():
+
+            cv2.putText(
+                frame,
+                "NO CALIBRATION - PRESS 1",
+                (10, 80),
+                STATUS_FONT,
+                0.8,
+                WARNING_COLOR,
+                2
+            )
 
     # --------------------------------------------------------
 
