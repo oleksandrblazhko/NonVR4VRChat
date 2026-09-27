@@ -99,3 +99,35 @@
 *   `1` - Калібрування
 *   `R` - Скидання
 *   `ESC` - Вихід
+
+
+### Особливості встановлення програми в ОС Windows
+
+1) Завантажити Python 3.10
+https://www.python.org/ftp/python/3.10.10/python-3.10.10-amd64.exe
+
+2) знаходячись у терміналі GitBash, клонувати репозиторій:
+gi clone https://github.com/oleksandrblazhko/NonVR4VRChat.git
+
+3) перейти до каталогу NonVR4VRChat/MediaPipe:
+cd NonVR4VRChat/MediaPipe
+
+4) Створити окреме віртуальне середовище з версією 3.10:
+py -3.10 -m venv .venv
+
+5) Активізувати середовище:
+. .venv/Scripts/activate
+
+6) Встановити бібліотеки:
+- python -m pip install --upgrade pip
+- python -m pip install mediapipe==0.10.21 opencv-python python-osc
+або через файл requirements.txt
+- python -m pip install -r requirements.txt
+
+7) запустити програму:
+python main.py
+
+8) після роботи деактивізувати (за бажанням):
+deactivate
+
+
