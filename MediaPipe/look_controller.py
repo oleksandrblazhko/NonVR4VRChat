@@ -53,9 +53,9 @@ class LookController:
         
         self.smooth = 0.25
 
-        # Завантаження конфігурації з control.json
+        # Завантаження конфігурації з config.json
         try:
-            config_path = os.path.join(os.path.dirname(__file__), "control.json")
+            config_path = os.path.join(os.path.dirname(__file__), "config.json")
             if os.path.exists(config_path):
                 with open(config_path, "r", encoding="utf-8") as f:
                     config = json.load(f)
@@ -73,7 +73,7 @@ class LookController:
                     
                     self.smooth = float(var_settings.get("smooth", 0.25))
 
-                print("Loaded control.json for full metric-based algorithm.")
+                print("Loaded config.json for full metric-based algorithm.")
                 print(
                     f"  horizontal settings: max_metric={self.max_horizontal_metric}, "
                     f"threshold={self.horizontal_threshold_metric}, sensitivity={self.horizontal_sensitivity_pct}%"
@@ -84,9 +84,9 @@ class LookController:
                 )
 
             else:
-                print("control.json not found, using default settings for full metric-based algorithm.")
+                print("config.json not found, using default settings for full metric-based algorithm.")
         except Exception as e:
-            print(f"Error loading control.json: {e}. Using default settings.")
+            print(f"Error loading config.json: {e}. Using default settings.")
 
     def reset(self):
         self.horizontal = HORIZONTAL_CENTER
