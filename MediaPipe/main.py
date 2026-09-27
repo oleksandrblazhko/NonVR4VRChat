@@ -36,23 +36,13 @@ from interface import Interface
 
 from camera_reader import CameraReader
 
-camera = CameraReader(0)
+camera = CameraReader()
 
 camera.start()
 
-#----
-
-import time
-
-while True:
-
-    success, frame = camera.read()
-
-    if success:
-
-        break
-
-    time.sleep(0.01)
+# Перший кадр потрібен до циклу нижче; якщо камери немає,
+# wait_first_frame() періодично пише про це в консоль.
+success, frame = camera.wait_first_frame()
 
 
 # ============================================================

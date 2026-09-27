@@ -4,7 +4,7 @@ osc_sender.py
 Передача OSC-команд до VRChat.
 
 Кожну надіслану команду можна виводити у консоль разом із значенням —
-для цього в `control.json` має стояти `debug: true` (див.
+для цього в `config.json` має стояти `debug: true` (див.
 `load_debug_flag`).
 
 Автор: OpenAI
@@ -22,7 +22,7 @@ from pythonosc import udp_client
 # Parameters
 # ============================================================
 
-CONFIG_FILE = "control.json"
+CONFIG_FILE = "config.json"
 
 # Безперервні осі надсилаються на кожному кадрі, тому у консоль виводиться
 # лише зміна значення щонайменше на цей крок — інакше вивід затопить
@@ -36,7 +36,7 @@ DEBUG_VALUE_STEP = 0.01
 
 def load_debug_flag() -> bool:
     """
-    Ознака `debug` з control.json.
+    Ознака `debug` з config.json.
 
     Без файлу, без ключа або в пошкодженому файлі — вимкнено.
     """
@@ -77,7 +77,7 @@ class OSCSender:
         self.ip = ip
         self.port = port
 
-        # None — взяти з control.json, інакше — явне значення викликача.
+        # None — взяти з config.json, інакше — явне значення викликача.
         self.debug = load_debug_flag() if debug is None else bool(debug)
 
         self._last_debug_values = {}

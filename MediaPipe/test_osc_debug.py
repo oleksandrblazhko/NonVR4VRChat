@@ -7,7 +7,7 @@ test_osc_debug.py
     python test_osc_debug.py
 
 Мережа не використовується: `udp_client` підмінений заглушкою, а
-`control.json` для перевірки `load_debug_flag()` створюється у
+`config.json` для перевірки `load_debug_flag()` створюється у
 тимчасовому каталозі.
 """
 
@@ -101,7 +101,7 @@ def capture(function, *args, **kwargs):
 
 def read_flag(payload):
     """
-    Що поверне load_debug_flag() для control.json з вмістом payload
+    Що поверне load_debug_flag() для config.json з вмістом payload
     (None — файлу немає зовсім).
     """
 
@@ -109,7 +109,7 @@ def read_flag(payload):
 
     if payload is not None:
 
-        with open(os.path.join(directory, "control.json"), "w", encoding="utf-8") as f:
+        with open(os.path.join(directory, "config.json"), "w", encoding="utf-8") as f:
 
             f.write(payload)
 
@@ -178,14 +178,14 @@ def test_flag_survives_broken_json():
 
     assert "Debug output disabled" in text
 
-    print("OK  пошкоджений control.json не ламає запуск")
+    print("OK  пошкоджений config.json не ламає запуск")
 
 
-def test_flag_matches_project_control_json():
+def test_flag_matches_project_config_json():
 
     real = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
-        "control.json"
+        "config.json"
     )
 
     with open(real, "r", encoding="utf-8") as f:
@@ -196,7 +196,7 @@ def test_flag_matches_project_control_json():
 
     assert value == expected
 
-    print("OK  load_debug_flag() збігається з поточним control.json")
+    print("OK  load_debug_flag() збігається з поточним config.json")
 
 
 # ============================================================
@@ -478,7 +478,7 @@ if __name__ == "__main__":
     test_flag_false()
     test_flag_defaults_to_off()
     test_flag_survives_broken_json()
-    test_flag_matches_project_control_json()
+    test_flag_matches_project_config_json()
     test_debug_off_is_silent()
     test_look_axes_are_reported()
     test_streaming_axis_prints_only_on_change()
