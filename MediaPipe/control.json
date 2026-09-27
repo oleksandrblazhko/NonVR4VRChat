@@ -1,4 +1,5 @@
 {
+  "debug": true,
   "velocity_type": "var",
   "const_settings": {
     "horizontal_threshold_deg": 3.0,

@@ -7,7 +7,7 @@ main.py
 Керування поглядом аватара VRChat
 за допомогою MediaPipe Pose.
 
-Клавіші
+Клавіші (обробка - в interface.py)
 
     1 - калібрування
     R - reset
@@ -16,8 +16,6 @@ main.py
 
 import math
 import time
-import winsound
-import threading
 
 import cv2
 import mediapipe as mp
@@ -27,7 +25,9 @@ from calibration import Calibration
 from body_tracker import BodyTracker
 from look_controller import LookController
 from grabcontroller import GrabController
+from grabcontroller import UseController
 from osc_sender import OSCSender
+from interface import Interface
 
 
 # ============================================================
@@ -96,6 +96,14 @@ osc = OSCSender()
 
 grab_controller = GrabController(osc)
 
+use_controller = UseController(osc)
+
+interface = Interface(
+    calibration,
+    look_controller,
+    osc
+)
+
 
 # ============================================================
 # Time
@@ -105,46 +113,10 @@ previous_time = time.time()
 
 
 # ============================================================
-# Calibration
-# ============================================================
-
-CALIBRATION_TIME = 4.0
-
-calibrating = False
-
-calibration_start = 0.0
-
-sum_yaw_metric = 0.0
-
-sum_pitch_metric = 0.0
-
-sample_count = 0
-
-def calibration_countdown():
-    """
-    Програвання зворотного відліку калібрування.
-    """
-    print("Режим калібрування. Тримайте тіло у стані спокою впродовж декількох секунд")
-    for i in range(3, 0, -1):
-        print(f"{i}.......")
-        if i == 1:
-            winsound.Beep(1000, 700) # Final beep for 1
-        else:
-            winsound.Beep(1000, 200) # Short beeps for 3 and 2
-        time.sleep(1)
-
-
-# ============================================================
 # Main
 # ============================================================
 
-print("------------------------------------")
-print("VRChat Body Tracker")
-print()
-print("1 - calibration")
-print("R - reset")
-print("ESC - quit")
-print("------------------------------------")
+interface.print_banner()
 
 
 while True:
@@ -184,15 +156,16 @@ while True:
 
     previous_time = current_time
 
-    elapsed = 0.0
-
     if results.pose_landmarks:
 
         #
-        # Grab Controller
+        # Hand gestures
         #
         right_wrist = results.pose_landmarks.landmark[mp_pose.PoseLandmark.RIGHT_WRIST]
         grab_controller.update(right_wrist)
+
+        left_wrist = results.pose_landmarks.landmark[mp_pose.PoseLandmark.LEFT_WRIST]
+        use_controller.update(left_wrist)
 
         #
         # Малювання лише ключових точок
@@ -202,6 +175,7 @@ while True:
             mp_pose.PoseLandmark.NOSE,
             mp_pose.PoseLandmark.LEFT_SHOULDER,
             mp_pose.PoseLandmark.RIGHT_SHOULDER,
+            mp_pose.PoseLandmark.LEFT_WRIST,
             mp_pose.PoseLandmark.RIGHT_WRIST,
         ]
 
@@ -240,25 +214,10 @@ while True:
         # Calibration
         # ----------------------------------------------------
 
-        if calibrating:
-
-            sum_yaw_metric += yaw_metric
-            sum_pitch_metric += pitch_metric
-            sample_count += 1
-            elapsed = current_time - calibration_start
-
-            if elapsed >= CALIBRATION_TIME:
-                calibration.set_neutral(
-                    sum_yaw_metric / sample_count,
-                    sum_pitch_metric / sample_count
-                )
-                look_controller.reset()
-                osc.center()
-                calibrating = False
-
-                print()
-                print("Calibration completed.")
-                calibration.print()
+        interface.update(
+            yaw_metric,
+            pitch_metric
+        )
 
         # ----------------------------------------------------
         # Tracking
@@ -342,17 +301,9 @@ while True:
             2
         )
 
-        if calibrating:
-
-            cv2.putText(
-                frame,
-                "CALIBRATION...",
-                (10, 190),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 0, 255),
-                2
-            )
+        interface.draw_status(
+            frame
+        )
 
     else:
 
@@ -367,6 +318,14 @@ while True:
         )
 
     # --------------------------------------------------------
+    # Hints
+    # --------------------------------------------------------
+
+    interface.draw_hints(
+        frame
+    )
+
+    # --------------------------------------------------------
     # Show camera
     # --------------------------------------------------------
 
@@ -379,45 +338,11 @@ while True:
     # Keyboard
     # --------------------------------------------------------
 
-    key = cv2.waitKey(1)
-
-    # ESC ----------------------------------------------------
-
-    if key == 27:
+    if interface.handle_key(
+            interface.read_key()
+    ):
 
         break
-
-    # C ------------------------------------------------------
-
-    elif key == ord("1"):
-
-        if not calibrating:
-            countdown_thread = threading.Thread(
-                target=calibration_countdown
-            )
-            countdown_thread.start()
-
-            calibrating = True
-
-            calibration_start = time.time()
-
-            sum_yaw_metric = 0.0
-            sum_pitch_metric = 0.0
-            sample_count = 0
-
-    # R ------------------------------------------------------
-
-    elif key == ord("r") or key == ord("R"):
-
-        print()
-
-        print("Reset.")
-
-        calibration.reset()
-
-        look_controller.reset()
-
-        osc.center()
 
 # ============================================================
 # Shutdown

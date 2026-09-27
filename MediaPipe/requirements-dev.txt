@@ -1,0 +1,4 @@
+# Dev-залежності — потрібні лише для перевірок, не для запуску програми.
+# Встановлення:  python -m pip install -r requirements-dev.txt
+# Запуск:        python -m pytest
+pytest==9.1.1
