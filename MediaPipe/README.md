@@ -93,8 +93,8 @@ https://www.python.org/ftp/python/3.10.10/python-3.10.10-amd64.exe
 2) знаходячись у терміналі GitBash, клонувати репозиторій:
 gi clone https://github.com/oleksandrblazhko/NonVR4VRChat.git
 
-3) перейти до каталогу NonVR4VRChat/MediaPipe:
-cd NonVR4VRChat/MediaPipe
+3) перейти до каталогу NonVR4VRChat:
+cd NonVR4VRChat
 
 4) Створити окреме віртуальне середовище з версією 3.10:
 py -3.10 -m venv .venv
@@ -103,13 +103,13 @@ py -3.10 -m venv .venv
 . .venv/Scripts/activate
 
 6) Встановити бібліотеки:
-- python -m pip install --upgrade pip
-- python -m pip install mediapipe==0.10.21 opencv-python python-osc
-або через файл requirements.txt
-- python -m pip install -r requirements.txt
+- py -m pip install --upgrade pip
+- py -m pip install -r requirements.txt
 
 7) запустити програму:
-python main.py
+py MediaPipe/main.py
+або
+.venv/Scripts/python.exe MediaPipe/main.py
 
 8) після роботи деактивізувати (за бажанням):
 deactivate
@@ -122,19 +122,15 @@ deactivate
 python -m pip install -r requirements-dev.txt
 python -m pytest
 ```
-
-Що саме перевіряє кожен тест і чому він працює без камери — у [Project.md](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/Project.md), підрозділ 4.6. Той самий файл запускається і без pytest (`python test_interface.py`), але тоді в переможеному виводі (`python test_interface.py | grep OK`) потрібен префікс `PYTHONIOENCODING=utf-8` — інакше українські рядки впадуть на кодуванні консолі.
+Подробиці - [Project.md](./MediaPipe/Project.md), підрозділ 4.6. 
 
 ### Перевірка кнопок у VRChat
 
-Якщо треба з'ясувати, чи спрацьовує якась кнопка VRChat (наприклад `UseRight`) і як саме — є окрема програма, камери вона не потребує:
-
+Якщо треба з'ясувати, чи спрацьовує якась OSC-команда у VRChat (наприклад `UseRight`) і як саме — є окрема програма:
 ```
 python osc_use_probe.py --dry-run          # спочатку подивитись, що піде
 python osc_use_probe.py                    # 5 коротких натискань UseRight
 python osc_use_probe.py --hold 3           # те саме, але тримати кнопку 3 секунди
 ```
-
-Вона сама рахує зворотний відлік на старті — за цей час устигнеш перемкнути вікно VRChat, бо без активного вікна команди рук не працюють. Параметри, умови та підказки описані в [Project.md](file:///C:/Users/User/Yoga/NonVR4VRChat/MediaPipe/Project.md), підрозділ 3.8.
-
+Вона сама рахує зворотний відлік на старті — за цей час устигнеш перемкнути вікно VRChat, бо без активного вікна команди рук не працюють. Параметри, умови та підказки описані в [Project.md](./MediaPipe/Project.md), підрозділ 3.8.
 
