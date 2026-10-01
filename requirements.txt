@@ -4,3 +4,4 @@ python-osc
 websockets
 aiohttp
 keyboard
+websockets
