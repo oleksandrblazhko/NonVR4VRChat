@@ -441,6 +441,28 @@ def test_banner_lists_keys(capsys=None):
     print("OK  банер у консолі перелічує ті самі клавіші")
 
 
+def test_render_display_telemetry():
+
+    iface, _clock, _sound, _cal, _look, _osc = build()
+
+    frame = np.full((480, 640, 3), 255, dtype=np.uint8)
+
+    disp = iface.render_display(
+        frame,
+        look_horizontal=0.75,
+        look_vertical=0.0,
+        grab_state=True,
+        use_triggered=True,
+    )
+
+    # Кадр камери не пошкоджений, знизу додано панель 56px
+    assert disp.shape == (480 + 56, 640, 3)
+    assert np.array_equal(disp[:480], frame)
+    assert disp[480:].min() == 0
+
+    print("OK  панель телеметрії додається знизу без пошкодження відео")
+
+
 # ============================================================
 # Main
 # ============================================================
@@ -460,6 +482,7 @@ if __name__ == "__main__":
     test_reset_during_calibration_is_not_cancelled()
     test_hints_line_at_bottom()
     test_hints_line_on_small_frame()
+    test_render_display_telemetry()
     test_status_shows_calibration_state()
     test_banner_lists_keys()
 

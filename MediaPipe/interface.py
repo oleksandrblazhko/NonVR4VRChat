@@ -329,6 +329,100 @@ class Interface:
 
     # --------------------------------------------------------
 
+    def render_display(
+        self,
+        frame,
+        look_horizontal: float | None = None,
+        look_vertical: float | None = None,
+        grab_state: bool = False,
+        use_triggered: bool = False,
+    ):
+        """
+        Створює кадр для відображення: додає знизу панель
+        з телеметрією (LookH, LookV, Grab, Use) та підказками гарячих клавіш.
+        """
+        h, w = frame.shape[:2]
+        panel_h = 56
+
+        # Додаємо чорну панель знизу, не чіпаючи корисний відеокадр
+        display_frame = cv2.copyMakeBorder(
+            frame,
+            0,
+            panel_h,
+            0,
+            0,
+            cv2.BORDER_CONSTANT,
+            value=(0, 0, 0)
+        )
+
+        # Розділювальна лінія між відео та панеллю
+        cv2.line(display_frame, (0, h), (w, h), (50, 50, 50), 1)
+
+        # ----------------------------------------------------
+        # Рядок 1: Телеметрія
+        # ----------------------------------------------------
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        font_scale = 0.45
+        thickness = 1
+        y1 = h + 20
+
+        # Розраховуємо 4 рівномірні колонки
+        col_w = w // 4
+
+        # 1. LookH
+        lh_text = "--" if look_horizontal is None else f"{look_horizontal:+.3f}"
+        lh_color = (150, 150, 150) if look_horizontal is None else (255, 255, 0)
+        cv2.putText(display_frame, "LookH: ", (15, y1), font, font_scale, (180, 180, 180), thickness)
+        (tw, _), _ = cv2.getTextSize("LookH: ", font, font_scale, thickness)
+        cv2.putText(display_frame, lh_text, (15 + tw, y1), font, font_scale, lh_color, thickness)
+
+        # 2. LookV
+        lv_text = "--" if look_vertical is None else f"{look_vertical:+.3f}"
+        lv_color = (150, 150, 150) if look_vertical is None else (255, 255, 0)
+        x2 = col_w + 10
+        cv2.putText(display_frame, "LookV: ", (x2, y1), font, font_scale, (180, 180, 180), thickness)
+        (tw, _), _ = cv2.getTextSize("LookV: ", font, font_scale, thickness)
+        cv2.putText(display_frame, lv_text, (x2 + tw, y1), font, font_scale, lv_color, thickness)
+
+        # 3. Grab
+        x3 = col_w * 2 + 10
+        grab_text = "Active" if grab_state else "Dropped"
+        grab_color = (0, 255, 0) if grab_state else (140, 140, 140)
+        cv2.putText(display_frame, "Grab: ", (x3, y1), font, font_scale, (180, 180, 180), thickness)
+        (tw, _), _ = cv2.getTextSize("Grab: ", font, font_scale, thickness)
+        cv2.putText(display_frame, grab_text, (x3 + tw, y1), font, font_scale, grab_color, thickness)
+
+        # 4. Use
+        x4 = col_w * 3 + 10
+        use_text = "Triggered" if use_triggered else "Idle"
+        use_color = (0, 215, 255) if use_triggered else (140, 140, 140)
+        cv2.putText(display_frame, "Use: ", (x4, y1), font, font_scale, (180, 180, 180), thickness)
+        (tw, _), _ = cv2.getTextSize("Use: ", font, font_scale, thickness)
+        cv2.putText(display_frame, use_text, (x4 + tw, y1), font, font_scale, use_color, thickness)
+
+        # Тонкий внутрішній розділювач між рядками 1 та 2
+        cv2.line(display_frame, (10, h + 29), (w - 10, h + 29), (35, 35, 35), 1)
+
+        # ----------------------------------------------------
+        # Рядок 2: Гарячі клавіші
+        # ----------------------------------------------------
+        hints_text = "   ".join(f"[{key}] {label}" for key, label in KEY_HINTS)
+        (hw, _), _ = cv2.getTextSize(hints_text, font, 0.45, 1)
+        y2 = h + 47
+        cv2.putText(
+            display_frame,
+            hints_text,
+            (max((w - hw) // 2, 0), y2),
+            font,
+            0.45,
+            HINT_COLOR,
+            1
+        )
+
+        return display_frame
+
+    # --------------------------------------------------------
+
     def print_banner(self):
         """
         Опис керування у консолі на старті.

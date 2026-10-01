@@ -27,7 +27,7 @@ import math
 # Parameters
 # ============================================================
 
-HORIZONTAL_CENTER = 0.0
+HORIZONTAL_CENTER = 0.5
 VERTICAL_CENTER = 0.1
 MAX_SENSITIVITY_MULTIPLIER = 10.0 # 100% sensitivity will equal this multiplier
 
@@ -147,11 +147,11 @@ class LookController:
         )
 
         if yaw == 0.0:
-            target_horizontal = 0.0
+            target_horizontal = HORIZONTAL_CENTER
         elif yaw > 0.0:
-            target_horizontal = 0.5 + 0.5 * yaw
+            target_horizontal = HORIZONTAL_CENTER + 0.5 * yaw
         else:
-            target_horizontal = -0.5 + 0.5 * yaw
+            target_horizontal = -HORIZONTAL_CENTER + 0.5 * yaw
             
         # ----------------------------------------------------
         # Вертикальний розрахунок
@@ -182,4 +182,3 @@ class LookController:
         self.vertical += (target_vertical - self.vertical) * (1.0 - self.smooth)
 
         return (self.horizontal, self.vertical)
-    

@@ -1,0 +1,28 @@
+{
+    "application": {
+        "title": "VRChat Exercise Worlds",
+        "vrchat_executable": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\VRChat\\launch.exe"
+    },
+    "worlds": [
+        {
+            "name": "Association football (soccer)",
+            "image": "images/football.png",
+            "id": "wrld_1d6cf9cf-c50f-43dd-87dd-eef2a5a0d0dc"
+        },
+        {
+            "name": "Skateboarding",
+            "image": "images/skateboarding.png",
+            "id": "wrld_35dbcbeb-af63-42ec-8966-008fd63116b7"
+        },
+        {
+            "name": "Bowling",
+            "image": "images/bowling.png",
+            "id": "wrld_52330ddb-312f-4813-9670-a468f0fe4062"
+        },
+        {
+            "name": "Basketball",
+            "image": "images/basketball.png",
+            "id": "wrld_ac390be1-6b14-471b-80ea-440c8c410ab5"
+        }
+    ]
+}

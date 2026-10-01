@@ -238,15 +238,26 @@ while True:
         )
 
     # --------------------------------------------------------
-    # Status & hints
+    # Status & display
     # --------------------------------------------------------
 
     interface.draw_status(
         frame
     )
 
-    interface.draw_hints(
-        frame
+    if calibration.is_ready():
+        disp_look_h = look_controller.horizontal
+        disp_look_v = look_controller.vertical
+    else:
+        disp_look_h = None
+        disp_look_v = None
+
+    display_frame = interface.render_display(
+        frame,
+        look_horizontal=disp_look_h,
+        look_vertical=disp_look_v,
+        grab_state=grab_controller.grab_state,
+        use_triggered=use_controller.is_triggered,
     )
 
     # --------------------------------------------------------
@@ -255,7 +266,7 @@ while True:
 
     cv2.imshow(
         "VRChat Body Tracker",
-        frame
+        display_frame
     )
 
     # --------------------------------------------------------
