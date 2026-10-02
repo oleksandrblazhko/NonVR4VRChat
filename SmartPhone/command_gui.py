@@ -6,7 +6,7 @@ class CommandGUI:
         self.root = tk.Tk()
 
         self.root.title("VRChat Smartphone Control")
-        self.root.geometry("500x500")
+        self.root.geometry("300x300")
         self.root.resizable(False, False)
 
         self.buttons = {}
@@ -23,7 +23,7 @@ class CommandGUI:
         self.buttons["/input/MoveForward"] = (
             self._create_button(
                 frame,
-                "↑\nВПЕРЕД",
+                "↑\nForward",
                 row=0,
                 column=1
             )
@@ -32,7 +32,7 @@ class CommandGUI:
         self.buttons["/input/MoveLeft"] = (
             self._create_button(
                 frame,
-                "←\nВЛІВО",
+                "←\nLeft",
                 row=1,
                 column=0
             )
@@ -41,7 +41,7 @@ class CommandGUI:
         self.buttons["/input/MoveRight"] = (
             self._create_button(
                 frame,
-                "→\nВПРАВО",
+                "→\nRight",
                 row=1,
                 column=2
             )
@@ -50,7 +50,7 @@ class CommandGUI:
         self.buttons["/input/MoveBackward"] = (
             self._create_button(
                 frame,
-                "↓\nНАЗАД",
+                "↓\nBackward",
                 row=2,
                 column=1
             )
@@ -66,9 +66,9 @@ class CommandGUI:
         button = tk.Label(
             parent,
             text=text,
-            width=12,
-            height=5,
-            font=("Arial", 16, "bold"),
+            width=8,
+            height=3,
+            font=("Arial", 12, "bold"),
             relief="raised",
             bd=3
         )
@@ -76,8 +76,8 @@ class CommandGUI:
         button.grid(
             row=row,
             column=column,
-            padx=10,
-            pady=10
+            padx=5,
+            pady=5
         )
 
         return button
@@ -112,17 +112,18 @@ class CommandGUI:
         button = self.buttons[command]
 
         if active:
-
             button.config(
                 relief="sunken",
-                bd=5
+                bd=5,
+                bg="green",
+                fg="white"
             )
-
         else:
-
             button.config(
                 relief="raised",
-                bd=3
+                bd=3,
+                bg="SystemButtonFace",
+                fg="black"
             )
 
     def run(self):
@@ -131,4 +132,3 @@ class CommandGUI:
         """
 
         self.root.mainloop()
-        

@@ -1,4 +1,6 @@
 import tkinter as tk
+from pathlib import Path
+
 from PIL import Image, ImageTk
 
 from vrchat import VRChat
@@ -20,6 +22,8 @@ class VRChatLauncher:
         self.create_world_grid()
 
     def create_world_grid(self):
+        app_dir = Path(__file__).resolve().parent
+
         for index, world in enumerate(self.config["worlds"]):
             row = index // 3
             column = index % 3
@@ -40,7 +44,9 @@ class VRChatLauncher:
             )
             name.pack()
 
-            image = Image.open(world["image"])
+            image_path = app_dir / world["image"]
+
+            image = Image.open(image_path)
             image = image.resize((250, 150))
             photo = ImageTk.PhotoImage(image)
 
@@ -64,4 +70,4 @@ class VRChatLauncher:
 
     def world_clicked(self, world):
         self.vrchat.launch_world(world["id"])
-        
+    

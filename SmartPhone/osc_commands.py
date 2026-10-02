@@ -1,16 +1,26 @@
-# TurboScratch/osc_commands.py
-
 from pythonosc import udp_client
 
 OSC_IP = "127.0.0.1"
 OSC_PORT = 9000
 
+
 class OSCCommands:
-    def __init__(self, debug=False, osc_bindings=[]):
+    def __init__(
+        self,
+        debug=False,
+        osc_bindings=None,
+        on_command_change=None
+    ):
         self.client = udp_client.SimpleUDPClient(OSC_IP, OSC_PORT)
         self.debug = debug
-        self.osc_bindings = osc_bindings
-        self._pressed = {binding["osc_command"]: False for binding in osc_bindings}
+        self.osc_bindings = osc_bindings or []
+        self.on_command_change = on_command_change
+
+        self._pressed = {
+            binding["osc_command"]: False
+            for binding in self.osc_bindings
+        }
+
         print("OSC command sender initialized.")
 
     def update_bindings(self, new_bindings):
@@ -18,10 +28,24 @@ class OSCCommands:
         Updates the OSC bindings and resets the state.
         """
         print("Updating OSC bindings...")
+
         self.release_all_commands()
+
         self.osc_bindings = new_bindings
-        self._pressed = {binding["osc_command"]: False for binding in self.osc_bindings}
+
+        self._pressed = {
+            binding["osc_command"]: False
+            for binding in self.osc_bindings
+        }
+
         print(f"New bindings loaded: {self.osc_bindings}")
+
+    def _notify_command_change(self, command, active):
+        """
+        Notifies the GUI about a command state change.
+        """
+        if self.on_command_change:
+            self.on_command_change(command, active)
 
     def _set_command(self, command: str, active: bool):
         """
@@ -29,7 +53,7 @@ class OSCCommands:
         """
 
         if command not in self._pressed:
-            return  # Ignore commands not in the bindings
+            return
 
         # ANSI-коди кольорів
         GREEN = "\033[92m"
@@ -48,90 +72,171 @@ class OSCCommands:
         indent = " " * INDENTS.get(command, 0)
 
         if active:
+
             if not self._pressed.get(command, True):
+
                 if self.debug:
-                    print(f"{indent}{GREEN} OSC:{command}-{True}{RESET}")
+                    print(
+                        f"{indent}{GREEN} "
+                        f"OSC:{command}-{True}{RESET}"
+                    )
+
                 self.client.send_message(command, True)
+
                 self._pressed[command] = True
+
+                # Повідомляємо GUI
+                self._notify_command_change(
+                    command,
+                    True
+                )
+
         else:
+
             if self._pressed.get(command, False):
+
                 if self.debug:
-                    print(f"{indent}{RED} OSC:{command}-{False}{RESET}")
+                    print(
+                        f"{indent}{RED} "
+                        f"OSC:{command}-{False}{RESET}"
+                    )
+
                 self.client.send_message(command, False)
+
                 self._pressed[command] = False
+
+                # Повідомляємо GUI
+                self._notify_command_change(
+                    command,
+                    False
+                )
 
     def release_all_commands(self):
         """
         Sends messages to deactivate all commands.
         """
         print("Releasing all OSC commands...")
+
         for command in self._pressed:
             self._set_command(command, False)
 
-    def send_commands(self, accX, accY, accZ, offset_accX, offset_accY, offset_accZ, move_threshold=0.5, run_threshold=1.5):
+    def send_commands(
+        self,
+        accX,
+        accY,
+        accZ,
+        offset_accX,
+        offset_accY,
+        offset_accZ,
+        move_threshold=0.5,
+        run_threshold=1.5
+    ):
         """
-        Sends OSC commands based on phone tilt, using configurable bindings.
+        Sends OSC commands based on phone tilt,
+        using configurable bindings.
         """
+
         deltas = {
             "X": accX - offset_accX,
             "Y": accY - offset_accY,
             "Z": accZ - offset_accZ
         }
 
-        command_active = {binding["osc_command"]: False for binding in self.osc_bindings}
+        command_active = {
+            binding["osc_command"]: False
+            for binding in self.osc_bindings
+        }
 
         for binding in self.osc_bindings:
+
             command = binding["osc_command"]
             axis = binding["axis"]
-            invert = binding.get("invert", False) # Get invert property, defaults to False
+            invert = binding.get("invert", False)
 
             value = deltas.get(axis)
-            
+
             is_active = False
+
             if command == "/input/MoveForward":
+
                 if value is not None:
-                    is_active = (value > move_threshold) if not invert else (value < -move_threshold)
+                    is_active = (
+                        value > move_threshold
+                        if not invert
+                        else value < -move_threshold
+                    )
+
             elif command == "/input/MoveBackward":
+
                 if value is not None:
-                    is_active = (value < -move_threshold) if not invert else (value > move_threshold)
+                    is_active = (
+                        value < -move_threshold
+                        if not invert
+                        else value > move_threshold
+                    )
+
             elif command == "/input/MoveLeft":
+
                 if value is not None:
-                    is_active = (value < -move_threshold) if not invert else (value > move_threshold)
+                    is_active = (
+                        value < -move_threshold
+                        if not invert
+                        else value > move_threshold
+                    )
+
             elif command == "/input/MoveRight":
+
                 if value is not None:
-                    is_active = (value > move_threshold) if not invert else (value < -move_threshold)
+                    is_active = (
+                        value > move_threshold
+                        if not invert
+                        else value < -move_threshold
+                    )
+
             elif command == "/input/Run":
+
                 axes_for_run = axis.split('_')
                 is_running = False
+
                 for run_axis in axes_for_run:
-                    # Inversion does not apply to /input/Run as it checks absolute magnitude
-                    if abs(deltas.get(run_axis, 0)) > run_threshold:
+
+                    # Inversion does not apply to /input/Run
+                    # because it checks absolute magnitude.
+                    if abs(
+                        deltas.get(run_axis, 0)
+                    ) > run_threshold:
+
                         is_running = True
                         break
+
                 is_active = is_running
 
             if is_active:
                 command_active[command] = True
-        
-        # To prevent sending both forward and backward, or left and right at the same time
-        if command_active.get("/input/MoveForward", False) and command_active.get("/input/MoveBackward", False):
-             command_active["/input/MoveForward"] = False
-             command_active["/input/MoveBackward"] = False
 
-        if command_active.get("/input/MoveLeft", False) and command_active.get("/input/MoveRight", False):
-             command_active["/input/MoveLeft"] = False
-             command_active["/input/MoveRight"] = False
+        # Prevent simultaneous forward and backward
+        if (
+            command_active.get("/input/MoveForward", False)
+            and
+            command_active.get("/input/MoveBackward", False)
+        ):
+            command_active["/input/MoveForward"] = False
+            command_active["/input/MoveBackward"] = False
+
+        # Prevent simultaneous left and right
+        if (
+            command_active.get("/input/MoveLeft", False)
+            and
+            command_active.get("/input/MoveRight", False)
+        ):
+            command_active["/input/MoveLeft"] = False
+            command_active["/input/MoveRight"] = False
 
         # Send commands
         for command in self._pressed:
-            self._set_command(command, command_active.get(command, False))
 
-        # Example for other commands
-        # for binding in self.osc_bindings:
-        #     command = binding["osc_command"]
-        #     axis = binding["axis"]
-        #     if command == "/input/Jump":
-        #         if axis == "Z" and dz > some_z_threshold:
-        #             self._set_command(command, True)
-        #         else:
-        #             self._set_command(command, False)
+            self._set_command(
+                command,
+                command_active.get(command, False)
+            )
+            
