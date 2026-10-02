@@ -23,10 +23,11 @@ class VRChatLauncher:
 
     def create_world_grid(self):
         app_dir = Path(__file__).resolve().parent
-
+        
         for index, world in enumerate(self.config["worlds"]):
-            row = index // 3
-            column = index % 3
+            # матриця 2x2 розташування кнопок-зображень світів
+            row = index // 2 
+            column = index % 2 
 
             frame = tk.Frame(
                 self.root,
@@ -40,7 +41,8 @@ class VRChatLauncher:
 
             name = tk.Label(
                 frame,
-                text=world["name"]
+                text=world["name"],
+                font=("Arial", 16, "bold")
             )
             name.pack()
 

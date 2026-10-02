@@ -5,7 +5,7 @@
     },
     "worlds": [
         {
-            "name": "Association football (soccer)",
+            "name": "Football (soccer)",
             "image": "images/football.png",
             "id": "wrld_1d6cf9cf-c50f-43dd-87dd-eef2a5a0d0dc"
         },
