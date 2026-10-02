@@ -81,6 +81,11 @@ class UseController:
         self.armed = True
 
         self.press_thread = None
+        self.last_triggered_time = 0.0
+
+    @property
+    def is_triggered(self) -> bool:
+        return (time.time() - self.last_triggered_time) < 0.4
 
     def update(self, left_wrist_landmark):
 
@@ -121,6 +126,8 @@ class UseController:
         self.press_thread.start()
 
     def _press_cycle(self):
+
+        self.last_triggered_time = time.time()
 
         self.osc_sender.send_use_right(True)
 
