@@ -12,6 +12,10 @@ import signal
 import winsound
 import argparse
 
+from pathlib import Path
+
+print("CWD:", os.getcwd())
+print("MAIN:", Path(__file__).resolve())
 
 # -------------------------------------------------
 # Імпорти
@@ -134,8 +138,7 @@ filtered_accZ = 0.0
 
 # --- Конфігурація ---
 
-CONFIG_FILE = "config.json"
-
+CONFIG_FILE = Path(__file__).resolve().parent / "config.json"
 
 def clamp(value, min_val, max_val):
     """Обмежує значення у заданому діапазоні."""

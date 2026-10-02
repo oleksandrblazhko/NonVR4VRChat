@@ -76,6 +76,8 @@ py ./VRChatApp/main.py
 або без необхідності активації
 .venv/Scripts/python.exe VRChatApp/main.py
 
+примітка: за необхідністю змінити повний шлях до VRChat у файлі config.json
+
 8) запустити програму MediaPipe (приклад шляхів для GitBash):
 py MediaPipe/main.py
 або
@@ -85,6 +87,8 @@ py MediaPipe/main.py
 py SmartPhone/main.py
 або
 .venv/Scripts/python.exe SmartPhone/main.py
+
+примітка: налаштувати IP-адресу HTTP-сервера, запущеного на смартфоні через програму phyphox
 
 10) після роботи деактивізувати python-середовище (за бажанням):
 deactivate
