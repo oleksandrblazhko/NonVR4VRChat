@@ -1,7 +1,7 @@
-import subprocess
-import sys
 import tkinter as tk
 from pathlib import Path
+import subprocess
+import sys
 
 from PIL import Image, ImageTk
 
@@ -82,7 +82,7 @@ class VRChatLauncher:
         btn_mediapipe = tk.Button(
             controls_frame,
             text="Навігація веб-камера",
-            font=("Arial", 10, "bold"),
+            font=("Arial", 16, "bold"),
             bg="#4CAF50",
             fg="white",
             padx=12,
@@ -96,7 +96,7 @@ class VRChatLauncher:
         btn_smartphone = tk.Button(
             controls_frame,
             text="Навігація руху",
-            font=("Arial", 10, "bold"),
+            font=("Arial", 16, "bold"),
             bg="#2196F3",
             fg="white",
             padx=12,
