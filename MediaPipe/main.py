@@ -95,6 +95,10 @@ interface = Interface(
 )
 
 
+# Shift/Ctrl + / - : чутливість LookH / LookV (глобальні хоткеї).
+interface.start_hotkeys()
+
+
 # ============================================================
 # Time
 # ============================================================
@@ -273,6 +277,8 @@ while True:
     # Keyboard
     # --------------------------------------------------------
 
+    interface.poll_hotkeys()
+
     if interface.handle_key(
             interface.read_key()
     ):
@@ -284,6 +290,12 @@ while True:
 # ============================================================
 
 print("Stopping...")
+
+interface.stop_hotkeys()
+
+interface.save_settings()
+
+osc.center()
 
 camera.stop()
 

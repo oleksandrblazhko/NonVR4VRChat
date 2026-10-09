@@ -20,7 +20,7 @@ VRChat виконує модуль look_controller.py.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 import math
 
@@ -43,11 +43,11 @@ class BodyState:
     Поточний стан тулуба.
     """
 
-    shoulder_center: Vector3 = Vector3()
+    shoulder_center: Vector3 = field(default_factory=Vector3)
 
-    shoulder_vector: Vector3 = Vector3()
+    shoulder_vector: Vector3 = field(default_factory=Vector3)
 
-    torso_vector: Vector3 = Vector3()
+    torso_vector: Vector3 = field(default_factory=Vector3)
 
     #
     # Метрики повороту та нахилу.
@@ -172,5 +172,3 @@ class BodyTracker:
         )
 
         print("--------------------------------")
-
-        
