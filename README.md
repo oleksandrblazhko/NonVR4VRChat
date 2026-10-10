@@ -84,7 +84,10 @@ py ./VRChatApp/main.py
 ```
 .venv/Scripts/python.exe VRChatApp/main.py
 ```
-примітка: за необхідністю змінити повний шлях до VRChat у файлі config.json
+примітка: 
+за необхідністю змінити повний шлях до VRChat у файлі config.json, наприклад:
+"vrchat_executable": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\VRChat\\launch.exe"
+"vrchat_executable": "C:\\Windows\\TempInst\\Steam\\steamapps\\common\\VRChat\\launch.exe"
 
 8) запустити програму MediaPipe (приклад шляхів для GitBash):
 ```
