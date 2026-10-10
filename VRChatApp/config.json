@@ -1,7 +1,7 @@
 {
     "application": {
         "title": "VRChat Exercise Worlds",
-        "vrchat_executable": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\VRChat\\launch.exe"
+        "vrchat_executable": "C:\\Windows\\TempInst\\Steam\\steamapps\\common\\VRChat\\launch.exe"
     },
     "worlds": [
         {
