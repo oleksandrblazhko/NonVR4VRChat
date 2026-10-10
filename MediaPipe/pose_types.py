@@ -42,6 +42,9 @@ class Skeleton:
 
     nose: Joint = field(default_factory=Joint)
 
+    left_ear: Joint = field(default_factory=Joint)
+    right_ear: Joint = field(default_factory=Joint)
+
     left_shoulder: Joint = field(default_factory=Joint)
     right_shoulder: Joint = field(default_factory=Joint)
 

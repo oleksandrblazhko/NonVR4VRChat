@@ -163,6 +163,8 @@ while True:
         h, w, _ = frame.shape
         landmark_indices = [
             mp_pose.PoseLandmark.NOSE,
+            mp_pose.PoseLandmark.LEFT_EAR,
+            mp_pose.PoseLandmark.RIGHT_EAR,
             mp_pose.PoseLandmark.LEFT_SHOULDER,
             mp_pose.PoseLandmark.RIGHT_SHOULDER,
             mp_pose.PoseLandmark.LEFT_WRIST,

@@ -56,35 +56,55 @@ OSC-повідомлення надсилаються на локальний OS
 https://www.python.org/ftp/python/3.10.10/python-3.10.10-amd64.exe
 
 2) знаходячись у терміналі GitBash, клонувати репозиторій:
+```
 gi clone https://github.com/oleksandrblazhko/NonVR4VRChat.git
-
+```
 3) перейти до каталогу NonVR4VRChat:
+```
 cd NonVR4VRChat
-
+```
 4) Створити окреме віртуальне середовище з версією 3.10:
+```
 py -3.10 -m venv .venv
-
+```
 5) Активізувати python-середовище:
+```
 . .venv/Scripts/activate
-
+```
 6) Встановити бібліотеки:
-- py -m pip install --upgrade pip
-- py -m pip install -r requirements.txt
-
+```
+py -m pip install --upgrade pip
+py -m pip install -r requirements.txt
+```
 7) запустити програму вибору VRChat-світів (приклад шляхів для GitBash):
+```
 py ./VRChatApp/main.py
+```
 або без необхідності активації
+```
 .venv/Scripts/python.exe VRChatApp/main.py
+```
+примітка: за необхідністю змінити повний шлях до VRChat у файлі config.json
 
 8) запустити програму MediaPipe (приклад шляхів для GitBash):
+```
 py MediaPipe/main.py
+```
 або
+```
 .venv/Scripts/python.exe MediaPipe/main.py
-
+```
 9) запустити програму SmartPhone (приклад шляхів для GitBash):
+```
 py SmartPhone/main.py
+```
 або
+```
 .venv/Scripts/python.exe SmartPhone/main.py
+```
+примітка: налаштувати IP-адресу HTTP-сервера, запущеного на смартфоні через програму phyphox
 
 10) після роботи деактивізувати python-середовище (за бажанням):
+```
 deactivate
+```

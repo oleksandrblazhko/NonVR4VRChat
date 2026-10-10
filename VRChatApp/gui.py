@@ -30,7 +30,7 @@ class VRChatLauncher:
 
     def create_world_grid(self):
         app_dir = Path(__file__).resolve().parent
-
+        
         for index, world in enumerate(self.config["worlds"]):
             # Сітка 2х2
             row = index // 2
