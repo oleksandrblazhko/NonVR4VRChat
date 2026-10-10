@@ -24,6 +24,10 @@ from pose_types import (
 
 NOSE = 0
 
+
+LEFT_EAR = 7
+RIGHT_EAR = 8
+
 LEFT_SHOULDER = 11
 RIGHT_SHOULDER = 12
 
@@ -105,6 +109,14 @@ def create_pose_frame(
             lm[NOSE]
         ),
 
+        left_ear=create_joint(
+            lm[LEFT_EAR]
+        ),
+
+        right_ear=create_joint(
+            lm[RIGHT_EAR]
+        ),
+
         left_shoulder=create_joint(
             lm[LEFT_SHOULDER]
         ),
@@ -120,7 +132,6 @@ def create_pose_frame(
         right_hip=create_joint(
             lm[RIGHT_HIP]
         )
-
     )
 
     return PoseFrame(

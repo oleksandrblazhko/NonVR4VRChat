@@ -1,5 +1,5 @@
 {
-  "server_ip": "192.168.0.100",
+  "server_ip": "192.168.0.161",
   "debug": false,
   "startup_mode": {
     "osc": true,
