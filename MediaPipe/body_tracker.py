@@ -113,18 +113,15 @@ class BodyTracker:
         # Метрики повороту та нахилу.
         #
 
+        ear_center_x = (skeleton.left_ear.position.x + skeleton.right_ear.position.x) / 2.0
+        ear_center_y = (skeleton.left_ear.position.y + skeleton.right_ear.position.y) / 2.0
+
+        ear_dist = max(abs(skeleton.left_ear.position.x - skeleton.right_ear.position.x), 0.02)
         # Нова z-less метрика для yaw
-        state.yaw_metric = (
-            skeleton.left_shoulder.position.x +
-            skeleton.right_shoulder.position.x -
-            2 * skeleton.nose.position.x
-        )
+        state.yaw_metric = ((ear_center_x - skeleton.nose.position.x) / ear_dist)
         
         # Нова z-less метрика для pitch
-        state.pitch_metric = (
-            shoulder_center.y -
-            skeleton.nose.position.y
-        )
+        state.pitch_metric = ((ear_center_y - skeleton.nose.position.y) / ear_dist)
 
         return state
 
