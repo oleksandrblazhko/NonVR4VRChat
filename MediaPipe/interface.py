@@ -9,6 +9,9 @@ interface.py
     R   - скидання
     ESC - вихід
 
+    Shift + / -  - чутливість по горизонталі (LookH)
+    Ctrl  + / -  - чутливість по вертикалі   (LookV)
+
 Модуль читає натиснуту клавішу, виконує її дію (калібрування, скидання
 або запит на вихід) та малює у вікні підсвітку стану калібрування і
 нижній рядок з підказками.
@@ -19,6 +22,10 @@ interface.py
 
 from __future__ import annotations
 
+import ctypes
+import json
+import os
+import sys
 import time
 import threading
 
@@ -44,6 +51,42 @@ KEY_HINTS = (
     ("1", "Calibration"),
     ("R", "Reset"),
     ("ESC", "Quit"),
+)
+
+# Чутливість у відсотках (того ж масштабу, що й *_sensitivity_pct у
+# config.json): крок на одне натискання, межі та назви атрибутів
+# LookController, які регулюються.
+SENSITIVITY_STEP = 2.0
+
+SENSITIVITY_MIN = 1.0
+
+SENSITIVITY_MAX = 100.0
+
+SENSITIVITY_ATTRS = {
+    "h": "horizontal_sensitivity_pct",
+    "v": "vertical_sensitivity_pct",
+}
+
+# Імена клавіш у бібліотеці `keyboard` (залежать від розкладки/нумпаду).
+KEYS_PLUS = ("+", "=", "plus", "add")
+
+KEYS_MINUS = ("-", "_", "minus", "subtract")
+
+CONFIG_FILE = "config.json"
+
+# Віртуальні коди клавіш Windows (GetAsyncKeyState).
+VK_SHIFT = 0x10
+
+VK_CONTROL = 0x11
+
+VK_PLUS = (0xBB, 0x6B)    # OEM_PLUS (=/+), NumPad +
+
+VK_MINUS = (0xBD, 0x6D)   # OEM_MINUS (-/_), NumPad -
+
+# Підписи регулювання чутливості для консольного банера.
+SENSITIVITY_HINTS = (
+    ("Shift + / -", "sensitivity LookH"),
+    ("Ctrl  + / -", "sensitivity LookV"),
 )
 
 HINT_FONT = cv2.FONT_HERSHEY_SIMPLEX
@@ -104,6 +147,14 @@ class Interface:
 
         self.calibration_start = 0.0
 
+        # Опитування клавіш Windows, див. start_hotkeys().
+        self._user32 = None
+
+        self._held = set()
+
+        # Чи змінювалась чутливість з моменту завантаження/збереження.
+        self._settings_dirty = False
+
     # --------------------------------------------------------
     # Keyboard
     # --------------------------------------------------------
@@ -137,6 +188,243 @@ class Interface:
             self.reset()
 
         return False
+
+    # --------------------------------------------------------
+    # Sensitivity
+    # --------------------------------------------------------
+
+    def sensitivity(self, axis: str) -> float | None:
+        """
+        Поточна чутливість осі (`"h"` або `"v"`) у відсотках.
+
+        None, якщо контролер погляду не має такого параметра.
+        """
+
+        return getattr(
+            self.look_controller,
+            SENSITIVITY_ATTRS[axis],
+            None
+        )
+
+    # --------------------------------------------------------
+
+    def adjust_sensitivity(self, axis: str, direction: int):
+        """
+        Змінити чутливість осі на один крок (`direction` = +1 або -1).
+
+        Значення обмежується діапазоном [SENSITIVITY_MIN; SENSITIVITY_MAX].
+        Повертає нове значення або None, якщо параметра немає.
+        """
+
+        current = self.sensitivity(axis)
+
+        if current is None:
+
+            return None
+
+        value = current + direction * SENSITIVITY_STEP
+
+        value = max(SENSITIVITY_MIN, min(SENSITIVITY_MAX, value))
+
+        setattr(
+            self.look_controller,
+            SENSITIVITY_ATTRS[axis],
+            value
+        )
+
+        if value != current:
+
+            self._settings_dirty = True
+
+        name = "LookH" if axis == "h" else "LookV"
+
+        print(f"Sensitivity {name}: {value:.0f}%")
+
+        return value
+
+    # --------------------------------------------------------
+
+    def handle_hotkey(
+            self,
+            name: str,
+            shift: bool,
+            ctrl: bool
+    ) -> bool:
+        """
+        Обробити натискання `+`/`-` разом з модифікатором.
+
+            Shift + / -  -> горизонталь
+            Ctrl  + / -  -> вертикаль
+
+        Без модифікатора або з обома одразу клавіша ігнорується.
+        Повертає True, якщо чутливість було оброблено.
+        """
+
+        name = (name or "").lower()
+
+        if name in KEYS_PLUS:
+
+            direction = 1
+
+        elif name in KEYS_MINUS:
+
+            direction = -1
+
+        else:
+
+            return False
+
+        if shift and not ctrl:
+
+            axis = "h"
+
+        elif ctrl and not shift:
+
+            axis = "v"
+
+        else:
+
+            return False
+
+        return self.adjust_sensitivity(axis, direction) is not None
+
+    # --------------------------------------------------------
+
+    def start_hotkeys(self) -> bool:
+        """
+        Увімкнути глобальні хоткеї чутливості (лише Windows).
+
+        `cv2.waitKey` не бачить Shift/Ctrl, тому стан клавіш читається
+        напряму через WinAPI. Працює і тоді, коли у фокусі VRChat, без
+        додаткових бібліотек та прав адміністратора. Самі натискання
+        обробляє poll_hotkeys(), яку треба викликати щокадру.
+        """
+
+        if sys.platform != "win32":
+
+            print("Хоткеї чутливості вимкнено: потрібна Windows.")
+
+            return False
+
+        try:
+
+            self._user32 = ctypes.windll.user32
+
+        except Exception as e:
+
+            print(f"Хоткеї чутливості вимкнено: {e}")
+
+            self._user32 = None
+
+            return False
+
+        return True
+
+    # --------------------------------------------------------
+
+    def stop_hotkeys(self):
+        """
+        Вимкнути опитування хоткеїв.
+        """
+
+        self._user32 = None
+
+        self._held.clear()
+
+    # --------------------------------------------------------
+
+    def _down(self, vk: int) -> bool:
+
+        return bool(self._user32.GetAsyncKeyState(vk) & 0x8000)
+
+    # --------------------------------------------------------
+
+    def poll_hotkeys(self):
+        """
+        Перевірити Shift/Ctrl + `+`/`-`. Викликати щокадру.
+
+        Одне натискання клавіші дає один крок.
+        """
+
+        if self._user32 is None:
+
+            return
+
+        shift = self._down(VK_SHIFT)
+
+        ctrl = self._down(VK_CONTROL)
+
+        for direction, codes in ((1, VK_PLUS), (-1, VK_MINUS)):
+
+            pressed = any(self._down(vk) for vk in codes)
+
+            if not pressed:
+
+                self._held.discard(direction)
+
+                continue
+
+            if direction in self._held:
+
+                continue
+
+            self._held.add(direction)
+
+            if shift and not ctrl:
+
+                self.adjust_sensitivity("h", direction)
+
+            elif ctrl and not shift:
+
+                self.adjust_sensitivity("v", direction)
+
+    # --------------------------------------------------------
+
+    def save_settings(self) -> bool:
+        """
+        Записати чутливість у `config.json` (секція `var_settings`),
+        якщо вона змінювалась. Решта ключів файлу зберігається.
+        """
+
+        if not self._settings_dirty:
+
+            return False
+
+        path = os.path.join(os.path.dirname(__file__), CONFIG_FILE)
+
+        try:
+
+            with open(path, "r", encoding="utf-8") as f:
+
+                config = json.load(f)
+
+            settings = config.setdefault("var_settings", {})
+
+            for axis, attr in SENSITIVITY_ATTRS.items():
+
+                value = self.sensitivity(axis)
+
+                if value is not None:
+
+                    settings[attr] = value
+
+            with open(path, "w", encoding="utf-8") as f:
+
+                json.dump(config, f, indent=2, ensure_ascii=False)
+
+                f.write("\n")
+
+        except Exception as e:
+
+            print(f"Не вдалось зберегти {CONFIG_FILE}: {e}")
+
+            return False
+
+        self._settings_dirty = False
+
+        print(f"Чутливість збережено у {CONFIG_FILE}.")
+
+        return True
 
     # --------------------------------------------------------
     # Calibration
@@ -342,7 +630,7 @@ class Interface:
         з телеметрією (LookH, LookV, Grab, Use) та підказками гарячих клавіш.
         """
         h, w = frame.shape[:2]
-        panel_h = 56
+        panel_h = 76
 
         # Додаємо чорну панель знизу, не чіпаючи корисний відеокадр
         display_frame = cv2.copyMakeBorder(
@@ -404,15 +692,45 @@ class Interface:
         cv2.line(display_frame, (10, h + 29), (w - 10, h + 29), (35, 35, 35), 1)
 
         # ----------------------------------------------------
-        # Рядок 2: Гарячі клавіші
+        # Рядок 2: Чутливість (під колонками LookH / LookV)
+        # ----------------------------------------------------
+        y2 = h + 47
+        label_color = (180, 180, 180)
+        sens_color = (255, 200, 0)
+
+        for x, label, axis in (
+                (15, "SensH: ", "h"),
+                (col_w + 10, "SensV: ", "v"),
+        ):
+            value = self.sensitivity(axis)
+            text = "--" if value is None else f"{value:.0f}%"
+            color = (150, 150, 150) if value is None else sens_color
+            cv2.putText(display_frame, label, (x, y2), font, font_scale, label_color, thickness)
+            (tw, _), _ = cv2.getTextSize(label, font, font_scale, thickness)
+            cv2.putText(display_frame, text, (x + tw, y2), font, font_scale, color, thickness)
+
+        cv2.putText(
+            display_frame,
+            "Shift +/- : H     Ctrl +/- : V",
+            (col_w * 2 + 10, y2),
+            font,
+            font_scale,
+            (140, 140, 140),
+            thickness
+        )
+
+        cv2.line(display_frame, (10, h + 56), (w - 10, h + 56), (35, 35, 35), 1)
+
+        # ----------------------------------------------------
+        # Рядок 3: Гарячі клавіші
         # ----------------------------------------------------
         hints_text = "   ".join(f"[{key}] {label}" for key, label in KEY_HINTS)
         (hw, _), _ = cv2.getTextSize(hints_text, font, 0.45, 1)
-        y2 = h + 47
+        y3 = h + 69
         cv2.putText(
             display_frame,
             hints_text,
-            (max((w - hw) // 2, 0), y2),
+            (max((w - hw) // 2, 0), y3),
             font,
             0.45,
             HINT_COLOR,
@@ -435,5 +753,9 @@ class Interface:
         for key, label in KEY_HINTS:
 
             print(f"{key} - {label.lower()}")
+
+        for key, label in SENSITIVITY_HINTS:
+
+            print(f"{key} - {label}")
 
         print("------------------------------------")
