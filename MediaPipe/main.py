@@ -28,6 +28,7 @@ from grabcontroller import GrabController
 from grabcontroller import UseController
 from osc_sender import OSCSender
 from interface import Interface
+from status_beacon import StatusBeacon, BEACON_PORT
 
 
 # ============================================================
@@ -93,6 +94,11 @@ interface = Interface(
     look_controller,
     osc
 )
+
+
+# «Пульс» для індикатора «Камера» в лаунчері (VRChatApp).
+beacon = StatusBeacon()
+print(f"Status beacon: ON (UDP 127.0.0.1:{BEACON_PORT})")
 
 
 # Shift/Ctrl + / - : чутливість LookH / LookV (глобальні хоткеї).
@@ -243,6 +249,11 @@ while True:
             2
         )
 
+    beacon.update(
+        pose_detected=bool(results.pose_landmarks),
+        calibrated=calibration.is_ready()
+    )
+
     # --------------------------------------------------------
     # Status & display
     # --------------------------------------------------------
@@ -296,6 +307,8 @@ print("Stopping...")
 interface.stop_hotkeys()
 
 interface.save_settings()
+
+beacon.clear()
 
 osc.center()
 

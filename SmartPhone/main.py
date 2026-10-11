@@ -925,7 +925,7 @@ def input_handler(
 
                         smart_cal_thread.start()
 
-            elif key == "esc":
+            elif key == "f9":
 
                 print("Завершення роботи...")
 

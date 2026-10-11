@@ -1,0 +1,44 @@
+{
+  "python": "auto",
+  "autostart": [
+    "phone",
+    "camera",
+    "launcher"
+  ],
+  "all_hotkey": "f8",
+  "close_vrchat_on_close_all": false,
+  "components": [
+    {
+      "id": "phone",
+      "title": "Телефон (SmartPhone)",
+      "dir": "SmartPhone",
+      "script": "main.py",
+      "hotkey": "f5",
+      "console": true,
+      "osc_reset": [
+        "move"
+      ]
+    },
+    {
+      "id": "camera",
+      "title": "Камера (MediaPipe)",
+      "dir": "MediaPipe",
+      "script": "main.py",
+      "hotkey": "f6",
+      "console": false,
+      "osc_reset": [
+        "look",
+        "hands"
+      ]
+    },
+    {
+      "id": "launcher",
+      "title": "Лаунчер світів (VRChatApp)",
+      "dir": "VRChatApp",
+      "script": "main.py",
+      "hotkey": "f7",
+      "console": false,
+      "osc_reset": []
+    }
+  ]
+}

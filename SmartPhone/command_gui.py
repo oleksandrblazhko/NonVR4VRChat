@@ -9,6 +9,8 @@ class CommandGUI:
         self.root.geometry("300x300")
         self.root.resizable(False, False)
 
+        self.root.attributes('-topmost', True)
+
         self.buttons = {}
 
         self._create_gui()
@@ -132,3 +134,7 @@ class CommandGUI:
         """
 
         self.root.mainloop()
+
+    if __name__ == "__main__":
+        app = CommandGUI()
+        app.run()
