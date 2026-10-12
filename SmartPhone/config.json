@@ -1,32 +1,32 @@
 {
-  "server_ip": "192.168.0.161",
-  "debug": false,
+  "server_ip": "10.120.251.40",
+  "debug": true,
   "startup_mode": {
     "osc": true,
     "websocket": false
   },
   "thresholds": {
-    "move": 5,
-    "run": 10
+    "move": 5.0,
+    "run": 10.0
   },
   "osc_bindings": [
     {
       "osc_command": "/input/MoveForward",
-      "axis": "X",
-      "invert": true
+      "axis": "X"
     },
     {
       "osc_command": "/input/MoveBackward",
-      "axis": "X",
-      "invert": true
+      "axis": "X"
     },
     {
       "osc_command": "/input/MoveLeft",
-      "axis": "Y"
+      "axis": "Y",
+      "invert": true
     },
     {
       "osc_command": "/input/MoveRight",
-      "axis": "Y"
+      "axis": "Y",
+      "invert": true
     },
     {
       "osc_command": "/input/Run",
@@ -34,8 +34,22 @@
     }
   ],
   "calibration": {
-    "delta_accX": 0.29,
-    "delta_accY": -0.25,
-    "delta_accZ": 9.86
+    "delta_accX": -9.72421642657807,
+    "delta_accY": -0.2780780868966778,
+    "delta_accZ": 1.5642439199335547
+  },
+  "preset_thresholds": {
+    "1. В руках": {
+      "move": 5.0,
+      "run": 10.0
+    },
+    "2. На дошці": {
+      "move": 5.0,
+      "run": 10.0
+    },
+    "3. На нозі спереду": {
+      "move": 5.0,
+      "run": 10.0
+    }
   }
 }
