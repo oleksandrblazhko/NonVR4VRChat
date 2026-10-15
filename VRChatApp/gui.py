@@ -27,18 +27,20 @@ class VRChatLauncher:
         self.process_mediapipe = None
         self.process_smartphone = None
         self.settings_window = None
+
         self.create_world_grid()
 
-        # Панель внизу
+        #Панель внизу
         self.create_bottom_controls()
 
+        # Безпечне завершення всіх процесів при закритті вікна
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
 
     def create_world_grid(self):
         app_dir = Path(__file__).resolve().parent
 
         for index, world in enumerate(self.config["worlds"]):
-            #Сітка 2х2
+            # Сітка 2х2
             row = index // 2
             column = index % 2
 
@@ -86,7 +88,7 @@ class VRChatLauncher:
         controls_frame = tk.Frame(self.root, pady=15)
         controls_frame.grid(row=2, column=0, columnspan=2)
 
-        #Кнопка запуску MediaPipe
+        # Кнопка запуску MediaPipe
         self.btn_mediapipe = tk.Button(
             controls_frame,
             text="Навігація веб-камера",
@@ -100,7 +102,7 @@ class VRChatLauncher:
         )
         self.btn_mediapipe.pack(side=tk.LEFT, padx=9)
 
-        #Кнопка запуску SmartPhone
+        # Кнопка запуску SmartPhone
         self.btn_smartphone = tk.Button(
             controls_frame,
             text="Навігація руху",
@@ -129,7 +131,6 @@ class VRChatLauncher:
         btn_settings.pack(side=tk.LEFT, padx=15)
 
     def toggle_mediapipe(self):
-
         if self.process_mediapipe and self.process_mediapipe.poll() is None:
             self.process_mediapipe.terminate()
             self.process_mediapipe = None
@@ -152,7 +153,6 @@ class VRChatLauncher:
             )
 
     def on_closing(self):
-        #Закриття програми разом з головним меню
         if self.process_mediapipe and self.process_mediapipe.poll() is None:
             self.process_mediapipe.terminate()
 
@@ -179,28 +179,27 @@ class VRChatLauncher:
 
         settings_window.protocol("WM_DELETE_WINDOW", on_settings_close)
 
-        # Шляхи до файлів конфігурацій
         app_dir = Path(__file__).resolve().parent
         vrchat_config_path = app_dir / "config.json"
         smartphone_config_path = app_dir.parent / "SmartPhone" / "config.json"
 
-        # Пресети орієнтації та прив'язок OSC
+        #Пресети
         presets = {
-            "1. В руках": [
+            "1. In the hands": [
                 {"osc_command": "/input/MoveForward", "axis": "Z"},
                 {"osc_command": "/input/MoveBackward", "axis": "Z"},
                 {"osc_command": "/input/MoveLeft", "axis": "X"},
                 {"osc_command": "/input/MoveRight", "axis": "X"},
                 {"osc_command": "/input/Run", "axis": "X_Z"}
             ],
-            "2. На дошці": [
+            "2. On the board": [
                 {"osc_command": "/input/MoveForward", "axis": "X"},
                 {"osc_command": "/input/MoveBackward", "axis": "X"},
                 {"osc_command": "/input/MoveLeft", "axis": "Y"},
                 {"osc_command": "/input/MoveRight", "axis": "Y"},
                 {"osc_command": "/input/Run", "axis": "X_Y"}
             ],
-            "3. На нозі спереду": [
+            "3. On the leg": [
                 {"osc_command": "/input/MoveForward", "axis": "X"},
                 {"osc_command": "/input/MoveBackward", "axis": "X"},
                 {"osc_command": "/input/MoveLeft", "axis": "Y", "invert": True},
@@ -211,9 +210,9 @@ class VRChatLauncher:
 
         # Налаштування кутів
         preset_thresholds = {
-            "1. В руках": {"move": 5.0, "run": 10.0},
-            "2. На дошці": {"move": 5.0, "run": 10.0},
-            "3. На нозі спереду": {"move": 5.0, "run": 10.0}
+            "1. In the hands": {"move": 5.0, "run": 10.0},
+            "2. On the board": {"move": 5.0, "run": 10.0},
+            "3. On the leg": {"move": 5.0, "run": 10.0}
         }
 
         current_ip = "192.168.0.100"
@@ -226,7 +225,7 @@ class VRChatLauncher:
                     current_ip = phone_data.get("server_ip", current_ip)
                     current_bindings = phone_data.get("osc_bindings", [])
 
-                    #Індивідуальні пресети
+                    # Індивідуальні пресети
                     saved_preset_thresh = phone_data.get("preset_thresholds", {})
                     for p_name, t_val in saved_preset_thresh.items():
                         if p_name in preset_thresholds:
@@ -234,7 +233,7 @@ class VRChatLauncher:
 
                     current_thresh = phone_data.get("thresholds", {})
                     if "move" in current_thresh and "run" in current_thresh:
-                        #Поточний поріг в активний пресет
+                        # Поточний поріг в активний пресет
                         for name, bindings in presets.items():
                             if current_bindings == bindings:
                                 preset_thresholds[name] = {
@@ -245,7 +244,7 @@ class VRChatLauncher:
             except Exception:
                 pass
 
-        #Вибраний пресет
+        # Вибраний пресет
         selected_preset_name = list(presets.keys())[0]
         for name, bindings in presets.items():
             if current_bindings == bindings:
@@ -258,7 +257,7 @@ class VRChatLauncher:
             "vrchat_executable", ""
         )
 
-        #IP-адреса телефону
+        # IP-адреса телефону
         lbl_ip = tk.Label(
             settings_window,
             text="IP-адреса телефону:",
@@ -270,7 +269,7 @@ class VRChatLauncher:
         ip_entry.insert(0, current_ip)
         ip_entry.pack(fill="x", padx=20, pady=(0, 8))
 
-        #Пресет
+        # Пресет
         lbl_preset = tk.Label(
             settings_window,
             text="Розташування смартфону:",
@@ -286,8 +285,9 @@ class VRChatLauncher:
         )
         preset_combobox.set(selected_preset_name)
         preset_combobox.pack(fill="x", padx=20, pady=(0, 8))
+        initial_preset = selected_preset_name
 
-        #Кут нахилу
+        # Кут нахилу
         lbl_thresholds = tk.Label(
             settings_window,
             text="Значення кута нахилу:",
@@ -308,7 +308,7 @@ class VRChatLauncher:
         run_entry.insert(0, str(preset_thresholds[selected_preset_name]["run"]))
         run_entry.grid(row=0, column=3)
 
-        #Автоматична зміна кутів
+        # Автоматична зміна кутів
         def on_preset_changed(event=None):
             prev_name = current_active_preset[0]
             try:
@@ -330,7 +330,7 @@ class VRChatLauncher:
 
         preset_combobox.bind("<<ComboboxSelected>>", on_preset_changed)
 
-        #Шлях до VRChat
+        # Шлях до VRChat
         lbl_path = tk.Label(
             settings_window,
             text="Шлях до VRChat:",
@@ -364,7 +364,7 @@ class VRChatLauncher:
         )
         btn_browse.pack(side=tk.LEFT, padx=(5, 0))
 
-        #Скидання
+        # Скидання
         def reset_defaults():
             current_mode = preset_combobox.get()
             preset_thresholds[current_mode] = {"move": 5.0, "run": 10.0}
@@ -419,7 +419,7 @@ class VRChatLauncher:
 
             preset_thresholds[selected_mode] = {"move": move_val, "run": run_val}
 
-            #Оновлення SmartPhone/config.json
+            # Оновлення SmartPhone/config.json
             if smartphone_config_path.exists():
                 try:
                     with open(smartphone_config_path, "r", encoding="utf-8") as f:
@@ -434,7 +434,7 @@ class VRChatLauncher:
 
                     phone_data["preset_thresholds"] = preset_thresholds
 
-                    if selected_mode in presets:
+                    if selected_mode in presets and selected_mode != initial_preset:
                         phone_data["osc_bindings"] = presets[selected_mode]
 
                     with open(smartphone_config_path, "w", encoding="utf-8") as f:
@@ -447,7 +447,7 @@ class VRChatLauncher:
                 messagebox.showerror("Помилка", f"Файл не знайдено: {smartphone_config_path}", parent=settings_window)
                 return
 
-            #Оновлення VRChatApp/config.json
+            # Оновлення VRChatApp/config.json
             try:
                 self.config["application"]["vrchat_executable"] = new_vrchat_path
                 self.vrchat.executable = new_vrchat_path
@@ -455,10 +455,11 @@ class VRChatLauncher:
                     json.dump(self.config, f, indent=4, ensure_ascii=False)
             except Exception as e:
                 messagebox.showerror("Помилка", f"Не вдалося оновити VRChatApp/config.json: {e}",
-                                     parent=settings_window)
+                                         parent=settings_window)
                 return
 
             messagebox.showinfo("Успіх", "Налаштування успішно збережено!", parent=settings_window)
+            self.settings_window = None
             settings_window.destroy()
 
         btn_save = tk.Button(
