@@ -1,3 +1,4 @@
+import sys
 import asyncio
 import json
 import math
@@ -13,6 +14,11 @@ import winsound
 import argparse
 
 from pathlib import Path
+
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
 
 print("CWD:", os.getcwd())
 print("MAIN:", Path(__file__).resolve())
@@ -161,7 +167,7 @@ def load_config():
 
         try:
 
-            with open(CONFIG_FILE, "r") as f:
+            with open(CONFIG_FILE, "r", encoding="utf-8") as f:
                 config = json.load(f)
 
             print(
@@ -185,8 +191,8 @@ def save_config(config):
     """
     try:
 
-        with open(CONFIG_FILE, "w") as f:
-            json.dump(config, f, indent=2)
+        with open(CONFIG_FILE, "w", encoding="utf-8") as f:
+            json.dump(config, f, indent=2, ensure_ascii=False)
 
         print(
             f"Конфігурацію збережено: {config}"
