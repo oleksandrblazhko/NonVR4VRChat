@@ -11,6 +11,7 @@ main.py
 
     1 - калібрування
     R - reset
+    P / O - наступний / попередній профіль
     ESC - вихід
 """
 
@@ -28,6 +29,7 @@ from grabcontroller import GrabController
 from grabcontroller import UseController
 from osc_sender import OSCSender
 from interface import Interface
+from profiles import ProfileManager
 
 
 # ============================================================
@@ -80,7 +82,9 @@ tracker = BodyTracker(
     calibration
 )
 
-look_controller = LookController()
+profiles = ProfileManager()
+
+look_controller = LookController(profiles)
 
 osc = OSCSender()
 
@@ -91,7 +95,8 @@ use_controller = UseController(osc)
 interface = Interface(
     calibration,
     look_controller,
-    osc
+    osc,
+    profiles=profiles
 )
 
 

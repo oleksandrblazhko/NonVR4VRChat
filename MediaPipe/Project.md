@@ -458,5 +458,5 @@ OpenCV і сам друкує `[WARN] cap.cpp: cv::VideoCapture::open VIDEOIO(DS
 
 ---
 
-*Примітка про актуальність ЧАСТИН 1–2.* Вони описують кутну версію алгоритму (`atan2`-yaw/pitch, `normalize_angle`, жорсткий $\alpha = 0.25$) та режим `const`/`var`. Фактично `BodyTracker` видає z-less метрики (3.3.1–3.3.2), `LookController` використовує `normalize_metric` і читає з `config.json` лише секцію `var_settings`, а коефіцієнт EMA дорівнює $1 - \text{smooth}$ (у `config.json` `smooth = 0.1`). Файл `filters.py` у поточному пайплайні не залучений.
+*Примітка про актуальність ЧАСТИН 1–2.* Вони описують кутну версію алгоритму (`atan2`-yaw/pitch, `normalize_angle`, жорсткий $\alpha = 0.25$) та режим `const`/`var`. Фактично `BodyTracker` видає z-less метрики (3.3.1–3.3.2), `LookController` використовує `normalize_metric` і читає з `config.json` параметри активного профілю зі списку `profiles` (профілі — `profiles.py`, перемикання клавішами `P`/`O`), а коефіцієнт EMA дорівнює $1 - \text{smooth}$ (у `config.json` `smooth = 0.1`). Файл `filters.py` у поточному пайплайні не залучений.
 

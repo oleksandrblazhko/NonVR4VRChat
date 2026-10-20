@@ -18,9 +18,9 @@ look_controller.py
 
 from __future__ import annotations
 
-import os
-import json
 import math
+
+from profiles import ProfileManager
 
 
 # ============================================================
@@ -37,7 +37,11 @@ MAX_SENSITIVITY_MULTIPLIER = 10.0 # 100% sensitivity will equal this multiplier
 
 class LookController:
 
-    def __init__(self):
+    def __init__(self, profiles=None):
+        """
+        `profiles` - ProfileManager із активним профілем користувача.
+        Без нього читається config.json (профіль, вибраний у ньому).
+        """
 
         self.horizontal = HORIZONTAL_CENTER
         self.vertical = VERTICAL_CENTER
@@ -50,43 +54,45 @@ class LookController:
         self.max_vertical_metric = 0.1
         self.vertical_threshold_metric = 0.01
         self.vertical_sensitivity_pct = 30.0
-        
+
         self.smooth = 0.25
 
-        # Завантаження конфігурації з config.json
+        # Профіль користувача з config.json
         try:
-            config_path = os.path.join(os.path.dirname(__file__), "config.json")
-            if os.path.exists(config_path):
-                with open(config_path, "r", encoding="utf-8") as f:
-                    config = json.load(f)
-                    
-                    var_settings = config.get("var_settings", {})
-                    # Горизонтальні налаштування
-                    self.max_horizontal_metric = float(var_settings.get("max_horizontal_metric", 0.2))
-                    self.horizontal_threshold_metric = float(var_settings.get("horizontal_threshold_metric", 0.02))
-                    self.horizontal_sensitivity_pct = float(var_settings.get("horizontal_sensitivity_pct", 30.0))
-
-                    # Вертикальні налаштування
-                    self.max_vertical_metric = float(var_settings.get("max_vertical_metric", 0.1))
-                    self.vertical_threshold_metric = float(var_settings.get("vertical_threshold_metric", 0.01))
-                    self.vertical_sensitivity_pct = float(var_settings.get("vertical_sensitivity_pct", 30.0))
-                    
-                    self.smooth = float(var_settings.get("smooth", 0.25))
-
-                print("Loaded config.json for full metric-based algorithm.")
-                print(
-                    f"  horizontal settings: max_metric={self.max_horizontal_metric}, "
-                    f"threshold={self.horizontal_threshold_metric}, sensitivity={self.horizontal_sensitivity_pct}%"
-                )
-                print(
-                    f"  vertical settings: max_metric={self.max_vertical_metric}, "
-                    f"threshold={self.vertical_threshold_metric}, sensitivity={self.vertical_sensitivity_pct}%"
-                )
-
-            else:
-                print("config.json not found, using default settings for full metric-based algorithm.")
+            self.profiles = profiles if profiles is not None else ProfileManager()
+            self.apply_profile()
         except Exception as e:
+            self.profiles = None
             print(f"Error loading config.json: {e}. Using default settings.")
+
+    def apply_profile(self):
+        """
+        Застосувати параметри активного профілю.
+        Викликається на старті та після зміни профілю.
+        """
+        settings = self.profiles.active_settings
+
+        # Горизонтальні налаштування
+        self.max_horizontal_metric = settings["max_horizontal_metric"]
+        self.horizontal_threshold_metric = settings["horizontal_threshold_metric"]
+        self.horizontal_sensitivity_pct = settings["horizontal_sensitivity_pct"]
+
+        # Вертикальні налаштування
+        self.max_vertical_metric = settings["max_vertical_metric"]
+        self.vertical_threshold_metric = settings["vertical_threshold_metric"]
+        self.vertical_sensitivity_pct = settings["vertical_sensitivity_pct"]
+
+        self.smooth = settings["smooth"]
+
+        print(f"Profile '{self.profiles.active_name}' applied.")
+        print(
+            f"  horizontal settings: max_metric={self.max_horizontal_metric}, "
+            f"threshold={self.horizontal_threshold_metric}, sensitivity={self.horizontal_sensitivity_pct}%"
+        )
+        print(
+            f"  vertical settings: max_metric={self.max_vertical_metric}, "
+            f"threshold={self.vertical_threshold_metric}, sensitivity={self.vertical_sensitivity_pct}%"
+        )
 
     def reset(self):
         self.horizontal = HORIZONTAL_CENTER
@@ -182,4 +188,4 @@ class LookController:
         self.vertical += (target_vertical - self.vertical) * (1.0 - self.smooth)
 
         return (self.horizontal, self.vertical)
-    
+    

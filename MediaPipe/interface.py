@@ -12,6 +12,9 @@ interface.py
     Shift + / -  - чутливість по горизонталі (LookH)
     Ctrl  + / -  - чутливість по вертикалі   (LookV)
 
+    P   - наступний профіль користувача
+    O   - попередній профіль користувача
+
 Модуль читає натиснуту клавішу, виконує її дію (калібрування, скидання
 або запит на вихід) та малює у вікні підсвітку стану калібрування і
 нижній рядок з підказками.
@@ -23,8 +26,6 @@ interface.py
 from __future__ import annotations
 
 import ctypes
-import json
-import os
 import sys
 import time
 import threading
@@ -45,11 +46,17 @@ KEY_CALIBRATE = ord("1")
 
 KEY_RESET = (ord("r"), ord("R"))
 
+# Профілі користувачів (див. profiles.py): P - наступний, O - попередній.
+KEY_PROFILE_NEXT = (ord("p"), ord("P"))
+
+KEY_PROFILE_PREV = (ord("o"), ord("O"))
+
 # Гарячі клавіші та їхні підписи: один список живить
 # і консольний банер, і рядок-підказку внизу кадру.
 KEY_HINTS = (
     ("1", "Calibration"),
     ("R", "Reset"),
+    ("P", "Profile"),
     ("ESC", "Quit"),
 )
 
@@ -87,6 +94,7 @@ VK_MINUS = (0xBD, 0x6D)   # OEM_MINUS (-/_), NumPad -
 SENSITIVITY_HINTS = (
     ("Shift + / -", "sensitivity LookH"),
     ("Ctrl  + / -", "sensitivity LookV"),
+    ("O / P", "previous / next profile"),
 )
 
 HINT_FONT = cv2.FONT_HERSHEY_SIMPLEX
@@ -107,6 +115,8 @@ STATUS_COLOR = (0, 0, 255)
 
 WARNING_COLOR = (0, 255, 255)
 
+PROFILE_COLOR = (255, 200, 0)
+
 
 # ============================================================
 # Interface
@@ -124,12 +134,16 @@ class Interface:
             calibration,
             look_controller,
             osc,
-            calibration_time: float = CALIBRATION_TIME
+            calibration_time: float = CALIBRATION_TIME,
+            profiles=None
     ):
 
         self.calibration = calibration
 
         self.look_controller = look_controller
+
+        # ProfileManager із профілями користувачів; None - без профілів.
+        self.profiles = profiles
 
         self.osc = osc
 
@@ -187,7 +201,76 @@ class Interface:
 
             self.reset()
 
+        elif key in KEY_PROFILE_NEXT:
+
+            self.switch_profile(1)
+
+        elif key in KEY_PROFILE_PREV:
+
+            self.switch_profile(-1)
+
         return False
+
+    # --------------------------------------------------------
+    # Profiles
+    # --------------------------------------------------------
+
+    @property
+    def profile_name(self) -> str | None:
+        """
+        Назва активного профілю або None, якщо профілів немає.
+        """
+
+        if self.profiles is None:
+
+            return None
+
+        return self.profiles.active_name
+
+    # --------------------------------------------------------
+
+    def switch_profile(self, step: int = 1) -> str | None:
+        """
+        Перемкнути профіль (`step` = +1 наступний, -1 попередній).
+
+        Чутливість, змінену хоткеями, спершу записується у профіль, який
+        залишаємо, тож вона не губиться. Далі параметри нового профілю
+        застосовуються до контролера погляду, а вибір зберігається у
+        `config.json`. Калібрування лишається чинним: воно описує тіло
+        користувача, а не параметри керування.
+
+        Повертає назву нового профілю або None, якщо профілів немає.
+        """
+
+        if self.profiles is None:
+
+            return None
+
+        if len(self.profiles.names) < 2:
+
+            print(f"Profile: {self.profiles.active_name} (єдиний профіль)")
+
+            return self.profiles.active_name
+
+        # Зберегти правки поточного профілю до переходу.
+        self.save_settings()
+
+        name = self.profiles.switch(step)
+
+        self.look_controller.apply_profile()
+
+        # Скинути згладжене положення, щоб не тягнути його зі старих налаштувань.
+        self.look_controller.reset()
+
+        self.osc.center()
+
+        self._settings_dirty = False
+
+        self.profiles.save()
+
+        print(f"Profile: {name}")
+
+        return name
 
     # --------------------------------------------------------
     # Sensitivity
@@ -382,47 +465,40 @@ class Interface:
 
     def save_settings(self) -> bool:
         """
-        Записати чутливість у `config.json` (секція `var_settings`),
-        якщо вона змінювалась. Решта ключів файлу зберігається.
+        Записати чутливість в активний профіль `config.json`, якщо вона
+        змінювалась. Решта профілів і ключів файлу зберігається.
         """
 
         if not self._settings_dirty:
 
             return False
 
-        path = os.path.join(os.path.dirname(__file__), CONFIG_FILE)
+        if self.profiles is None:
 
-        try:
+            return False
 
-            with open(path, "r", encoding="utf-8") as f:
+        values = {}
 
-                config = json.load(f)
+        for axis, attr in SENSITIVITY_ATTRS.items():
 
-            settings = config.setdefault("var_settings", {})
+            value = self.sensitivity(axis)
 
-            for axis, attr in SENSITIVITY_ATTRS.items():
+            if value is not None:
 
-                value = self.sensitivity(axis)
+                values[attr] = value
 
-                if value is not None:
+        self.profiles.update_active(values)
 
-                    settings[attr] = value
-
-            with open(path, "w", encoding="utf-8") as f:
-
-                json.dump(config, f, indent=2, ensure_ascii=False)
-
-                f.write("\n")
-
-        except Exception as e:
-
-            print(f"Не вдалось зберегти {CONFIG_FILE}: {e}")
+        if not self.profiles.save():
 
             return False
 
         self._settings_dirty = False
 
-        print(f"Чутливість збережено у {CONFIG_FILE}.")
+        print(
+            f"Чутливість збережено у профілі "
+            f"'{self.profiles.active_name}' ({CONFIG_FILE})."
+        )
 
         return True
 
@@ -549,6 +625,18 @@ class Interface:
         detected` малює `main.py`, і він стоїть вище - за координатами
         вони не перекриваються.
         """
+
+        if self.profile_name is not None:
+
+            cv2.putText(
+                frame,
+                f"Profile: {self.profile_name}",
+                (10, 18),
+                STATUS_FONT,
+                0.5,
+                PROFILE_COLOR,
+                1
+            )
 
         if self.calibrating:
 
@@ -758,4 +846,4 @@ class Interface:
 
             print(f"{key} - {label}")
 
-        print("------------------------------------")
+        print("------------------------------------")
