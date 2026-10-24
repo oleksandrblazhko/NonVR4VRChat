@@ -55,18 +55,7 @@ class GrabController:
 
 
 class UseController:
-    """
-    Ліва кисть надсилає /input/UseRight коротким імпульсом.
-
-    На відміну від хапка це не стан, а подія: `1` тримається
-    `USE_PRESS_SECONDS`, після чого надсилається `0`. Наступний імпульс
-    можливий лише після того, як рука зникне з кадру `HIDDEN_THRESHOLD`
-    кадрів поспіль - інакше просто стояння з піднятою рукою сипало б
-    дію предмета без зупину.
-    """
-
-    def __init__(self, osc_sender, press_seconds: float = 0.1):
-
+    def __init__(self, osc_sender, press_seconds: float = 0.15):
         self.osc_sender = osc_sender
 
         self.VISIBLE_THRESHOLD = 1
@@ -76,11 +65,7 @@ class UseController:
 
         self.visible_counter = 0
         self.hidden_counter = 0
-
-        # Готовий до наступного жесту.
         self.armed = True
-
-        self.press_thread = None
         self.last_triggered_time = 0.0
 
     @property
@@ -88,12 +73,13 @@ class UseController:
         return (time.time() - self.last_triggered_time) < 0.4
 
     def update(self, left_wrist_landmark):
-
         if left_wrist_landmark is None:
             hand_visible = False
         else:
             hand_visible = left_wrist_landmark.visibility >= self.VISIBILITY_LIMIT
+        self.update_active(hand_visible)
 
+    def update_active(self, hand_visible: bool):
         if hand_visible:
             self.visible_counter += 1
             self.hidden_counter = 0
@@ -102,38 +88,18 @@ class UseController:
             self.visible_counter = 0
 
         if self.armed and self.visible_counter >= self.VISIBLE_THRESHOLD:
-
             self.armed = False
-
             self.visible_counter = 0
-
-            self._press()
+            threading.Thread(target=self._press_cycle, daemon=True).start()
 
         if self.hidden_counter >= self.HIDDEN_THRESHOLD:
-
             self.armed = True
-
             self.hidden_counter = 0
 
-    def _press(self):
-
-        self.press_thread = threading.Thread(
-            target=self._press_cycle
-        )
-
-        self.press_thread.daemon = True
-
-        self.press_thread.start()
-
     def _press_cycle(self):
-
         self.last_triggered_time = time.time()
-
-        self.osc_sender.send_use_right(True)
-
+        self.osc_sender.send_drop_right(True)
         if self.osc_sender.debug:
             print("Action: Use")
-
         time.sleep(self.USE_PRESS_SECONDS)
-
-        self.osc_sender.send_use_right(False)
+        self.osc_sender.send_drop_right(False)
