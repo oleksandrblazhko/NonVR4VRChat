@@ -28,6 +28,7 @@ from grabcontroller import GrabController
 from grabcontroller import UseController
 from osc_sender import OSCSender
 from interface import Interface
+from direct_input import DirectInput
 
 
 # ============================================================
@@ -87,6 +88,8 @@ osc = OSCSender()
 grab_controller = GrabController(osc)
 
 use_controller = UseController(osc)
+
+direct_input = DirectInput()
 
 interface = Interface(
     calibration,
@@ -159,7 +162,11 @@ while True:
         grab_controller.update(right_wrist)
 
         left_wrist = results.pose_landmarks.landmark[mp_pose.PoseLandmark.LEFT_WRIST]
-        use_controller.update(left_wrist)
+        if grab_controller.grab_state:
+            direct_input.update(left_wrist)
+        else:
+            direct_input.release()
+            use_controller.update(left_wrist)
 
         #
         # Малювання лише ключових точок
@@ -304,5 +311,7 @@ camera.stop()
 cv2.destroyAllWindows()
 
 pose.close()
+
+direct_input.release()
 
 osc.close()
